@@ -388,12 +388,12 @@ td {
     border: 1px solid var(--blue1);
 }
 
-#room, #hour {
+.room, .hour {
     color: var(--blue1);
     background: black;
 }
 
-#hour {
+.hour {
     width: 3vw;
     vertical-align: top;
 }
@@ -404,9 +404,9 @@ td {
     width: 0;
 }
 
-#LoL {background: #894694}
-#RL {background: #1c7ebb}
-#break {background: var(--pink1)}
+.LoL {background: #894694}
+.RL {background: #1c7ebb}
+.break {background: var(--pink1)}
 
 @media (max-width: 900px) {
     td {
@@ -442,14 +442,14 @@ td {
     border-radius: 5px;
 }
 
-#staff #name {
+#staff .name {
     font-weight: bold;
     font-size: 18px;
     padding-top: 4%;
     border-top: var(--pink1) solid 4px
 }
 
-#staff #role {
+#staff .role {
     font-size: 13px;
     font-style: italic;
     font-weight: 400;

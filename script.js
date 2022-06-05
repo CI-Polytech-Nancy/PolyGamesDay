@@ -2,8 +2,8 @@ function showPopup(game) {
     document.getElementById("popup").id = "popupActivated";
     document.getElementById("overlay").id = "overlayActivated";
 
-    content = document.getElementById("popupContent");
-    title = document.getElementById("popupTitle");
+    let content = document.getElementById("popupContent");
+    let title = document.getElementById("popupTitle");
 
     content.textContent = "Le tournoi s'organise de la manière suivante :\n\n";
 

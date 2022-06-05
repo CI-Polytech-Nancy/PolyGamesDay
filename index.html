@@ -42,12 +42,12 @@
 
     <section id="intro">
         <h1>Poly Games Days</h1>
-        <img src="./images/background.jpg" class="parallax">
+        <img src="./images/background.jpg" class="parallax" alt="PolyGamesDays">
         <div id="medias">
             <a href="https://www.instagram.com/club_info_polytech_nancy/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://www.discord.gg/PMNFaNG" target="_blank"><i class="fa-brands fa-discord"></i></a>
             <a href="https://www.facebook.com/ClubInfoPolytechNancy" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.youtube.com/channel/UCkh5EzQc0l9Wi-muVNXbYQw" target="_blank"><i class="fa-brands fa-youtube"></i></i></a>
+            <a href="https://www.youtube.com/channel/UCkh5EzQc0l9Wi-muVNXbYQw" target="_blank"><i class="fa-brands fa-youtube"></i></a>
         </div>
     </section>
 
@@ -66,11 +66,11 @@
                 <p id="notice">Cette compétition n'est pas affiliée à Riot Games, Inc. ni parrainée par cette dernière ou League of Legends Esports.</p>
             <div class="row">
                 <div class="column">
-                    <img src="images/games/game1.png">
+                    <img src="images/games/game1.png" alt="Rocket League">
                     <button onclick="showPopup(1)">Informations</button>
                 </div>
                 <div class="column">
-                    <img src="images/games/game2.png">
+                    <img src="images/games/game2.png" alt="League Of Legends">
                     <button onclick="showPopup(2)">Informations</button>
                 </div>
             </div>
@@ -84,7 +84,7 @@
                 <button onclick="closePopup()">&times;</button>
             </div>
             <div id="popupContent"></div>
-            <a href="https://www.billetweb.fr/shop.php?event=polygamesdays1" onclick="var w=window.open('https://www.billetweb.fr/shop.php?event=polygamesdays1&popup=1', 'Reserver', 'width=650, height=600, top=100, left=100, toolbar=no, resizable=yes, scrollbars=yes, status=no'); w.focus(); return false;">S'inscrire</a>
+            <a href="https://www.billetweb.fr/shop.php?event=polygamesdays1" onclick="let w=window.open('https://www.billetweb.fr/shop.php?event=polygamesdays1&popup=1', 'Reserver', 'width=650, height=600, top=100, left=100, toolbar=no, resizable=yes, scrollbars=yes, status=no'); w.focus(); return false;">S'inscrire</a>
         </div>
 
         <div id="overlay" onclick="closePopup()"></div>
@@ -94,66 +94,67 @@
         <div class="container">
             <h2>Calendrier</h2>
 
-            <p>Les Poly Games Days auront lieu le <b>Samedi 26 Mars</b>, de 8 heures à 23 heures :</p>
+            <!-- pi fyx hi gixxi wtigmepmxi iwx hi hizipsttiv yri evqii hi legoiv ix w iqteviv hy qsrhi ir gsqqirgerx tev pe psvvemri. tsyv pe wymxi hy tper rsyw eppsrw exxeuyiv piw iziriqirxw hy gpyf mrjsvqexmuyi -->
+            <p>Les Poly Games Days auront lieu le <b>S̸̛͙̯͍͈͍̣̉̈́̉̎͘͘a̸͇͓̙̗̫͖͘m̶̝̗̣͚̫̟̲̯̥̹̼͌͛̃̿͛͘͝ͅȇ̵̡̲̲͉̐͝d̵̡̟̘͙̤̱̪̖̹̿̐̈́̀̈́̾́̐i̷̧̦̐ ̴̨͔̘̿̈́̋̍̉̕͝2̴̧̛̛̫̥͇̞̘̰͐͊̽̂̈́͂̈́͋̿̌͘͘͝6̴̡͍̗͔̹̤̜̰̺̞̭̘̈̾͐͒̒̆͒͒̓̄́̚͠ ̷̞̲̬͎̱̊̑M̵̨̛̱̹̬̙̣͖̬̮̭̙̹̜̈́͆͆́̋́́͗̕͜͝a̷͎̋̽̿̄͐͜r̷̨̰̬̦̮͈͓̎́̈́̃̉̕͜͜š̵͇͓͒̔̓͋̕͜͠</b>, de 8 heures à 23 heures :</p>
 
             <table>
                 <tr>
                     <td id="empty"></td>
-                    <td id="room">Salle F310</td>
-                    <td id="room">Salle de conférence</td>
+                    <td class="room">Salle F310</td>
+                    <td class="room">Salle de conférence</td>
                 </tr>
                 <tr>
-                    <td id="hour">8:00</td>
+                    <td class="hour">8:00</td>
                     <td></td>
                     <td rowspan="3" id="LoL">League of Legend</td>
                 </tr>
                 <tr>
-                    <td id="hour">9:00</td>
-                    <td rowspan="2" id="RL">Rocket League</td>
+                    <td class="hour">9:00</td>
+                    <td rowspan="2" class="RL">Rocket League</td>
                 </tr>
-                <tr><td id="hour">10:00</td></tr>
+                <tr><td class="hour">10:00</td></tr>
                 <tr>
-                    <td id="hour">10:45</td>
-                    <td colspan="2" id="break">Pause</td>
-                </tr>
-                <tr>
-                    <td id="hour">11:00</td>
-                    <td id="RL">Rocket League</td>
-                    <td id="LoL">League of Legend</td>
+                    <td class="hour">10:45</td>
+                    <td colspan="2" class="break">Pause</td>
                 </tr>
                 <tr>
-                    <td id="hour">12:00</td>
-                    <td rowspan="2" colspan="2" id="break">Repas</td>
-                </tr>
-                <tr><td id="hour">13:00</td></tr>
-                <tr>
-                    <td id="hour">14:00</td>
-                    <td rowspan="3" id="RL">Rocket League</td>
-                    <td rowspan="3" id="LoL">League of Legend</td>
-                </tr>
-                <tr><td id="hour">15:00</td></tr>
-                <tr><td id="hour">16:00</td></tr>
-                <tr>
-                    <td id="hour">16:45</td>
-                    <td colspan="2" id="break">Pause</td>
+                    <td class="hour">11:00</td>
+                    <td class="RL">Rocket League</td>
+                    <td class="LoL">League of Legend</td>
                 </tr>
                 <tr>
-                    <td id="hour">17:00</td>
-                    <td rowspan="2" id="RL">Rocket League</td>
-                    <td rowspan="2" id="LoL">League of Legend</td>
+                    <td class="hour">12:00</td>
+                    <td rowspan="2" colspan="2" class="break">Repas</td>
                 </tr>
-                <tr><td id="hour">18:00</td></tr>
+                <tr><td class="hour">13:00</td></tr>
                 <tr>
-                    <td id="hour">19:00</td>
-                    <td colspan="2" id="break">Repas</td>
+                    <td class="hour">14:00</td>
+                    <td rowspan="3" class="RL">Rocket League</td>
+                    <td rowspan="3" class="LoL">League of Legend</td>
+                </tr>
+                <tr><td class="hour">15:00</td></tr>
+                <tr><td class="hour">16:00</td></tr>
+                <tr>
+                    <td class="hour">16:45</td>
+                    <td colspan="2" class="break">Pause</td>
                 </tr>
                 <tr>
-                    <td id="hour">20:00</td>
-                    <td rowspan="3" id="RL">Rocket League</td>
-                    <td rowspan="3" id="LoL">League of Legend</ts>
+                    <td class="hour">17:00</td>
+                    <td rowspan="2" class="RL">Rocket League</td>
+                    <td rowspan="2" class="LoL">League of Legend</td>
                 </tr>
-                <tr><td id="hour">21:00</td></tr>
-                <tr><td id="hour">22:00</td></tr>
+                <tr><td class="hour">18:00</td></tr>
+                <tr>
+                    <td class="hour">19:00</td>
+                    <td colspan="2" class="break">Repas</td>
+                </tr>
+                <tr>
+                    <td class="hour">20:00</td>
+                    <td rowspan="3" class="RL">Rocket League</td>
+                    <td rowspan="3" class="LoL">League of Legend</td>
+                </tr>
+                <tr><td class="hour">21:00</td></tr>
+                <tr><td class="hour">22:00</td></tr>
             </table>
         </div>
     </section>
@@ -167,44 +168,44 @@
 
             <div class="row">
                 <div class="column">
-                    <img src="images/staff/clara.png">
-                    <div id="name">Clara Dubost</div>
-                    <div id="role">Présidente</div>
+                    <img src="images/staff/clara.png" alt="Clara">
+                    <div class="name">Clara Dubost</div>
+                    <div class="role">Présidente</div>
                 </div>
                 <div class="column">
-                    <img src="images/staff/sebastien.png">
-                    <div id="name">Sebastien Meynet</div>
-                    <div id="role">Ex-Président</div>
+                    <img src="images/staff/sebastien.png" alt="Sébastien">
+                    <div class="name">Sebastien Meynet</div>
+                    <div class="role">Ex-Président</div>
                 </div>
                 <div class="column">
-                    <img src="images/staff/gabriel.png">
-                    <div id="name">Gabriel Mouchette</div>
-                    <div id="role">Chargé Technique</div>
+                    <img src="images/staff/gabriel.png" alt="Gabriel">
+                    <div class="name">Gabriel Mouchette</div>
+                    <div class="role">Chargé Technique</div>
                 </div>
                 <div class="column">
-                    <img src="images/staff/julien.png">
-                    <div id="name">Julien Pistre</div>
-                    <div id="role">Chargé Développement</div>
+                    <img src="images/staff/julien.png" alt="Julien">
+                    <div class="name">Julien Pistre</div>
+                    <div class="role">Chargé Développement</div>
                 </div>
                 <div class="column">
-                    <img src="images/staff/maeric.png">
-                    <div id="name">Maéric Debucquet</div>
-                    <div id="role">Chargé Logistique</div>
+                    <img src="images/staff/maeric.png" alt="Maéric">
+                    <div class="name">Maéric Debucquet</div>
+                    <div class="role">Chargé Logistique</div>
                 </div>
                 <div class="column">
-                    <img src="images/staff/alban.png">
-                    <div id="name">Alban Charton</div>
-                    <div id="role">Chargé Animation</div>
+                    <img src="images/staff/alban.png" alt="Alban">
+                    <div class="name">Alban Charton</div>
+                    <div class="role">Chargé Animation</div>
                 </div>
                 <div class="column">
-                    <img src="images/staff/paul.png">
-                    <div id="name">Paul Vincenot</div>
-                    <div id="role">Chargé Communication</div>
+                    <img src="images/staff/paul.png" alt="Paul">
+                    <div class="name">Paul Vincenot</div>
+                    <div class="role">Chargé Communication</div>
                 </div>
                 <div class="column">
-                    <img src="images/staff/hugo.png">
-                    <div id="name">Hugo Simeoni</div>
-                    <div id="role">Chargé Partenariats</div>
+                    <img src="images/staff/hugo.png" alt="Hugo">
+                    <div class="name">Hugo Simeoni</div>
+                    <div class="role">Chargé Partenariats</div>
                 </div>
             </div>
         </div>
@@ -213,14 +214,16 @@
     <section id="sponsors" class="alt">
         <div class="container">
             <h2>Sponsors</h2>
-            <img src="images/sponsors/sopra.png" id="sopra">
+
+            <img src="images/sponsors/sopra.png" id="sopra" alt="Sopra Steria">
             <p>Sopra Steria est l’un des leaders européens du conseil, des services numériques et de l’édition de logiciels.
                 Il aide ses clients à mener leur transformation digitale et à obtenir des bénéfices concrets et durables.
                 Il apporte également une réponse globale aux enjeux de compétitivité des grandes entreprises et organisations, 
                 combinant une connaissance approfondie des secteurs d’activité et des technologies innovantes à une approche 
                 résolument collaborative. Sopra Steria place l’humain au centre de son action et s’engage auprès de ses clients 
                 à tirer le meilleur parti du digital pour construire un avenir positif.</p>
-            <img src="images/sponsors/boulanger.png" id="boulanger">
+
+            <img src="images/sponsors/boulanger.png" id="boulanger" alt="Boulanger">
             <p>Boulanger est le spécialiste des équipements de la maison en électroménager et multimédia. 
                 Leur offre de 25 000 références regroupe les indispensables du quotidien.
                 Boulanger met tout son savoir-faire au service de ses clients, notamment grâce à leurs marques exclusives et leurs nombreux services d’accompagnement</p>
