@@ -49,6 +49,10 @@ header a {
     color: inherit;
 }
 
+header span {
+    color: black;
+}
+
 .short-text {display: none;}
 
 @media (max-width: 1100px) {.responsive {display: none;}}

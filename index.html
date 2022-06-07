@@ -27,6 +27,7 @@
             <i class="fas fa-gamepad"></i>
             <a href="https://polygamesdays.fr" class="full-text"> Poly Games Days</a>
             <a href="https://polygamesdays.fr" class="short-text"> PGD</a>
+            <span id="viewCount"></span>
         </div>
         <nav class="responsive">
             <ul>
@@ -235,7 +236,14 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>window.onscroll = function() {buttonDisplay()};</script>
+    <script>
+        window.onscroll = function() {buttonDisplay()};
+        let views = Number(localStorage.getItem("views")) + 1;
+        localStorage.setItem("views", String(views));
+
+        let element = document.getElementById("viewCount");
+        element.textContent = String(views);
+    </script>
 </body>
 
 </html>
