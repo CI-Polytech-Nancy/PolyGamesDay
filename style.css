@@ -122,12 +122,11 @@ header li:hover {color: var(--pink2);}
 }
 
 #intro h1 {
-    font-family: 'Russo One';
+    font-family: 'Russo One', sans-serif;
     font-size: 64px;
     font-weight: 700;
     text-transform: uppercase;
     background: -webkit-linear-gradient(#ffc08a, var(--pink2));
-    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding-left: 10%;
@@ -437,7 +436,7 @@ td {
 }
 
 #staff .column {
-    background: white;
+    background-color: white;
     margin: 4% 4% 4% 4%;
     border-radius: 5px;
 }

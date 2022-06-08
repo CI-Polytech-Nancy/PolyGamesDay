@@ -42,4 +42,12 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
 }
 
-mybutton = document.getElementById("scrollBtn")
+mybutton = document.getElementById("scrollBtn");
+show = document.getElementById("show");
+img = document.getElementById("clara");
+
+show.addEventListener('mouseover', function () {img.src = 'images/cube.png';});
+show.addEventListener("touchstart", function () {img.src = 'images/cube.png';});
+
+show.addEventListener('mouseout', function () {img.src = 'images/staff/clara.png';});
+show.addEventListener("touchend", function () {img.src = 'images/staff/clara.png';});
