@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Poly Games Days" />
+    <meta property="og:description" content="La compétition multi-gaming créée par des étudiants pour des étudiants. Que ce soit pour s'amuser ou pour try-hard, venez vous affronter et jouer ensemble !" />
+    <meta property="og:url" content="https://polygamesdays.fr/" />
+    <meta property="og:image" content="https://i.imgur.com/DywysrU.png" />
+    <meta content="#D22B2B" data-react-helmet="true" name="theme-color" />
+
+    <title>Poly Games Days</title>
+
+    <link href="../static/style.css" rel="stylesheet">
+    <link rel="icon" href="../static/images/favicon.ico">
+    <script src="https://kit.fontawesome.com/c133775852.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700|Russo+One" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <i class="fas fa-gamepad"></i>
+            <a href="https://polygamesdays.fr" class="full-text"> Poly Games Days</a>
+            <a href="https://polygamesdays.fr" class="short-text"> PGD</a>
+        </div>
+        <nav class="responsive">
+            <ul>
+                <li><a href="#event">Evenement</a></li>
+                <li><a href="#calendar">Calendrier</a></li>
+                <li><a href="#staff">Organisateurs</a></li>
+                <li><a href="#sponsors">Sponsors</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <button onclick="topFunction()" id="scrollBtn" title="Remonter">↑</button>
+
+    <section id="intro">
+        <h1>Poly Games Days</h1>
+        <img src="../static/images/background.jpg" class="parallax" alt="PolyGamesDays">
+        <div id="medias">
+            <a href="https://www.instagram.com/club_info_polytech_nancy/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.discord.gg/PMNFaNG" target="_blank"><i class="fa-brands fa-discord"></i></a>
+            <a href="https://www.facebook.com/ClubInfoPolytechNancy" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.youtube.com/channel/UCkh5EzQc0l9Wi-muVNXbYQw" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </section>
+
+    <section id="event">
+        <div class="container">
+            <h2>Présentation</h2>
+            <p>Les <b>Poly Games Days</b>, c’est avant tout un concept créé il y a maintenant cinq ans par des étudiants pour
+                des étudiants :<br><br>
+                Cet événement permet à des équipes de s’affronter lors de <b>compétitions sur plusieurs jeux</b>.
+                Tu aimes moins la compétition ? Pas de soucis, des <b>jeux de société et des consoles</b> sont disponibles en <b>libre accès</b>.
+                Donc si tu as envie de jouer avec tes amis, que ce soit pour t'amuser ou pour gagner, viens aux Poly
+                Games Days !<br><br>
+                À la clé, <b>500€ et du matériel gaming</b> à gagner, alors n'hésite plus et inscris-toi !
+                </p>
+
+                <p id="notice">Cette compétition n'est pas affiliée à Riot Games, Inc. ni parrainée par cette dernière ou League of Legends Esports.</p>
+            <div class="row">
+                <div class="column">
+                    <img src="../static/images/games/game1.png" alt="Rocket League">
+                    <button onclick="showPopup(1)">Informations</button>
+                </div>
+                <div class="column">
+                    <img src="../static/images/games/game2.png" alt="League Of Legends">
+                    <button onclick="showPopup(2)">Informations</button>
+                </div>
+            </div>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2635.392435663236!2d6.186126215667344!3d48.659737079268524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479498ec85b7dcc1%3A0x37be5c98aae2e926!2sPolytech%20Nancy!5e0!3m2!1sfr!2sfr!4v1608931969111!5m2!1sfr!2sfr" allowfullscreen></iframe>
+        </div>
+
+        <div id="popup">
+            <div id="popupHeader">
+                <div id="popupTitle"></div>
+                <button onclick="closePopup()">&times;</button>
+            </div>
+            <div id="popupContent"></div>
+            <a href="https://www.billetweb.fr/shop.php?event=polygamesdays1" onclick="let w=window.open('https://www.billetweb.fr/shop.php?event=polygamesdays1&popup=1', 'Reserver', 'width=650, height=600, top=100, left=100, toolbar=no, resizable=yes, scrollbars=yes, status=no'); w.focus(); return false;">S'inscrire</a>
+        </div>
+
+        <div id="overlay" onclick="closePopup()"></div>
+    </section>
+
+    <section id="calendar" class="alt">
+        <div class="container">
+            <h2>Calendrier</h2>
+
+            <!-- exxeuyi viywwmi :
+            ni gsrxvspi piw iziriqirxw hy gpyf mrjs -->
+
+            <p>Les Poly Games Days auront lieu le <b>S̸̛͙̯͍͈͍̣̉̈́̉̎͘͘a̸͇͓̙̗̫͖͘m̶̝̗̣͚̫̟̲̯̥̹̼͌͛̃̿͛͘͝ͅȇ̵̡̲̲͉̐͝d̵̡̟̘͙̤̱̪̖̹̿̐̈́̀̈́̾́̐i̷̧̦̐ ̴̨͔̘̿̈́̋̍̉̕͝2̴̧̛̛̫̥͇̞̘̰͐͊̽̂̈́͂̈́͋̿̌͘͘͝6̴̡͍̗͔̹̤̜̰̺̞̭̘̈̾͐͒̒̆͒͒̓̄́̚͠ ̷̞̲̬͎̱̊̑M̵̨̛̱̹̬̙̣͖̬̮̭̙̹̜̈́͆͆́̋́́͗̕͜͝a̷͎̋̽̿̄͐͜r̷̨̰̬̦̮͈͓̎́̈́̃̉̕͜͜š̵͇͓͒̔̓͋̕͜͠</b>, de 8 heures à 23 heures :</p>
+
+            <table>
+                <tr>
+                    <td id="empty"></td>
+                    <td class="room">Salle F310</td>
+                    <td class="room">Salle de conférence</td>
+                </tr>
+                <tr>
+                    <td class="hour">8:00</td>
+                    <td></td>
+                    <td rowspan="3" class="LoL">League of Legend</td>
+                </tr>
+                <tr>
+                    <td class="hour">9:00</td>
+                    <td rowspan="2" class="RL">Rocket League</td>
+                </tr>
+                <tr><td class="hour">10:00</td></tr>
+                <tr>
+                    <td class="hour">10:45</td>
+                    <td colspan="2" class="break">Pause</td>
+                </tr>
+                <tr>
+                    <td class="hour">11:00</td>
+                    <td class="RL">Rocket League</td>
+                    <td class="LoL">League of Legend</td>
+                </tr>
+                <tr>
+                    <td class="hour">12:00</td>
+                    <td rowspan="2" colspan="2" class="break">Repas</td>
+                </tr>
+                <tr><td class="hour">13:00</td></tr>
+                <tr>
+                    <td class="hour">14:00</td>
+                    <td rowspan="3" class="RL">Rocket League</td>
+                    <td rowspan="3" class="LoL">League of Legend</td>
+                </tr>
+                <tr><td class="hour">15:00</td></tr>
+                <tr><td class="hour">16:00</td></tr>
+                <tr>
+                    <td class="hour">16:45</td>
+                    <td colspan="2" class="break">Pause</td>
+                </tr>
+                <tr>
+                    <td class="hour">17:00</td>
+                    <td rowspan="2" class="RL">Rocket League</td>
+                    <td rowspan="2" class="LoL">League of Legend</td>
+                </tr>
+                <tr><td class="hour">18:00</td></tr>
+                <tr>
+                    <td class="hour">19:00</td>
+                    <td colspan="2" class="break">Repas</td>
+                </tr>
+                <tr>
+                    <td class="hour">20:00</td>
+                    <td rowspan="3" class="RL">Rocket League</td>
+                    <td rowspan="3" class="LoL">League of Legend</td>
+                </tr>
+                <tr><td class="hour">21:00</td></tr>
+                <tr><td class="hour">22:00</td></tr>
+            </table>
+        </div>
+    </section>
+
+    <section id="staff">
+        <div class="container">
+            <h2>Organisateurs</h2>
+            <p>Le Club Informatique de l’école d’ingénieur Polytech Nancy (ex-ESSTIN) est une association étudiante
+                ayant pour but de promouvoir l’informatique et le monde du jeu vidéo auprès des étudiants de l’école.
+            </p>
+
+            <div class="row">
+                <div class="column">
+                    <img src="../static/images/staff/clara.png" alt="Clara">
+                    <div class="name">Clara Dubost</div>
+                    <div class="role">Présidente</div>
+                </div>
+                <div class="column">
+                    <img src="../static/images/staff/sebastien.png" alt="Sébastien">
+                    <div class="name">Sebastien Meynet</div>
+                    <div class="role">Ex-Président</div>
+                </div>
+                <div class="column">
+                    <img src="../static/images/staff/gabriel.png" alt="Gabriel">
+                    <div class="name">Gabriel Mouchette</div>
+                    <div class="role">Chargé Technique</div>
+                </div>
+                <div class="column">
+                    <img src="../static/images/staff/julien.png" alt="Julien">
+                    <div class="name">Julien Pistre</div>
+                    <div class="role">Chargé Développement</div>
+                </div>
+                <div class="column">
+                    <img src="../static/images/staff/maeric.png" alt="Maéric">
+                    <div class="name">Maéric Debucquet</div>
+                    <div class="role">Chargé Logistique</div>
+                </div>
+                <div class="column">
+                    <img src="../static/images/staff/alban.png" alt="Alban">
+                    <div class="name">Alban Charton</div>
+                    <div class="role">Chargé Animation</div>
+                </div>
+                <div class="column">
+                    <img src="../static/images/staff/paul.png" alt="Paul">
+                    <div class="name">Paul Vincenot</div>
+                    <div class="role">Chargé Communication</div>
+                </div>
+                <div class="column">
+                    <img src="../static/images/staff/hugo.png" alt="Hugo">
+                    <div class="name">Hugo Simeoni</div>
+                    <div class="role">Chargé Partenariats</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sponsors" class="alt">
+        <div class="container">
+            <h2>Sponsors</h2>
+
+            <img src="../static/images/sponsors/sopra.png" id="sopra" alt="Sopra Steria">
+            <p>Sopra Steria est l’un des leaders européens du conseil, des services numériques et de l’édition de logiciels.
+                Il aide ses clients à mener leur transformation digitale et à obtenir des bénéfices concrets et durables.
+                Il apporte également une réponse globale aux enjeux de compétitivité des grandes entreprises et organisations, 
+                combinant une connaissance approfondie des secteurs d’activité et des technologies innovantes à une approche 
+                résolument collaborative. Sopra Steria place l’humain au centre de son action et s’engage auprès de ses clients 
+                à tirer le meilleur parti du digital pour construire un avenir positif.</p>
+
+            <img src="../static/images/sponsors/boulanger.png" id="boulanger" alt="Boulanger">
+            <p>Boulanger est le spécialiste des équipements de la maison en électroménager et multimédia. 
+                Leur offre de 25 000 références regroupe les indispensables du quotidien.
+                Boulanger met tout son savoir-faire au service de ses clients, notamment grâce à leurs marques exclusives et leurs nombreux services d’accompagnement</p>
+        </div>
+    </section>
+
+    <footer>
+        <a href="https://polygamesdays.fr/mentions-legales">Club Informatique Polytech Nancy © 2022</a>
+    </footer>
+
+    <script src="../static/script.js"></script>
+    <script>window.onscroll = function() {buttonDisplay()};</script>
+</body>
+
+</html>
