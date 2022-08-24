@@ -1,39 +1,10 @@
-function showPopup(game) {
-    document.getElementById("popup").id = "popupActivated";
-    document.getElementById("overlay").id = "overlayActivated";
-
-    let content = document.getElementById("popupContent");
-    let title = document.getElementById("popupTitle");
-
-    content.textContent = "Le tournoi s'organise de la manière suivante :\n\n";
-
-    if (game === 1) {
-        title.textContent = "Rocket League";
-        content.textContent += "• Affrontements en équipes de 2 personnes\n";
-        content.textContent += "• Arbre de tournoi à double élimination\n";
-        content.textContent += "• Matchs en BO3 et finale en BO5"; 
-    } else {
-        title.textContent = "League of Legend";
-        content.textContent += "• Affrontements en équipes de 5 personnes\n";
-        content.textContent += "• Phase de poules en BO1, quart et demi finales en BO3 et finale en BO5\n"; 
-        content.textContent += "• Poules de 4 équipes, seulement les 2 meilleures se qualifient"
-    }
-
-    content.textContent += "\n\nVous devrez payer 5€ supplémentaires si vous n'êtes pas cotisant et que vous prennez le tarif cotisant."
+function showModal(id) {
+    modals[id].style.display = "block";
 }
 
-function closePopup() {
-    document.getElementById("popupActivated").id = "popup";
-    document.getElementById("overlayActivated").id = "overlay";
-}
-
-function buttonDisplay() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.opacity = "1";
-        mybutton.style.visibility = "visible";
-    } else {
-        mybutton.style.opacity = "0";
-        mybutton.style.visibility = "hidden";
+function closeModals() {
+    for (const modal of modals) {
+        modal.style.display = "none";
     }
 }
 
@@ -42,12 +13,18 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
 }
 
-mybutton = document.getElementById("scrollBtn");
-show = document.getElementById("show");
-img = document.getElementById("clara");
+let modals = document.getElementsByClassName("overlay");
 
-show.addEventListener('mouseover', function () {img.src = 'images/cube.png';});
-show.addEventListener("touchstart", function () {img.src = 'images/cube.png';});
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("topBtn").style.opacity = "1";
+    } else {
+        document.getElementById("topBtn").style.opacity = "0";
+    }
+};
 
-show.addEventListener('mouseout', function () {img.src = 'images/staff/clara.png';});
-show.addEventListener("touchend", function () {img.src = 'images/staff/clara.png';});
+window.onclick = function (event) {
+    for (const modal of modals) {
+        if (event.target === modal) closeModals();
+    }
+}
