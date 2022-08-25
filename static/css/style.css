@@ -58,6 +58,9 @@ header nav {
     display: none;
   }
 }
+header #short {
+  display: none;
+}
 header #logo {
   float: left;
   font-size: 28px;
@@ -341,11 +344,6 @@ table .break {
   border-radius: 10px;
   margin: 1% 0 2% 0;
 }
-@media (max-width: 600px) {
-  #sponsors img {
-    width: 80%;
-  }
-}
 
 footer {
   padding: 25px 0;
@@ -378,6 +376,24 @@ footer a:hover {
 }
 #mentions .container {
   padding: 0;
+}
+
+@media (max-width: 600px) {
+  section h2, td {
+    font-size: 14px;
+  }
+  section p {
+    font-size: 26px;
+  }
+  #sponsors img {
+    width: 80%;
+  }
+  header #short {
+    display: inline;
+  }
+  header #long {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

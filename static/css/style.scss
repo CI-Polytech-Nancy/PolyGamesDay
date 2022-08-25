@@ -75,6 +75,10 @@ header {
     }
   }
 
+  #short {
+    display: none;
+  }
+
   #logo {
     float: left;
     font-size: 28px;
@@ -386,10 +390,6 @@ table {
     background: white;
     border-radius: 10px;
     margin: 1% 0 2% 0;
-
-    @media (max-width: 600px) {
-      width: 80%;
-    }
   }
 }
 
@@ -431,5 +431,29 @@ footer {
 
   .container {
     padding: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  section h2, td {
+    font-size: 14px;
+  }
+
+  section p {
+    font-size: 26px;
+  }
+
+  #sponsors img {
+    width: 80%;
+  }
+
+  header {
+    #short {
+      display: inline;
+    }
+
+    #long {
+      display: none;
+    }
   }
 }
