@@ -1,5 +1,3 @@
-@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700|Russo+One";
-
 $blue1: #C393CB;
 $blue2: #9F6AB9;
 $pink1: #E91E63;
@@ -117,7 +115,7 @@ header {
     font-weight: 700;
     text-transform: uppercase;
     background: -webkit-linear-gradient(#ffc08a, $pink2);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
