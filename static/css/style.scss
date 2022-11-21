@@ -455,3 +455,62 @@ footer {
     }
   }
 }
+
+:root, :host {
+  --fa-style-family-brands: 'Font Awesome 6 Brands';
+  --fa-font-brands: normal 400 1em/1 'Font Awesome 6 Brands';
+  --fa-style-family-classic: 'Font Awesome 6 Free';
+  --fa-font-solid: normal 900 1em/1 'Font Awesome 6 Free';
+}
+
+@font-face {
+  font-family: 'Font Awesome 6 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("/static/fonts/fa-solid-900.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Font Awesome 6 Brands';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/static/fonts/fa-brands-400.woff2") format("woff2");
+}
+
+.fab,
+.fa-brands {
+  font-weight: 400;
+  font-family: 'Font Awesome 6 Brands';
+}
+
+.fa-instagram:before {
+  content: "\f16d";
+}
+
+.fa-facebook:before {
+  content: "\f09a";
+}
+
+.fa-discord:before {
+  content: "\f392";
+}
+
+.fa-youtube:before {
+  content: "\f167";
+}
+
+.fas,
+.fa-solid {
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+}
+
+.fa-arrow-up::before {
+  content: "\f062";
+}
+
+.fa-gamepad::before {
+  content: "\f11b";
+}
