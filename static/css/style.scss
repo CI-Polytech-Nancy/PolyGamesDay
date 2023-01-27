@@ -1,14 +1,14 @@
-$blue1: #C393CB;
-$blue2: #9F6AB9;
-$pink1: #E91E63;
-$pink2: #FF377B;
-$altback: #1B001F;
+$blue1: #92d7c5;
+$blue2: #69699f;
+$pink1: #e22f8a;
+$pink2: #e98ebc;
+$altback: #fbfefe;
 
 html {
   scroll-behavior: smooth;
 
   body {
-    color: $blue1;
+    color: $blue2;
     font-family: "Open Sans", sans-serif;
 
     &::-webkit-scrollbar {
@@ -16,7 +16,7 @@ html {
     }
 
     &::-webkit-scrollbar-track {
-      background: black;
+      background: $blue1;
     }
 
     &::-webkit-scrollbar-thumb:hover {
@@ -26,7 +26,48 @@ html {
     &::-webkit-scrollbar-thumb {
       background: $blue2;
       border-radius: 30px;
-      transition: all .2s;
+      transition: all 0.2s;
+    }
+  }
+
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+
+    .mySlides {      
+      display: none;
+      img{
+        max-height: 500px;
+        width: auto;
+        object-fit: cover;
+        background-position: top top;
+      }
+    }
+
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+
+      &:hover {
+        background-color: $pink1;
+      }
+    }
+
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
     }
   }
 
@@ -50,15 +91,15 @@ header {
   line-height: 84px;
   position: sticky;
 
-  color: $blue1;
-  background-color: black;
+  color: $blue2;
+  background-color: $blue1;
   font-size: 14px;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
 
   a {
     color: inherit;
-    transition: color .2s;
+    transition: color 0.2s;
     padding-right: 30px;
 
     &:hover {
@@ -94,7 +135,7 @@ header {
   background: $blue2;
   padding: 15px;
   border-radius: 5px;
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
 
   &:hover {
     background: $pink1;
@@ -107,38 +148,51 @@ header {
   background-size: cover;
 
   div {
-    padding: 15% 0 0 10%;
+    padding: 10% 0 0 10%;
   }
 
   h1 {
-    font-family: 'Russo One', sans-serif;
-    font-size: 64px;
-    font-weight: 700;
+    font-family: "Zorque", sans-serif;
+    font-size: 74px;
     text-transform: uppercase;
-    background: -webkit-linear-gradient(#ffc08a, $pink2);
+    background: -webkit-linear-gradient($pink1, $pink2);
+    -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+
+  }
+  h3 {
+    font-family: "Zorque", sans-serif;
+    font-size: 34px;
+    background: -webkit-linear-gradient($pink2, $pink1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    sup{
+      font-size: 14px;
+    }
   }
 
   a {
     font-size: 2.5rem;
-    color: $pink2;
-    transition: color .2s;
+    color: $pink1;
+    transition: color 0.2s;
     margin: 30px 1% 0 0;
 
     &:hover {
-      color: $blue1
+      color: $blue1;
     }
   }
 }
 
+
 section {
-  &:nth-child(2n+1) {
-    background-color: black;
+  &:nth-child(2n + 1) {
+    background-color: $blue1;
   }
 
   &:nth-child(2n) {
-    background-color: $altback;
+    background-color: $blue2;
   }
 
   h2 {
@@ -152,7 +206,7 @@ section {
     text-align: center;
 
     &::after {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       width: 62px;
@@ -171,7 +225,7 @@ section {
   #notice {
     color: #858380;
     font-style: italic;
-    font-size: .75rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -188,12 +242,15 @@ section {
 }
 
 #event {
+  b{
+    font-weight: 700;
+  }
   .column {
     width: 100%;
     overflow: hidden;
     border-radius: 15px;
     border: 2px solid $pink1;
-    transition: background-color .2s;
+    transition: background-color 0.2s;
 
     &:not(:first-child) {
       margin: 25px 0 0 0;
@@ -213,7 +270,7 @@ section {
       font-size: 16px;
       background: $pink1;
       border-top: 2px $pink1 solid;
-      transition: background-color .2s;
+      transition: background-color 0.2s;
 
       &:hover {
         background-color: $blue1;
@@ -223,6 +280,7 @@ section {
 
   @media (min-width: 960px) {
     .row {
+      padding: 5px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -242,7 +300,7 @@ section {
   display: none;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.4);
 
   .modal {
     z-index: 2;
@@ -255,23 +313,30 @@ section {
     border: 2px $pink1 solid;
     border-radius: 15px;
     overflow: hidden;
-    background-color: black;
+    background-color: $blue1;
     animation-name: animatetop;
-    animation-duration: .2s;
+    animation-duration: 0.2s;
 
     @keyframes animatetop {
-      from {scale: 0; opacity: 0}
-      to {scale: 1; opacity: 1}
+      from {
+        scale: 0;
+        opacity: 0;
+      }
+      to {
+        scale: 1;
+        opacity: 1;
+      }
     }
 
     button {
       color: $pink1;
       font-size: 20px;
       font-weight: 700;
-      transition: color .2s;
+      transition: color 0.2s;
       background-color: transparent;
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         color: $blue2;
       }
     }
@@ -294,11 +359,11 @@ section {
     a {
       display: block;
       padding: 10px 15px;
-      color: black;
+      color: $blue1;
       background: $pink1;
       font-weight: 700;
       text-align: center;
-      transition: background-color .2s;
+      transition: background-color 0.2s;
 
       &:hover {
         background-color: $blue1;
@@ -315,17 +380,18 @@ table {
   td {
     width: 350px;
     height: 40px;
-    color: black;
+    color: $blue1;
     font-weight: 700;
     text-transform: uppercase;
     background-color: $altback;
     border: 1px solid $blue1;
   }
 
-  .room, .hour {
+  .room,
+  .hour {
     width: 55px;
     color: $blue1;
-    background-color: black;
+    background-color: $blue1;
   }
 
   .hour {
@@ -337,9 +403,15 @@ table {
     width: 0;
   }
 
-  .LoL {background-color: #894694}
-  .RL {background-color: #1c7ebb}
-  .break {background-color: $pink1}
+  .LoL {
+    background-color: #894694;
+  }
+  .RL {
+    background-color: #1c7ebb;
+  }
+  .break {
+    background-color: $pink1;
+  }
 }
 
 #staff {
@@ -369,7 +441,7 @@ table {
     font-weight: 700;
     font-size: 18px;
     padding-top: 4%;
-    border-top: $pink1 solid 4px
+    border-top: $pink1 solid 4px;
   }
 
   .role {
@@ -395,24 +467,25 @@ table {
 footer {
   padding: 25px 0;
   text-align: center;
-  background: black;
+  background: $blue1;
 
   a {
     color: #858380;
-    font-size: .90rem;
+    font-size: 0.9rem;
     text-decoration: none;
-    transition: color .2s;
+    transition: color 0.2s;
 
     &:hover {
-      color: #e4d0d0
+      color: #e4d0d0;
     }
   }
 }
 
 #mentions {
+  background: $blue1;
   a {
     color: $blue2;
-    transition: color .2s;
+    transition: color 0.2s;
 
     &:hover {
       color: $pink1;
@@ -434,7 +507,8 @@ footer {
 }
 
 @media (max-width: 600px) {
-  section p, td {
+  section p,
+  td {
     font-size: 14px;
   }
 
@@ -458,121 +532,96 @@ footer {
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("/static/fonts/montserrat-ext-400.woff2") format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("/static/fonts/montserrat-400.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("/static/fonts/montserrat-ext-700.woff2") format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  src: url("../fonts/montserrat-700.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
+    U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("/static/fonts/montserrat-700.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-stretch: 100%;
   font-display: swap;
-  src: url("/static/fonts/open-sans-ext-400.woff2") format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  src: url("../fonts/open-sans-400.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
+    U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url("/static/fonts/open-sans-400.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin-ext */
-@font-face {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
   font-stretch: 100%;
   font-display: swap;
-  src: url("/static/fonts/open-sans-ext-700.woff2") format('woff2');
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  src: url("../fonts/open-sans-700.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
+    U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-
 @font-face {
-  font-family: 'Open Sans';
+  font-family: "Russo One";
   font-style: normal;
   font-weight: 700;
-  font-stretch: 100%;
   font-display: swap;
-  src: url("/static/fonts/open-sans-700.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: url("../fonts/russo-one.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
+    U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-
 @font-face {
-  font-family: 'Russo One';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("/static/fonts/russo-one.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'Font Awesome 6 Free';
+  font-family: "Font Awesome 6 Free";
   font-style: normal;
   font-weight: 900;
   font-display: swap;
-  src: url("/static/fonts/fa-solid-900.woff2") format("woff2");
+  src: url("../fonts/fa-solid-900.woff2") format("woff2");
 }
-
 @font-face {
-  font-family: 'Font Awesome 6 Brands';
+  font-family: "Font Awesome 6 Brands";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("/static/fonts/fa-brands-400.woff2") format("woff2");
+  src: url("../fonts/fa-brands-400.woff2") format("woff2");
 }
 
-.fab, .fa-brands {
+@font-face {
+  font-family: "Zorque";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/zorque.ttf") format("ttf");
+}
+
+.fab,
+.fa-brands {
   font-weight: 400;
-  font-family: 'Font Awesome 6 Brands';
+  font-family: "Font Awesome 6 Brands";
 }
 
-.fa-instagram:before {content: "\f16d"}
-.fa-facebook:before {content: "\f09a"}
-.fa-discord:before {content: "\f392"}
-.fa-youtube:before {content: "\f167"}
+.fa-instagram:before {
+  content: "\f16d";
+}
+.fa-facebook:before {
+  content: "\f09a";
+}
+.fa-discord:before {
+  content: "\f392";
+}
+.fa-youtube:before {
+  content: "\f167";
+}
 
-.fas, .fa-solid {
-  font-family: 'Font Awesome 6 Free';
+.fas,
+.fa-solid {
+  font-family: "Font Awesome 6 Free";
   font-weight: 900;
 }
 
-.fa-arrow-up::before {content: "\f062"}
-.fa-gamepad::before {content: "\f11b"}
+.fa-arrow-up::before {
+  content: "\f062";
+}
+.fa-gamepad::before {
+  content: "\f11b";
+}

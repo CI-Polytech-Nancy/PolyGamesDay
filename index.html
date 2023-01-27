@@ -18,15 +18,11 @@
 
   <link rel="preload" as="font" type="font/woff2" href="/static/fonts/fa-solid-900.woff2" crossorigin />
   <link rel="preload" as="font" type="font/woff2" href="/static/fonts/fa-brands-400.woff2" crossorigin />
-  <link rel="preload" as="font" type="font/woff2" href="/static/fonts/montserrat-400.woff2" crossorigin />
-  <link rel="preload" as="font" type="font/woff2" href="/static/fonts/montserrat-ext-400.woff2" crossorigin />
   <link rel="preload" as="font" type="font/woff2" href="/static/fonts/montserrat-700.woff2" crossorigin />
-  <link rel="preload" as="font" type="font/woff2" href="/static/fonts/montserrat-ext-700.woff2" crossorigin />
   <link rel="preload" as="font" type="font/woff2" href="/static/fonts/open-sans-400.woff2" crossorigin />
-  <link rel="preload" as="font" type="font/woff2" href="/static/fonts/open-sans-ext-400.woff2" crossorigin />
   <link rel="preload" as="font" type="font/woff2" href="/static/fonts/open-sans-700.woff2" crossorigin />
-  <link rel="preload" as="font" type="font/woff2" href="/static/fonts/open-sans-ext-400.woff2" crossorigin />
   <link rel="preload" as="font" type="font/woff2" href="/static/fonts/russo-one.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/ttf" href="/static/fonts/zorque.ttf" crossorigin />
 
   <link rel="preload" as="style" type="text/css" href="/static/css/style.css" onload="this.onload=null;this.rel='stylesheet';" />
 
@@ -50,35 +46,43 @@
 
 <section id="intro" style="background-image: url('static/images/background.webp')">
   <div>
-    <h1>Poly Games Days</h1>
+    <h1>Poly Games Days <h3>25 Mars 2023 - 6<sup>e</sup> édition</h3></h1>
     <a href="https://www.instagram.com/club_info_polytech_nancy/" target="_blank" aria-label="Notre Instagram"><span class="fab fa-instagram"></span></a>
     <a href="https://www.discord.gg/PMNFaNG" target="_blank"><span class="fab fa-discord" aria-label="Notre Discord"></span></a>
     <a href="https://www.facebook.com/ClubInfoPolytechNancy" target="_blank" aria-label="Notre Facebook"><span class="fab fa-facebook"></span></a>
     <a href="https://www.youtube.com/channel/UCkh5EzQc0l9Wi-muVNXbYQw" target="_blank" aria-label="Notre Youtube"><span class="fab fa-youtube"></span></a>
+    
   </div>
 </section>
 
 <section id="event">
+    
+  
+
   <div class="container">
     <h2>Présentation</h2>
-    <p>Les <b>Poly Games Days</b>, c’est avant tout un concept créé il y a maintenant cinq ans par des étudiants pour
-      des étudiants :<br><br>
-      Cet événement permet à des équipes de s’affronter lors de <b>compétitions sur plusieurs jeux</b>.
-      Tu aimes moins la compétition ? Pas de soucis, des <b>jeux de société et des consoles</b> sont disponibles en <b>libre accès</b>.
-      Donc si tu as envie de jouer avec tes amis, que ce soit pour t'amuser ou pour gagner, viens aux Poly
-      Games Days !<br><br>
-      À la clé, <b>500€ et du matériel gaming</b> à gagner, alors n'hésite plus et inscris-toi !
-    </p>
+    <p>
+      <b>Le Poly Games Day</b>, c’est avant tout un concept créé il y a maintenant six ans par des étudiants pour des étudiants.<br><br>
+      Viens affronter tes potes sur <b>Mario Kart</b> ou ramène ton équipe sur <b>LoL</b> pour terrasser tes adversaires ! <br>
+      <b>Tu préfères chiller avec tes amis ?</b> Pas de soucis, des consoles sont disponibles en libre accès. <br><br>
+      Donc si tu as envie de jouer avec tes amis, que ce soit pour t'amuser ou pour gagner, <b>viens aux Poly Games Day !</b><br>
 
+      À la clé un <b>gros cashprize</b> pour League of Legends et Mario Kart alors n'hésite plus et inscris-toi ! <br>
+    </p>
     <p id="notice">Cette compétition n'est pas affiliée à Riot Games, Inc. ni parrainée par cette dernière ou League of Legends Esports.</p>
     <div class="row">
       <div class="column">
         <img src="static/images/games/game1.webp" alt="Rocket League">
-        <button onclick="showModal(0)">Informations</button>
+        <button onclick="showModal(0)">Inscriptions</button>
       </div>
       <div class="column">
         <img src="static/images/games/game2.webp" alt="League Of Legends">
-        <button onclick="showModal(1)">Informations</button>
+        <button onclick="showModal(1)">Inscriptions</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+      <button onclick="window.open('https://www.billetweb.fr/shop.php?event=polygamesdays1&popup=1', 'Reserver', 'width=650, height=600, top=100, left=100, toolbar=no, resizable=yes, scrollbars=yes, status=no'); w.focus(); return false;">Inscriptions libres</button>
       </div>
     </div>
   </div>
@@ -86,19 +90,15 @@
   <div class="overlay">
     <div class="modal">
       <div class="header">
-        <span>Rocket League</span>
+        <span>Mario Kart</span>
         <button onclick="closeModals()">&times;</button>
       </div>
       <div class="content">
         <span>
-          Le tournoi s'organise de la manière suivante :<br><br>
-          • Affrontements en équipes de 2 personnes<br>
-          • Arbre de tournoi à double élimination<br>
-          • Matchs en BO3 et finale en BO5<br><br>
-          Vous devrez payer 5€ supplémentaires si vous n'êtes pas cotisant et que vous prennez le tarif cotisant.
+          Informations à venir...
         </span>
       </div>
-      <a href="https://www.billetweb.fr/shop.php?event=polygamesdays1" onclick="let w=window.open('https://www.billetweb.fr/shop.php?event=polygamesdays1&popup=1', 'Reserver', 'width=650, height=600, top=100, left=100, toolbar=no, resizable=yes, scrollbars=yes, status=no'); w.focus(); return false;">S'inscrire</a>
+      <a href="https://www.billetweb.fr/shop.php?event=polygamesdays1" onclick="window.open('https://www.billetweb.fr/shop.php?event=polygamesdays1&popup=1', 'Reserver', 'width=650, height=600, top=100, left=100, toolbar=no, resizable=yes, scrollbars=yes, status=no'); w.focus(); return false;">S'inscrire</a>
     </div>
   </div>
 
@@ -110,11 +110,7 @@
       </div>
       <div class="content">
         <span>
-          Le tournoi s'organise de la manière suivante :<br><br>
-          • Affrontements en équipes de 5 personnes<br>
-          • Phase de poules en BO1, quart et demi finales en BO3 et finale en BO5<br>
-          • Poules de 4 équipes, seulement les 2 meilleures se qualifient<br><br>
-          Vous devrez payer 5€ supplémentaires si vous n'êtes pas cotisant et que vous prennez le tarif cotisant.
+          Informations à venir...
         </span>
       </div>
       <a href="https://www.billetweb.fr/shop.php?event=polygamesdays1" onclick="window.open('https://www.billetweb.fr/shop.php?event=polygamesdays1&popup=1', 'Reserver', 'width=650, height=600, top=100, left=100, toolbar=no, resizable=yes, scrollbars=yes, status=no'); w.focus(); return false;">S'inscrire</a>
@@ -122,70 +118,86 @@
   </div>
 </section>
 
+<section id = slideshow>
+  <div class="slideshow-container">
+    <div class="mySlides">
+      <img src="static/images/slideshow/1.webp" style="width:100%"  >
+    </div>
+  
+    <div class="mySlides">
+      <img src="static/images/slideshow/2.webp" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <img src="static/images/slideshow/3.webp" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="static/images/slideshow/4.webp" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="static/images/slideshow/5.webp" style="width:100%">
+    </div>
+
+
+    <div class="mySlides">
+      <img src="static/images/slideshow/7.webp" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="static/images/slideshow/8.webp" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="static/images/slideshow/9.webp" style="width:100%"> 
+    </div>
+
+    <div class="mySlides">
+      <img src="static/images/slideshow/10.webp" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="static/images/slideshow/11.webp" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="static/images/slideshow/12.webp" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="static/images/slideshow/13.webp" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="static/images/slideshow/15.webp" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="static/images/slideshow/16.webp" style="width:100%">  
+    </div>
+
+    <div class="mySlides">
+      <img src="static/images/slideshow/17.webp" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <img src="static/images/slideshow/18.webp" style="width:100%">
+    </div>
+    
+
+  
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+</section>
+
 <section id="calendar">
   <div class="container">
     <h2>Calendrier</h2>
-    <p>Les Poly Games Days auront lieu le <b>Samedi 26 Mars</b>, de 8 heures à 23 heures :</p>
-
-    <table>
-      <tr>
-        <td id="empty"></td>
-        <td class="room">Salle F310</td>
-        <td class="room">Salle de conférence</td>
-      </tr>
-      <tr>
-        <td class="hour">8:00</td>
-        <td></td>
-        <td rowspan="3" class="LoL">League of Legend</td>
-      </tr>
-      <tr>
-        <td class="hour">9:00</td>
-        <td rowspan="2" class="RL">Rocket League</td>
-      </tr>
-      <tr><td class="hour">10:00</td></tr>
-      <tr>
-        <td class="hour">10:45</td>
-        <td colspan="2" class="break">Pause</td>
-      </tr>
-      <tr>
-        <td class="hour">11:00</td>
-        <td class="RL">Rocket League</td>
-        <td class="LoL">League of Legend</td>
-      </tr>
-      <tr>
-        <td class="hour">12:00</td>
-        <td rowspan="2" colspan="2" class="break">Repas</td>
-      </tr>
-      <tr><td class="hour">13:00</td></tr>
-      <tr>
-        <td class="hour">14:00</td>
-        <td rowspan="3" class="RL">Rocket League</td>
-        <td rowspan="3" class="LoL">League of Legend</td>
-      </tr>
-      <tr><td class="hour">15:00</td></tr>
-      <tr><td class="hour">16:00</td></tr>
-      <tr>
-        <td class="hour">16:45</td>
-        <td colspan="2" class="break">Pause</td>
-      </tr>
-      <tr>
-        <td class="hour">17:00</td>
-        <td rowspan="2" class="RL">Rocket League</td>
-        <td rowspan="2" class="LoL">League of Legend</td>
-      </tr>
-      <tr><td class="hour">18:00</td></tr>
-      <tr>
-        <td class="hour">19:00</td>
-        <td colspan="2" class="break">Repas</td>
-      </tr>
-      <tr>
-        <td class="hour">20:00</td>
-        <td rowspan="3" class="RL">Rocket League</td>
-        <td rowspan="3" class="LoL">League of Legend</td>
-      </tr>
-      <tr><td class="hour">21:00</td></tr>
-      <tr><td class="hour">22:00</td></tr>
-    </table>
+    <p>Les Poly Games Days auront lieu le <b>Samedi 26 Mars</b>, de 8 heures à 23 heures</p>
+    <h1>Planning à venir</h1>
+    
   </div>
 </section>
 
@@ -198,72 +210,71 @@
 
     <div class="grid">
       <div class="column" id="show">
-        <img src="static/images/staff/clara.webp" alt="Clara" id="clara">
-        <div class="name">Clara Dubost</div>
-        <div class="role">Présidente</div>
+        <img src="static/images/staff/thimote.webp" alt="Clara" id="clara">
+        <div class="name">GARAVEL Thimote </div>
+        <div class="role">Président</div>
       </div>
       <div class="column">
-        <img src="static/images/staff/sebastien.webp" alt="Sébastien">
-        <div class="name">Sebastien Meynet</div>
+        <img src="static/images/staff/thomasfro.webp" alt="Julien">
+        <div class="name">FROGER-BESSIERE Thomas</div>
+        <div class="role">Chargé Technique</div>
+      </div>
+      <div class="column">
+        <img src="static/images/staff/yann.webp" alt="Maéric">
+        <div class="name">PHILLOT Yann</div>
+        <div class="role">Chargé Logistique</div>
+      </div>
+      <div class="column">
+        <img src="static/images/staff/thomaslucq.webp" alt="Alban">
+        <div class="name">LUCQ Thomas </div>
+        <div class="role">Chargé Animation</div>
+      </div>
+      <div class="column">
+        <img src="static/images/staff/cecile.webp" alt="Paul">
+        <div class="name">LE RALLEC Cécile</div>
+        <div class="role">Chargée Communication</div>
+      </div>
+      <div class="column">
+        <img src="static/images/staff/thomasloct.webp" alt="Hugo">
+        <div class="name">LOCTIN Thomas</div>
+        <div class="role">Chargé Partenariats</div>
+      </div>
+      <div class="column">
+        <img src="static/images/staff/clara.webp" alt="Sébastien">
+        <div class="name">DUBOST Clara</div>
         <div class="role">Ex-Président</div>
       </div>
       <div class="column">
         <img src="static/images/staff/gabriel.webp" alt="Gabriel">
-        <div class="name">Gabriel Mouchette</div>
-        <div class="role">Chargé Technique</div>
-      </div>
-      <div class="column">
-        <img src="static/images/staff/julien.webp" alt="Julien">
-        <div class="name">Julien Pistre</div>
-        <div class="role">Chargé Développement</div>
-      </div>
-      <div class="column">
-        <img src="static/images/staff/maeric.webp" alt="Maéric">
-        <div class="name">Maéric Debucquet</div>
-        <div class="role">Chargé Logistique</div>
-      </div>
-      <div class="column">
-        <img src="static/images/staff/alban.webp" alt="Alban">
-        <div class="name">Alban Charton</div>
-        <div class="role">Chargé Animation</div>
-      </div>
-      <div class="column">
-        <img src="static/images/staff/paul.webp" alt="Paul">
-        <div class="name">Paul Vincenot</div>
-        <div class="role">Chargé Communication</div>
-      </div>
-      <div class="column">
-        <img src="static/images/staff/hugo.webp" alt="Hugo">
-        <div class="name">Hugo Simeoni</div>
-        <div class="role">Chargé Partenariats</div>
+        <div class="name">MOUCHETTE Gabriel</div>
+        <div class="role">Ex-Chargé Technique</div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="sponsors">
-  <div class="container">
-    <h2>Sponsors</h2>
 
-    <img src="static/images/sponsors/sopra.webp" id="sopra" alt="Sopra Steria">
-    <p>Sopra Steria est l’un des leaders européens du conseil, des services numériques et de l’édition de logiciels.
-      Il aide ses clients à mener leur transformation digitale et à obtenir des bénéfices concrets et durables.
-      Il apporte également une réponse globale aux enjeux de compétitivité des grandes entreprises et organisations,
-      combinant une connaissance approfondie des secteurs d’activité et des technologies innovantes à une approche
-      résolument collaborative. Sopra Steria place l’humain au centre de son action et s’engage auprès de ses clients
-      à tirer le meilleur parti du digital pour construire un avenir positif.</p>
 
-    <img src="static/images/sponsors/boulanger.webp" id="boulanger" alt="Boulanger">
-    <p>Boulanger est le spécialiste des équipements de la maison en électroménager et multimédia.
-      Leur offre de 25 000 références regroupe les indispensables du quotidien.
-      Boulanger met tout son savoir-faire au service de ses clients, notamment grâce à leurs marques exclusives et leurs nombreux services d’accompagnement</p>
-  </div>
-</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <button onclick="topFunction()" id="topBtn" title="Remonter"><span class="fas fa-arrow-up"></span></button>
 
 <footer>
-  <a href="https://polygamesdays.fr/mentions-legales">Club Informatique Polytech Nancy © 2022</a>
+  <a href="https://polygamesdays.fr/mentions-legales">Club Informatique Polytech Nancy © 2023</a>
 </footer>
 
 <script src="static/script.js" async></script>
