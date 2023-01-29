@@ -209,6 +209,10 @@ section #notice {
 #event b {
     font-weight: 700;
 }
+#event a {
+    color: #69699f;
+    text-decoration: underline #69699f;
+}
 #event .column {
     width: 100%;
     overflow: hidden;

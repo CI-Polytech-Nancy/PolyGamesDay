@@ -242,8 +242,12 @@ section {
 }
 
 #event {
-  b{
+  b {
     font-weight: 700;
+  }
+  a{
+    color: $blue2;
+    text-decoration: underline $blue2;
   }
   .column {
     width: 100%;
