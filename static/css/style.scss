@@ -189,10 +189,13 @@ header {
 section {
   &:nth-child(2n + 1) {
     background-color: $blue1;
+    color: $blue2;
   }
 
   &:nth-child(2n) {
     background-color: $blue2;
+    color: $blue1;
+    
   }
 
   h2 {
@@ -486,9 +489,7 @@ footer {
 }
 
 #mentions {
-  background: $blue1;
   a {
-    color: $blue2;
     transition: color 0.2s;
 
     &:hover {
