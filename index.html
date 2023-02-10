@@ -8,13 +8,13 @@
   <meta name="description" content="La compétition multi-gaming créée par des étudiants pour des étudiants. Que ce soit pour s'amuser ou pour try-hard, venez vous affronter et jouer ensemble !"" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Poly Games Day" />
+  <meta property="og:title" content="Poly Games Days" />
   <meta property="og:description" content="La compétition multi-gaming créée par des étudiants pour des étudiants. Que ce soit pour s'amuser ou pour try-hard, venez vous affronter et jouer ensemble !" />
   <meta property="og:url" content="https://polygamesdays.fr/" />
   <meta property="og:image" content="static/images/logo.webp" />
-  <meta content="#D22B2B" data-react-helmet="true" name="theme-color" />
+  <meta content="#e22f8a" data-react-helmet="true" name="theme-color" />
 
-  <title>Poly Games Day</title>
+  <title>Poly Games Days</title>
 
   <link rel="preload" as="font" type="font/woff2" href="static/fonts/fa-solid-900.woff2" crossorigin />
   <link rel="preload" as="font" type="font/woff2" href="static/fonts/fa-brands-400.woff2" crossorigin />
@@ -25,15 +25,14 @@
 
   <link rel="preload" as="style" type="text/css" href="static/css/style.css" onload="this.onload=null;this.rel='stylesheet';" />
 
-  <link rel="icon" href="static/images/favicon.webp" />
+  <link rel="icon" href="static/images/logo.webp" />
 </head>
 
 <body>
 <header>
   <div id="logo">
     <span class="fas fa-gamepad"></span>
-    <a href="https://polygamesdays.fr" id="long"> Poly Games Day</a>
-    <a href="https://polygamesdays.fr" id="short">PGD</a>
+    <a href="/"> </a>
   </div>
   <nav>
     <a href="#event">Evenement</a>
@@ -43,22 +42,20 @@
   </nav>
 </header>
 
+
 <section id="intro" style="background-image: url('static/images/background.webp')">
   <div>
-    <h1>Poly Games Day <h3>25 Mars 2023 - 6<sup>e</sup> édition</h3></h1>
+    <h1>Poly Games Day</h1><h3></h3>
     <a href="https://www.instagram.com/club_info_polytech_nancy/" target="_blank" aria-label="Notre Instagram"><span class="fab fa-instagram"></span></a>
     <a href="https://www.discord.gg/PMNFaNG" target="_blank"><span class="fab fa-discord" aria-label="Notre Discord"></span></a>
     <a href="https://www.facebook.com/ClubInfoPolytechNancy" target="_blank" aria-label="Notre Facebook"><span class="fab fa-facebook"></span></a>
     <a href="https://www.youtube.com/channel/UCkh5EzQc0l9Wi-muVNXbYQw" target="_blank" aria-label="Notre Youtube"><span class="fab fa-youtube"></span></a>
     <a href="https://www.twitch.tv/ci_polytech_nancy" target="_blank" aria-label="Notre chaîne Twitch"><span class="fab fa-twitch"></span></a>
-    
   </div>
 </section>
 
-<section id="event">
-    
-  
 
+<section id="event">
   <div class="container">
     <h2>Présentation</h2>
     <p>
@@ -71,54 +68,10 @@
 
       P.S. : Si tu cherches des coéquipiers pour LoL, n'hésite pas à aller sur notre <a href="https://www.discord.gg/PMNFaNG" target="_blank">Discord</a> !
     </p>
-    <p id="notice">Cette compétition n'est pas affiliée à Riot Games, Inc. ni parrainée par cette dernière ou League of Legends Esports.</p>
-    <div class="row">
-      <div class="column">
-        <img src="static/images/games/game1.webp" alt="Rocket League">
-        <button onclick="showModal(0)">Inscriptions</button>
-      </div>
-      <div class="column">
-        <img src="static/images/games/game2.webp" alt="League Of Legends">
-        <button onclick="showModal(1)">Inscriptions</button>
-      </div>
-    </div>
-    <div class="row">
-      <div class="column">
-      <button onclick="window.open('https://www.billetweb.fr/shop.php?event=polygamesdays1&popup=1', 'Reserver', 'width=650, height=600, top=100, left=100, toolbar=no, resizable=yes, scrollbars=yes, status=no'); w.focus(); return false;">Inscriptions libres</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="overlay">
-    <div class="modal">
-      <div class="header">
-        <span>Mario Kart</span>
-        <button onclick="closeModals()">&times;</button>
-      </div>
-      <div class="content">
-        <span>
-          Informations à venir...
-        </span>
-      </div>
-      <a href="https://www.billetweb.fr/shop.php?event=polygamesdays1" onclick="window.open('https://www.billetweb.fr/shop.php?event=polygamesdays1&popup=1', 'Reserver', 'width=650, height=600, top=100, left=100, toolbar=no, resizable=yes, scrollbars=yes, status=no'); w.focus(); return false;">S'inscrire</a>
-    </div>
-  </div>
-
-  <div class="overlay">
-    <div class="modal">
-      <div class="header">
-        <span>League of Legend</span>
-        <button onclick="closeModals()">&times;</button>
-      </div>
-      <div class="content">
-        <span>
-          Informations à venir...
-        </span>
-      </div>
-      <a href="https://www.billetweb.fr/shop.php?event=polygamesdays1" onclick="window.open('https://www.billetweb.fr/shop.php?event=polygamesdays1&popup=1', 'Reserver', 'width=650, height=600, top=100, left=100, toolbar=no, resizable=yes, scrollbars=yes, status=no'); w.focus(); return false;">S'inscrire</a>
-    </div>
+    <!--<p id="notice">Cette compétition n'est pas affiliée à Riot Games, Inc. ni parrainée par cette dernière ou League of Legends Esports.</p>-->
   </div>
 </section>
+
 
 <section id = slideshow>
   <div class="slideshow-container">
@@ -183,22 +136,41 @@
     <div class="mySlides">
       <img src="static/images/slideshow/18.webp" style="width:100%">
     </div>
-    
 
-  
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
 </section>
 
+
+<section id="inscriptions">
+  <div class="container">
+    <h2>Inscriptions</h2>
+    <p>Jeux libres</p>
+    <p>League of Legends</p>
+    <p>Mario Kart</p>
+  </div>
+</section>
+
+
 <section id="calendar">
   <div class="container">
     <h2>Calendrier</h2>
-    <p>Le Poly Games Day aura lieu le <b>Samedi 25 Mars</b>, de 8 heures à 23 heures</p>
+    <p>Les Poly Games Days auront lieu le <b>Samedi 25 Mars</b>, de 8 heures à 23 heures</p>
     <h1>Planning à venir</h1>
     
   </div>
 </section>
+
+
+
+<section id="sponsors">
+  <div class="container">
+    <h2>Sponsors</h2>
+    <img src="static/images/sponsors/univ-esport.png" alt="Universit' E-Sport">
+  </div>
+</section>
+
 
 <section id="staff">
   <div class="container">
@@ -252,30 +224,11 @@
   </div>
 </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<section id="footer">
+  <a href="mentions-legales.html">Club Informatique Polytech Nancy © 2023</a>
+</section>
 
 <button onclick="topFunction()" id="topBtn" title="Remonter"><span class="fas fa-arrow-up"></span></button>
-
-<footer>
-  <a href="https://polygamesdays.fr/mentions-legales">Club Informatique Polytech Nancy © 2023</a>
-</footer>
-
 <script src="static/script.js" async></script>
 </body>
 
