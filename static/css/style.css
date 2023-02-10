@@ -93,7 +93,7 @@ header #logo a::after {
   font-family: "Zorque", sans-serif;
   font-size: 74px;
   text-transform: uppercase;
-  background: -webkit-linear-gradient(#e22f8a, #69699f);
+  background: -webkit-linear-gradient(#e22f8a, #e98ebc);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -101,7 +101,7 @@ header #logo a::after {
 #intro h3 {
   font-family: "Zorque", sans-serif;
   font-size: 34px;
-  background: -webkit-linear-gradient(#69699f, #e22f8a);
+  background: -webkit-linear-gradient(#e98ebc, #e22f8a);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
