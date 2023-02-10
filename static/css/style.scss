@@ -8,7 +8,7 @@ html {
   scroll-behavior: smooth;
 
   body {
-    color: $blue2;
+    color: black;
     font-family: "Open Sans", sans-serif;
 
     &::-webkit-scrollbar {
@@ -19,55 +19,9 @@ html {
       background: $blue1;
     }
 
-    &::-webkit-scrollbar-thumb:hover {
-      background: $pink1;
-    }
-
     &::-webkit-scrollbar-thumb {
-      background: $blue2;
-      border-radius: 30px;
+      background: $pink1;
       transition: all 0.2s;
-    }
-  }
-
-  .slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-
-    .mySlides {      
-      display: none;
-      img{
-        max-height: 500px;
-        width: auto;
-        object-fit: cover;
-        background-position: top top;
-      }
-    }
-
-    .prev,
-    .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      margin-top: -22px;
-      padding: 16px;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.6s ease;
-      border-radius: 0 3px 3px 0;
-      user-select: none;
-
-      &:hover {
-        background-color: $pink1;
-      }
-    }
-
-    .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
     }
   }
 
@@ -82,7 +36,22 @@ html {
     cursor: pointer;
     font-family: inherit;
   }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $pink1;
+    }
+  }
+
+  i {
+    font-style: normal;
+  }
 }
+
 
 header {
   top: 0;
@@ -91,20 +60,14 @@ header {
   line-height: 84px;
   position: sticky;
 
-  color: $blue2;
-  background-color: $blue1;
+  background-color: white;
+  box-shadow: 0 6px 13px -7px rgb(0 0 0 / 20%);
   font-size: 14px;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
 
   a {
-    color: inherit;
-    transition: color 0.2s;
     padding-right: 30px;
-
-    &:hover {
-      color: $pink1;
-    }
   }
 
   nav {
@@ -126,21 +89,6 @@ header {
   }
 }
 
-#topBtn {
-  z-index: 1;
-  opacity: 0;
-  position: fixed;
-  bottom: 29px;
-  right: 30px;
-  background: $blue2;
-  padding: 15px;
-  border-radius: 5px;
-  transition: all 0.2s ease-in;
-
-  &:hover {
-    background: $pink1;
-  }
-}
 
 #intro {
   height: 90vh;
@@ -161,6 +109,7 @@ header {
     -webkit-text-fill-color: transparent;
 
   }
+  
   h3 {
     font-family: "Zorque", sans-serif;
     font-size: 34px;
@@ -180,28 +129,67 @@ header {
     margin: 30px 1% 0 0;
 
     &:hover {
-      color: $blue1;
+      color: black;
     }
   }
 }
 
 
-section {
-  &:nth-child(2n + 1) {
-    background-color: $blue1;
-    color: $blue2;
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  padding: 50px;
+
+  .mySlides {      
+    display: none;
+    margin-top: 4px;
+
+    img {
+      border-radius: 5px;
+      max-height: 500px;
+      width: auto;
+      object-fit: cover;
+    }
   }
 
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.2s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    border-radius: 3px;
+
+    &:hover {
+      color: black;
+      background-color: $pink1;
+    }
+  }
+
+  .prev {
+    left: 0;
+  }
+
+  .next {
+    right: 0;
+  }
+}
+
+
+section {
   &:nth-child(2n) {
     background-color: $blue2;
-    color: $blue1;
-    
   }
 
   h2 {
     margin-bottom: 45px;
-
-    color: $pink1;
     font-family: "Montserrat", sans-serif;
     font-size: 32px;
     font-weight: 700;
@@ -216,7 +204,7 @@ section {
       height: 2px;
       margin-top: 15px;
       left: calc(50% - 32px);
-      background-color: $pink1;
+      background-color: black;
     }
   }
 
@@ -248,136 +236,12 @@ section {
   b {
     font-weight: 700;
   }
-  a{
-    color: $blue2;
+
+  a {
     text-decoration: underline $blue2;
   }
-  .column {
-    width: 100%;
-    overflow: hidden;
-    border-radius: 15px;
-    border: 2px solid $pink1;
-    transition: background-color 0.2s;
-
-    &:not(:first-child) {
-      margin: 25px 0 0 0;
-    }
-
-    img {
-      height: 100px;
-      width: auto;
-      padding: 5vh 0;
-    }
-
-    button {
-      display: block;
-      width: 100%;
-      padding: 10px 0;
-      font-weight: 700;
-      font-size: 16px;
-      background: $pink1;
-      border-top: 2px $pink1 solid;
-      transition: background-color 0.2s;
-
-      &:hover {
-        background-color: $blue1;
-      }
-    }
-  }
-
-  @media (min-width: 960px) {
-    .row {
-      padding: 5px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .column:not(:first-child) {
-      margin: 0 0 0 25px;
-    }
-  }
 }
 
-.overlay {
-  z-index: 2;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: none;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.4);
-
-  .modal {
-    z-index: 2;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    max-width: 90vw;
-
-    transform: translate(-50%, -50%);
-    border: 2px $pink1 solid;
-    border-radius: 15px;
-    overflow: hidden;
-    background-color: $blue1;
-    animation-name: animatetop;
-    animation-duration: 0.2s;
-
-    @keyframes animatetop {
-      from {
-        scale: 0;
-        opacity: 0;
-      }
-      to {
-        scale: 1;
-        opacity: 1;
-      }
-    }
-
-    button {
-      color: $pink1;
-      font-size: 20px;
-      font-weight: 700;
-      transition: color 0.2s;
-      background-color: transparent;
-
-      &:hover,
-      &:focus {
-        color: $blue2;
-      }
-    }
-
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 2px $pink1 solid;
-      padding: 10px 15px;
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-
-    .content {
-      display: block;
-      padding: 10px 15px;
-    }
-
-    a {
-      display: block;
-      padding: 10px 15px;
-      color: $blue1;
-      background: $pink1;
-      font-weight: 700;
-      text-align: center;
-      transition: background-color 0.2s;
-
-      &:hover {
-        background-color: $blue1;
-      }
-    }
-  }
-}
 
 table {
   border-collapse: collapse;
@@ -387,18 +251,18 @@ table {
   td {
     width: 350px;
     height: 40px;
-    color: $blue1;
+    color: black;
     font-weight: 700;
     text-transform: uppercase;
     background-color: $altback;
-    border: 1px solid $blue1;
+    border: 1px solid white;
   }
 
   .room,
   .hour {
     width: 55px;
-    color: $blue1;
-    background-color: $blue1;
+    color: white;
+    background-color: white;
   }
 
   .hour {
@@ -433,7 +297,6 @@ table {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    color: $pink1;
   }
 
   .column {
@@ -448,7 +311,7 @@ table {
     font-weight: 700;
     font-size: 18px;
     padding-top: 4%;
-    border-top: $pink1 solid 4px;
+    border-top: $blue2 solid 4px;
   }
 
   .role {
@@ -465,7 +328,6 @@ table {
     width: 50%;
     height: auto;
     padding: 10px;
-    background: white;
     border-radius: 10px;
     margin: 1% 0 2% 0;
   }
@@ -474,29 +336,9 @@ table {
 footer {
   padding: 25px 0;
   text-align: center;
-  background: $blue1;
-
-  a {
-    color: #858380;
-    font-size: 0.9rem;
-    text-decoration: none;
-    transition: color 0.2s;
-
-    &:hover {
-      color: #e4d0d0;
-    }
-  }
 }
 
 #mentions {
-  a {
-    transition: color 0.2s;
-
-    &:hover {
-      color: $pink1;
-    }
-  }
-
   p {
     padding-bottom: 50px;
     margin: 0;
@@ -504,10 +346,6 @@ footer {
 
   h2:first-child {
     padding-top: 50px;
-  }
-
-  .container {
-    padding: 0;
   }
 }
 
@@ -533,6 +371,22 @@ footer {
     #long {
       display: none;
     }
+  }
+}
+
+#topBtn {
+  z-index: 1;
+  opacity: 0;
+  position: fixed;
+  bottom: 29px;
+  right: 30px;
+  background: $pink1;
+  padding: 15px;
+  border-radius: 5px;
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    background: $pink1;
   }
 }
 
