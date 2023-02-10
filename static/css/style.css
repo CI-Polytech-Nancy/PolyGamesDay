@@ -10,7 +10,7 @@ html body::-webkit-scrollbar {
     width: 7px;
 }
 html body::-webkit-scrollbar-track {
-    background: #92d7c5;
+    background: #99ecec;
 }
 html body::-webkit-scrollbar-thumb:hover {
     background: #e22f8a;
@@ -62,6 +62,7 @@ html * {
     padding: 0;
     border: none;
     text-decoration: none;
+    font-style: normal;
 }
 html button {
     cursor: pointer;
@@ -75,7 +76,7 @@ header {
     line-height: 84px;
     position: sticky;
     color: #69699f;
-    background-color: #92d7c5;
+    background-color: #99ecec;
     font-size: 14px;
     font-weight: 700;
     font-family: "Montserrat", sans-serif;
@@ -155,16 +156,16 @@ header #logo {
     margin: 30px 1% 0 0;
 }
 #intro a:hover {
-    color: #92d7c5;
+    color: #99ecec;
 }
 
 section:nth-child(2n+1) {
-    background-color: #92d7c5;
+    background-color: #99ecec;
     color: #69699f;
 }
 section:nth-child(2n) {
     background-color: #69699f;
-    color: #92d7c5;
+    color: #99ecec;
 }
 section h2 {
     margin-bottom: 45px;
@@ -241,7 +242,7 @@ section #notice {
     transition: background-color 0.2s;
 }
 #event .column button:hover {
-    background-color: #92d7c5;
+    background-color: #99ecec;
 }
 @media (min-width: 960px) {
     #event .row {
@@ -275,7 +276,7 @@ section #notice {
     border: 2px #e22f8a solid;
     border-radius: 15px;
     overflow: hidden;
-    background-color: #92d7c5;
+    background-color: #99ecec;
     animation-name: animatetop;
     animation-duration: 0.2s;
 }
@@ -315,14 +316,14 @@ section #notice {
 .overlay .modal a {
     display: block;
     padding: 10px 15px;
-    color: #92d7c5;
+    color: #99ecec;
     background: #e22f8a;
     font-weight: 700;
     text-align: center;
     transition: background-color 0.2s;
 }
 .overlay .modal a:hover {
-    background-color: #92d7c5;
+    background-color: #99ecec;
 }
 
 table {
@@ -333,17 +334,17 @@ table {
 table td {
     width: 350px;
     height: 40px;
-    color: #92d7c5;
+    color: #99ecec;
     font-weight: 700;
     text-transform: uppercase;
     background-color: #fbfefe;
-    border: 1px solid #92d7c5;
+    border: 1px solid #99ecec;
 }
 table .room,
 table .hour {
     width: 55px;
-    color: #92d7c5;
-    background-color: #92d7c5;
+    color: #99ecec;
+    background-color: #99ecec;
 }
 table .hour {
     vertical-align: top;
@@ -408,7 +409,7 @@ table .break {
 footer {
     padding: 25px 0;
     text-align: center;
-    background: #92d7c5;
+    background: #99ecec;
 }
 footer a {
     color: #858380;
