@@ -12,11 +12,10 @@ window.onscroll = function() {
 };
 
 
-setInterval(function(){ plusSlides(1); }, 3000);
+setInterval(function(){ plusSlides(1); }, 5000);
 
-var slideIndex = 1;
+var slideIndex = Math.floor(Math.random() * document.getElementsByClassName("mySlides").length) + 1;
 showSlides(slideIndex);
-showSlides(slideIndex = Math.floor(Math.random() * document.getElementsByClassName("mySlides").length) + 1); 
 
 
 function plusSlides(n) {
