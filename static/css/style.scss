@@ -117,9 +117,6 @@ header {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    sup{
-      font-size: 14px}
-
     &::after {
       text-transform: uppercase;
       content: "25 Mars 2023 - 6e édition ";
@@ -137,19 +134,14 @@ header {
     transition: color 0.2s ease;
     margin: 30px 1% 0 0;
 
-    &:hover {
-      color: $pink1}
+    &:hover {color: $pink1}
   }
 }
 
 
 section {
-  &:nth-child(2n+1) {
-    background-color: #99ecec;
-  }
-
-  &:nth-child(2n) {
-    background-color: $blue1}
+  &:nth-child(2n+1) {background-color: #99ecec;}
+  &:nth-child(2n) {background-color: $blue1}
 
   h2 {
     margin-bottom: 45px;
@@ -181,25 +173,70 @@ section {
     color: #6d6565;
     font-style: italic;
     font-size: 0.75rem;
+    margin-bottom: 0;
   }
 }
 
 .container {
-  max-width: 70vw;
+  max-width: 65vw;
   margin: 0 auto;
   padding: 50px 0;
   text-align-last: center;
-
-  @media (min-width: 1300px) {
-    max-width: 70vw}
 }
 
-#event {
-  b {
-    font-weight: 700}
 
-  a {
-    text-decoration: underline black}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: black;
+
+  .column {
+    min-width: 0;
+    max-width: 275px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 5px;
+  }
+  
+  img {
+    height: auto;
+    max-width: 50%;
+    vertical-align: bottom;
+  }
+  
+  span {display: block;}
+  
+  .name {
+    font-weight: 700;
+    font-size: 18px;
+    padding-top: 4%;
+    border-top: $blue1 solid 4px;
+  }
+  
+  .role {
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 4%;
+  }
+}
+
+
+#event {
+  b {font-weight: 700}
+  a {text-decoration: underline black}
+}
+
+
+#inscriptions {
+  .column:first-child img {
+    margin-top: 12px;
+  }
+
+  img {
+    max-width: 65%;
+    padding: 4% 0;
+  }
 }
 
 
@@ -241,11 +278,8 @@ section {
     }
   }
 
-  .prev {
-    left: 0}
-
-  .next {
-    right: 0}
+  .prev {left: 0}
+  .next {right: 0}
 }
 
 
@@ -264,66 +298,24 @@ table {
     border: 1px solid white;
   }
 
-  .room,
-  .hour {
+  .room, .hour {
     width: 55px;
     color: white;
     background-color: white;
   }
 
-  .hour {
-    vertical-align: top}
+  .hour {vertical-align: top}
 
   #empty {
     border: none;
     width: 0;
   }
 
-  .LoL {
-    background-color: #894694}
-  .RL {
-    background-color: #1c7ebb}
-  .break {
-    background-color: $pink1}
+  .LoL {background-color: #894694}
+  .RL {background-color: #1c7ebb}
+  .break {background-color: $pink1}
 }
 
-
-#staff {
-  .grid {
-    margin: -10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    color: black;
-  }
-
-  .column {
-    min-width: 0;
-    max-width: 275px;
-    background-color: white;
-    margin: 10px;
-    border-radius: 5px;
-  }
-
-  img {
-    height: auto;
-    max-width: 50%;
-    vertical-align: bottom;
-  }
-
-  .name {
-    font-weight: 700;
-    font-size: 18px;
-    padding-top: 4%;
-    border-top: $blue1 solid 4px;
-  }
-
-  .role {
-    font-size: 14px;
-    font-style: italic;
-    margin-bottom: 4%;
-  }
-}
 
 #sponsors {
   text-align-last: center;
@@ -337,10 +329,12 @@ table {
   }
 }
 
+
 #footer {
   padding: 25px 0;
   text-align: center;
 }
+
 
 #topBtn {
   z-index: 1;
@@ -354,29 +348,27 @@ table {
   transition: all 0.2s ease;
 }
 
+
 #mentions {
   p {
     padding-bottom: 50px;
     margin: 0;
   }
 
-  h2:first-child {
-    padding-top: 50px}
+  h2:first-child {padding-top: 50px}
 
-  .container {
-    padding: 0}
+  .container {padding: 0}
 }
+
 
 @media (max-width: 600px) {
-  section p, td {
-    font-size: 14px}
+  section p, td {font-size: 14px}
 
-  section h2 {
-    font-size: 26px}
+  section h2 {font-size: 26px}
 
-  #sponsors img {
-    width: 80%}
+  #sponsors img {width: 80%}
 }
+
 
 @font-face {
   font-family: "Montserrat";

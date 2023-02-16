@@ -106,9 +106,6 @@ header #logo a::after {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-#intro h3 sup {
-  font-size: 14px;
-}
 #intro h3::after {
   text-transform: uppercase;
   content: "25 Mars 2023 - 6e édition ";
@@ -162,19 +159,48 @@ section #notice {
   color: #6d6565;
   font-style: italic;
   font-size: 0.75rem;
+  margin-bottom: 0;
 }
 
 .container {
-  max-width: 70vw;
+  max-width: 65vw;
   margin: 0 auto;
   padding: 50px 0;
   -moz-text-align-last: center;
        text-align-last: center;
 }
-@media (min-width: 1300px) {
-  .container {
-    max-width: 70vw;
-  }
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: black;
+}
+.grid .column {
+  min-width: 0;
+  max-width: 275px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 5px;
+}
+.grid img {
+  height: auto;
+  max-width: 50%;
+  vertical-align: bottom;
+}
+.grid span {
+  display: block;
+}
+.grid .name {
+  font-weight: 700;
+  font-size: 18px;
+  padding-top: 4%;
+  border-top: #69699f solid 4px;
+}
+.grid .role {
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 4%;
 }
 
 #event b {
@@ -183,6 +209,14 @@ section #notice {
 #event a {
   -webkit-text-decoration: underline black;
           text-decoration: underline black;
+}
+
+#inscriptions .column:first-child img {
+  margin-top: 12px;
+}
+#inscriptions img {
+  max-width: 65%;
+  padding: 4% 0;
 }
 
 .slideshow-container {
@@ -243,8 +277,7 @@ table td {
   background-color: #fbfefe;
   border: 1px solid white;
 }
-table .room,
-table .hour {
+table .room, table .hour {
   width: 55px;
   color: white;
   background-color: white;
@@ -264,37 +297,6 @@ table .RL {
 }
 table .break {
   background-color: #e22f8a;
-}
-
-#staff .grid {
-  margin: -10px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  color: black;
-}
-#staff .column {
-  min-width: 0;
-  max-width: 275px;
-  background-color: white;
-  margin: 10px;
-  border-radius: 5px;
-}
-#staff img {
-  height: auto;
-  max-width: 50%;
-  vertical-align: bottom;
-}
-#staff .name {
-  font-weight: 700;
-  font-size: 18px;
-  padding-top: 4%;
-  border-top: #69699f solid 4px;
-}
-#staff .role {
-  font-size: 14px;
-  font-style: italic;
-  margin-bottom: 4%;
 }
 
 #sponsors {
