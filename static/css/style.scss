@@ -51,7 +51,7 @@ header {
   box-shadow: 0 6px 13px -7px rgb(0 0 0 / 20%);
 
   color: black;
-  background-color: #99ecec;
+  background-color: white;
   font-size: 14px;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
@@ -140,7 +140,6 @@ header {
 
 
 section {
-  &:nth-child(2n+1) {background-color: #99ecec;}
   &:nth-child(2n) {background-color: $blue1}
 
   h2 {
@@ -350,6 +349,8 @@ table {
 
 
 #mentions {
+  background-color: white;
+
   p {
     padding-bottom: 50px;
     margin: 0;
@@ -358,6 +359,16 @@ table {
   h2:first-child {padding-top: 50px}
 
   .container {padding: 0}
+}
+
+
+#error {
+  background-color: white;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -ms-transform: translate(-45%, -50%);
+  transform: translate(-45%, -50%);
 }
 
 

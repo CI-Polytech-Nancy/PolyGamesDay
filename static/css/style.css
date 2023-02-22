@@ -43,7 +43,7 @@ header {
   position: sticky;
   box-shadow: 0 6px 13px -7px rgba(0, 0, 0, 0.2);
   color: black;
-  background-color: #99ecec;
+  background-color: white;
   font-size: 14px;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
@@ -126,9 +126,6 @@ header #logo a::after {
   color: #e22f8a;
 }
 
-section:nth-child(2n+1) {
-  background-color: #99ecec;
-}
 section:nth-child(2n) {
   background-color: #69699f;
 }
@@ -328,6 +325,9 @@ table .break {
   transition: all 0.2s ease;
 }
 
+#mentions {
+  background-color: white;
+}
 #mentions p {
   padding-bottom: 50px;
   margin: 0;
@@ -337,6 +337,14 @@ table .break {
 }
 #mentions .container {
   padding: 0;
+}
+
+#error {
+  background-color: white;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-45%, -50%);
 }
 
 @media (max-width: 600px) {
