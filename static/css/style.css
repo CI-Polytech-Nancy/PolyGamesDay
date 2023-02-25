@@ -158,8 +158,7 @@ section #notice {
   max-width: 65vw;
   margin: 0 auto;
   padding: 50px 0;
-  -moz-text-align-last: center;
-       text-align-last: center;
+  text-align: center;
 }
 
 .grid {
@@ -287,19 +286,11 @@ table .break {
 }
 
 #sponsors {
-  -moz-text-align-last: center;
-       text-align-last: center;
   background-color: white;
-}
-#sponsors .container {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 50px 0;
 }
 #sponsors img {
   padding: 10px;
-  border-radius: 10px;
-  margin: 1% 0 2% 0;
+  margin: 4% 0 2% 0;
   vertical-align: middle;
 }
 #sponsors img.long {
@@ -309,11 +300,6 @@ table .break {
 #sponsors img.square {
   width: auto;
   height: 150px;
-}
-#sponsors .helper {
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
 }
 
 #footer {
