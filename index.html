@@ -80,18 +80,18 @@
 
     <div class="grid">
       <div class="column">
-        <img src="static/images/games/lol.webp">
-        <span class="name"><a href="">League of Legends</a></span>
+        <img src="static/images/games/lol.webp" alt="League of Legends">
+        <span class="name"><a href="/">League of Legends</a></span>
         <span class="role">5v5</span>
       </div>
       <div class="column">
-        <img src="static/images/games/mk.webp">
-        <span class="name"><a href="">Mario Kart</a></span>
+        <img src="static/images/games/mk.webp" alt="Mario Kart">
+        <span class="name"><a href="/">Mario Kart</a></span>
         <span class="role">FFA</span>
       </div>
       <div class="column">
-        <img src="static/images/games/free.webp">
-        <span class="name"><a href="">Inscription Libre</a></span>
+        <img src="static/images/games/free.webp" alt="Jeux libres">
+        <span class="name"><a href="/">Inscription Libre</a></span>
         <span class="role">Salle de jeux</span>
       </div>
     </div>
@@ -101,54 +101,12 @@
 
 <section id ="slideshow">
   <div class="slideshow-container">
-    <div class="mySlides">
-      <img src="static/images/slideshow/1.webp" style="width:100%"  >
-    </div>
-    <div class="mySlides">
-      <img src="static/images/slideshow/3.webp" style="width:100%">
-    </div>
-    <div class="mySlides">
-      <img src="static/images/slideshow/4.webp" style="width:100%">
-    </div>
-    <div class="mySlides">
-      <img src="static/images/slideshow/5.webp" style="width:100%">
-    </div>
-    <div class="mySlides">
-      <img src="static/images/slideshow/7.webp" style="width:100%">
-    </div>
-    <div class="mySlides">
-      <img src="static/images/slideshow/8.webp" style="width:100%">
-    </div>
-    <div class="mySlides">
-      <img src="static/images/slideshow/9.webp" style="width:100%"> 
-    </div>
-    <div class="mySlides">
-      <img src="static/images/slideshow/10.webp" style="width:100%">
-    </div>
-    <div class="mySlides">
-      <img src="static/images/slideshow/11.webp" style="width:100%">
-    </div>
-    <div class="mySlides">
-      <img src="static/images/slideshow/12.webp" style="width:100%">
-    </div>
-    <div class="mySlides">
-      <img src="static/images/slideshow/13.webp" style="width:100%">
-    </div>
-    <div class="mySlides">
-      <img src="static/images/slideshow/15.webp" style="width:100%">
-    </div>
-    <div class="mySlides">
-      <img src="static/images/slideshow/16.webp" style="width:100%">  
-    </div>
-    <div class="mySlides">
-      <img src="static/images/slideshow/17.webp" style="width:100%">
-    </div>
-    <div class="mySlides">
-      <img src="static/images/slideshow/18.webp" style="width:100%">
+    <div id="slide">
+      <img src="static/images/slideshow/1.webp" alt="1" id="slide-img" />
     </div>
 
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <button class="prev" onclick="incrementSlideShow(-1)">&#10094;</button>
+    <button class="next" onclick="incrementSlideShow(1)">&#10095;</button>
   </div>
 </section>
 

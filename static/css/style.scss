@@ -39,6 +39,7 @@ html {
   button {
     cursor: pointer;
     font-family: inherit;
+    background-color: white;
   }
 }
 
@@ -244,14 +245,13 @@ section {
   position: relative;
   margin: auto;
 
-  .mySlides {
-    display: none;
+  #slide {
     padding: 50px;
     margin-top: 3px;
 
     img {
+      width: 100%;
       max-height: 500px;
-      width: auto;
       object-fit: cover;
       border-radius: 5px;
       background-position: top top;
@@ -272,12 +272,10 @@ section {
     user-select: none;
 
     &:hover {
-      color: black;
       background-color: $pink1;
     }
   }
 
-  .prev {left: 0}
   .next {right: 0}
 }
 
