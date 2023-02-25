@@ -77,54 +77,48 @@ header #logo a::after {
 
 #intro {
   height: 90vh;
-  background: fixed center no-repeat;
+  background: url("../images/background.webp") fixed center no-repeat;
   background-size: cover;
 }
 #intro div {
   padding: 10% 0 0 10%;
 }
-#intro span {
-  color: #e22f8a;
-  transition: 0.2s all;
-}
-#intro span:hover {
-  color: black;
-}
 #intro h1 {
-  font-family: "Zorque", sans-serif;
   font-size: 74px;
+  font-family: "Zorque", sans-serif;
   text-transform: uppercase;
   background: -webkit-linear-gradient(#e22f8a, #e98ebc);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-#intro h3 {
-  font-family: "Zorque", sans-serif;
+#intro p {
   font-size: 34px;
+  font-family: "Zorque", sans-serif;
   background: -webkit-linear-gradient(#e98ebc, #e22f8a);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
 }
-#intro h3::after {
+#intro p::after {
   text-transform: uppercase;
   content: "25 Mars 2023 - 6e édition ";
 }
 @media (max-width: 600px) {
-  #intro h3::after {
+  #intro p::after {
     content: "25 Mars 2023\a 6e édition";
     white-space: pre-wrap;
   }
 }
 #intro a {
+  color: #e22f8a;
   font-size: 2.5rem;
-  color: black;
+  margin-right: 1%;
   transition: color 0.2s ease;
-  margin: 30px 1% 0 0;
 }
 #intro a:hover {
-  color: #e22f8a;
+  color: black;
 }
 
 section:nth-child(2n) {
