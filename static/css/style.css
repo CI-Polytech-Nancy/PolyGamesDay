@@ -220,6 +220,7 @@ section #notice {
   margin-top: 3px;
 }
 .slideshow-container #slide img {
+  display: none;
   width: 100%;
   max-height: 500px;
   -o-object-fit: cover;

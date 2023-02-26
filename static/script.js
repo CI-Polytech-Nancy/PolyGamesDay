@@ -12,16 +12,19 @@ window.onscroll = function() {
 };
 
 
+var slideIdx = 1;
 setInterval(function(){ incrementSlideShow(1); }, 5000);
 
 function incrementSlideShow(inc) {
-  var img = document.getElementById("slide-img")
-  var idx = parseInt(img.alt)
+  var images = document.getElementById("slide").getElementsByTagName("img")
 
-  nextIdx = (idx + inc) % 15
-  if (nextIdx == 0)
-    nextIdx = 15
+  nextId = (slideIdx + inc) % images.length
+  if (nextId == 0) {
+    nextId = images.length
+  }
 
-  img.src = "static/images/slideshow/" + nextIdx + ".webp"
-  img.alt = nextIdx
+  images[slideIdx - 1].style.display = "none"
+  images[nextId - 1].style.display = "block"
+
+  slideIdx = nextId
 }
