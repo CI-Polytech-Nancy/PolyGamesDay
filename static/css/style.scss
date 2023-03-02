@@ -142,7 +142,6 @@ section {
     font-size: 32px;
     font-weight: 700;
     text-transform: uppercase;
-    text-align: center;
 
     &::after {
       content: "";
@@ -170,7 +169,7 @@ section {
 }
 
 .container {
-  max-width: 65vw;
+  max-width: 55vw;
   margin: 0 auto;
   padding: 50px 0;
   text-align: center;
@@ -181,7 +180,6 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  color: black;
 
   .column {
     min-width: 0;
@@ -372,8 +370,7 @@ table {
 
 
 @media (max-width: 600px) {
-  section p, td {font-size: 14px}
-
+  section p, td {font-size: 16px}
   section h2 {font-size: 26px}
 
   #sponsors img {width: 80%}
