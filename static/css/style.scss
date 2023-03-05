@@ -271,37 +271,66 @@ section {
 }
 
 
+#calendar figcaption {
+	width: 75%;
+	margin: auto;
+}
+
 table {
-  border-collapse: collapse;
-  text-align: center;
-  margin: 0 auto;
+	border-collapse: collapse;
+	text-align: center;
+	margin: 25px auto;
+  background-color: #1c7ebb;
+
+  tbody {
+    border: 5px solid #fff;
+  }
 
   td {
-    width: 350px;
-    height: 40px;
-    color: white;
-    font-weight: 700;
-    text-transform: uppercase;
-    background-color: #fbfefe;
-    border: 1px solid white;
+    &:not(:first-child) {
+      width: 250px;
+      height: 30px;
+      padding: 5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      border: 2px solid #fff;
+    }
+
+    &:first-child {
+      width: auto;
+      height: 35px;
+      padding: 5px;
+      font-weight: 700;
+      font-size: 0.8rem;
+      position: relative;
+      border-top: none;
+      border-right: 5px solid #fff;
+      top: -23px;
+      text-align: right;
+    }
   }
 
-  .room, .hour {
-    width: 55px;
-    color: white;
-    background-color: white;
+  #jeuxtab td {
+    font-size: 0.8rem;
+    height: 25px;
+    padding: 0;
+    text-shadow: 0 0 7px #444;
   }
 
-  .hour {vertical-align: top}
+  .loltab {background-color: #e98ebc;}
+  .mktab {background-color: #92d7c5;}
+  .pause, .snack {background-color: #1c7ebb;}
+  .repas {background-color: #e22f8a;}
 
-  #empty {
-    border: none;
-    width: 0;
+  .snack {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
   }
 
-  .LoL {background-color: #894694}
-  .RL {background-color: #1c7ebb}
-  .break {background-color: $pink1}
+  .empty {
+    border: none !important;
+    background-color: transparent;
+  }
 }
 
 

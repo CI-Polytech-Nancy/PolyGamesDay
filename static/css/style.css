@@ -248,40 +248,65 @@ section #notice {
   right: 0;
 }
 
+#calendar figcaption {
+  width: 75%;
+  margin: auto;
+}
+
 table {
   border-collapse: collapse;
   text-align: center;
-  margin: 0 auto;
-}
-table td {
-  width: 350px;
-  height: 40px;
-  color: white;
-  font-weight: 700;
-  text-transform: uppercase;
-  background-color: #fbfefe;
-  border: 1px solid white;
-}
-table .room, table .hour {
-  width: 55px;
-  color: white;
-  background-color: white;
-}
-table .hour {
-  vertical-align: top;
-}
-table #empty {
-  border: none;
-  width: 0;
-}
-table .LoL {
-  background-color: #894694;
-}
-table .RL {
+  margin: 25px auto;
   background-color: #1c7ebb;
 }
-table .break {
+table tbody {
+  border: 5px solid #fff;
+}
+table td:not(:first-child) {
+  width: 250px;
+  height: 30px;
+  padding: 5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 2px solid #fff;
+}
+table td:first-child {
+  width: auto;
+  height: 35px;
+  padding: 5px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  position: relative;
+  border-top: none;
+  border-right: 5px solid #fff;
+  top: -23px;
+  text-align: right;
+}
+table #jeuxtab td {
+  font-size: 0.8rem;
+  height: 25px;
+  padding: 0;
+  text-shadow: 0 0 7px #444;
+}
+table .loltab {
+  background-color: #e98ebc;
+}
+table .mktab {
+  background-color: #92d7c5;
+}
+table .pause, table .snack {
+  background-color: #1c7ebb;
+}
+table .repas {
   background-color: #e22f8a;
+}
+table .snack {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+}
+table .empty {
+  border: none !important;
+  background-color: transparent;
 }
 
 #sponsors {
