@@ -282,6 +282,10 @@ table {
 	margin: 25px auto;
   background-color: #1c7ebb;
 
+  .responsive {
+    display: none;
+  }
+
   tbody {
     border: 5px solid #fff;
   }
@@ -403,6 +407,14 @@ table {
   section h2 {font-size: 26px}
 
   #sponsors img {width: 80%}
+  .container {max-width: 80vw;}
+
+  table {
+    td {font-size: 12px;}
+
+    .full {display: none;}
+    .responsive {display: block;}
+  }
 }
 
 

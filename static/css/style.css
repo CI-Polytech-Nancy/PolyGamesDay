@@ -259,6 +259,9 @@ table {
   margin: 25px auto;
   background-color: #1c7ebb;
 }
+table .responsive {
+  display: none;
+}
 table tbody {
   border: 5px solid #fff;
 }
@@ -374,6 +377,18 @@ table .empty {
   }
   #sponsors img {
     width: 80%;
+  }
+  .container {
+    max-width: 80vw;
+  }
+  table td {
+    font-size: 12px;
+  }
+  table .full {
+    display: none;
+  }
+  table .responsive {
+    display: block;
   }
 }
 @font-face {
