@@ -1,6 +1,6 @@
-$blue1: #69699f;
-$blue2: #a4dded;
-$pink1: #e22f8a;
+$blue1: #c6b7f1;
+$blue2: #1c7ebb;
+$pink: #e22f8a;
 
 html {
   scroll-behavior: smooth;
@@ -16,7 +16,7 @@ html {
       background-color: white}
 
     &::-webkit-scrollbar-thumb {
-      background-color: $pink1}
+      background-color: $blue2}
 
     a {
       color: black;
@@ -24,7 +24,7 @@ html {
       transition: color 0.2s;
 
       &:hover {
-        color: $pink1}
+        color: $blue2}
     }
   }
 
@@ -95,19 +95,13 @@ header {
     font-size: 74px;
     font-family: "Zorque", sans-serif;
     text-transform: uppercase;
-    background: -webkit-linear-gradient($pink1, #e98ebc);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: $pink;
   }
 
   p {
     font-size: 34px;
     font-family: "Zorque", sans-serif;
-    background: -webkit-linear-gradient(#e98ebc, $pink1);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: $pink;
     margin-bottom: 10px;
 
     &::after {
@@ -122,12 +116,12 @@ header {
   }
 
   a {
-    color: $pink1;
+    color: $pink;
     font-size: 2.5rem;
     margin-right: 1%;
     transition: color 0.2s ease;
 
-    &:hover {color: black}
+    &:hover {color: $blue2}
   }
 }
 
@@ -169,7 +163,7 @@ section {
 }
 
 .container {
-  max-width: 55vw;
+  max-width: 65vw;
   margin: 0 auto;
   padding: 50px 0;
   text-align: center;
@@ -263,7 +257,7 @@ section {
     user-select: none;
 
     &:hover {
-      background-color: $pink1;
+      background-color: $blue2;
     }
   }
 
@@ -271,9 +265,8 @@ section {
 }
 
 
-#calendar figcaption {
-	width: 75%;
-	margin: auto;
+.responsive {
+  display: none;
 }
 
 table {
@@ -281,10 +274,6 @@ table {
 	text-align: center;
 	margin: 25px auto;
   background-color: #1c7ebb;
-
-  .responsive {
-    display: none;
-  }
 
   tbody {
     border: 5px solid #fff;
@@ -369,11 +358,12 @@ table {
   z-index: 1;
   opacity: 0;
   position: fixed;
-  bottom: 29px;
-  right: 30px;
-  background: $pink1;
-  padding: 15px;
-  border-radius: 5px;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 17px;
+  border-radius: 50%;
+  font-size: 17px;
+  background-color: $blue2;
   transition: all 0.2s ease;
 }
 
@@ -409,12 +399,9 @@ table {
   #sponsors img {width: 80%}
   .container {max-width: 80vw;}
 
-  table {
-    td {font-size: 12px;}
-
-    .full {display: none;}
-    .responsive {display: block;}
-  }
+  table td {font-size: 12px;}
+  .full {display: none;}
+  .responsive {display: block;}
 }
 
 

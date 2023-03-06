@@ -13,7 +13,7 @@ html body::-webkit-scrollbar-track {
   background-color: white;
 }
 html body::-webkit-scrollbar-thumb {
-  background-color: #e22f8a;
+  background-color: #1c7ebb;
 }
 html body a {
   color: black;
@@ -21,7 +21,7 @@ html body a {
   transition: color 0.2s;
 }
 html body a:hover {
-  color: #e22f8a;
+  color: #1c7ebb;
 }
 html * {
   margin: 0;
@@ -87,18 +87,12 @@ header #logo a::after {
   font-size: 74px;
   font-family: "Zorque", sans-serif;
   text-transform: uppercase;
-  background: -webkit-linear-gradient(#e22f8a, #e98ebc);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #e22f8a;
 }
 #intro p {
   font-size: 34px;
   font-family: "Zorque", sans-serif;
-  background: -webkit-linear-gradient(#e98ebc, #e22f8a);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #e22f8a;
   margin-bottom: 10px;
 }
 #intro p::after {
@@ -118,11 +112,11 @@ header #logo a::after {
   transition: color 0.2s ease;
 }
 #intro a:hover {
-  color: black;
+  color: #1c7ebb;
 }
 
 section:nth-child(2n) {
-  background-color: #69699f;
+  background-color: #c6b7f1;
 }
 section h2 {
   margin-bottom: 45px;
@@ -154,7 +148,7 @@ section #notice {
 }
 
 .container {
-  max-width: 55vw;
+  max-width: 65vw;
   margin: 0 auto;
   padding: 50px 0;
   text-align: center;
@@ -184,7 +178,7 @@ section #notice {
   font-weight: 700;
   font-size: 18px;
   padding-top: 4%;
-  border-top: #69699f solid 4px;
+  border-top: #c6b7f1 solid 4px;
 }
 .grid .role {
   font-size: 14px;
@@ -242,15 +236,14 @@ section #notice {
           user-select: none;
 }
 .slideshow-container .prev:hover, .slideshow-container .next:hover {
-  background-color: #e22f8a;
+  background-color: #1c7ebb;
 }
 .slideshow-container .next {
   right: 0;
 }
 
-#calendar figcaption {
-  width: 75%;
-  margin: auto;
+.responsive {
+  display: none;
 }
 
 table {
@@ -258,9 +251,6 @@ table {
   text-align: center;
   margin: 25px auto;
   background-color: #1c7ebb;
-}
-table .responsive {
-  display: none;
 }
 table tbody {
   border: 5px solid #fff;
@@ -338,11 +328,12 @@ table .empty {
   z-index: 1;
   opacity: 0;
   position: fixed;
-  bottom: 29px;
-  right: 30px;
-  background: #e22f8a;
-  padding: 15px;
-  border-radius: 5px;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 17px;
+  border-radius: 50%;
+  font-size: 17px;
+  background-color: #1c7ebb;
   transition: all 0.2s ease;
 }
 
@@ -384,10 +375,10 @@ table .empty {
   table td {
     font-size: 12px;
   }
-  table .full {
+  .full {
     display: none;
   }
-  table .responsive {
+  .responsive {
     display: block;
   }
 }
