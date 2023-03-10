@@ -16,7 +16,11 @@ html {
       background-color: white}
 
     &::-webkit-scrollbar-thumb {
-      background-color: $blue2}
+      background-color: $blue2;
+
+      &:hover {
+        background-color: $pink}
+    }
 
     a {
       color: black;
@@ -273,7 +277,7 @@ table {
 	border-collapse: collapse;
 	text-align: center;
 	margin: 25px auto;
-  background-color: #1c7ebb;
+  background-color: $blue2;
 
   tbody {
     border: 5px solid #fff;
@@ -286,7 +290,7 @@ table {
       padding: 5px;
       font-weight: 700;
       text-transform: uppercase;
-      border: 2px solid #fff;
+      border: 2px solid white;
     }
 
     &:first-child {
@@ -297,7 +301,7 @@ table {
       font-size: 0.8rem;
       position: relative;
       border-top: none;
-      border-right: 5px solid #fff;
+      border-right: 5px solid white;
       top: -23px;
       text-align: right;
     }
@@ -312,8 +316,8 @@ table {
 
   .loltab {background-color: #e98ebc;}
   .mktab {background-color: #92d7c5;}
-  .pause, .snack {background-color: #1c7ebb;}
-  .repas {background-color: #e22f8a;}
+  .pause, .snack {background-color: $blue2;}
+  .repas {background-color: $pink ;}
 
   .snack {
     writing-mode: vertical-lr;
@@ -365,6 +369,10 @@ table {
   font-size: 17px;
   background-color: $blue2;
   transition: all 0.2s ease;
+
+  &:hover {
+    background-color: $pink;
+  }
 }
 
 
@@ -376,9 +384,8 @@ table {
     margin: 0;
   }
 
-  h2:first-child {padding-top: 50px}
-
   .container {padding: 0}
+  h2:first-child {padding-top: 50px}
 }
 
 

@@ -15,6 +15,9 @@ html body::-webkit-scrollbar-track {
 html body::-webkit-scrollbar-thumb {
   background-color: #1c7ebb;
 }
+html body::-webkit-scrollbar-thumb:hover {
+  background-color: #e22f8a;
+}
 html body a {
   color: black;
   text-decoration: none;
@@ -261,7 +264,7 @@ table td:not(:first-child) {
   padding: 5px;
   font-weight: 700;
   text-transform: uppercase;
-  border: 2px solid #fff;
+  border: 2px solid white;
 }
 table td:first-child {
   width: auto;
@@ -271,7 +274,7 @@ table td:first-child {
   font-size: 0.8rem;
   position: relative;
   border-top: none;
-  border-right: 5px solid #fff;
+  border-right: 5px solid white;
   top: -23px;
   text-align: right;
 }
@@ -336,6 +339,9 @@ table .empty {
   background-color: #1c7ebb;
   transition: all 0.2s ease;
 }
+#topBtn:hover {
+  background-color: #e22f8a;
+}
 
 #mentions {
   background-color: white;
@@ -344,11 +350,11 @@ table .empty {
   padding-bottom: 50px;
   margin: 0;
 }
-#mentions h2:first-child {
-  padding-top: 50px;
-}
 #mentions .container {
   padding: 0;
+}
+#mentions h2:first-child {
+  padding-top: 50px;
 }
 
 #error {
