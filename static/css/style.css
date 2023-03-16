@@ -83,12 +83,16 @@ header #logo {
   font-size: 28px;
   padding-left: 3ch;
 }
-header #logo a::after {
+header #logo::before {
+  font-family: "Font Awesome 6 Free";
+  content: "\f11b";
+}
+header #logo::after {
   font-family: "Montserrat", sans-serif;
   content: "Poly Games Day";
 }
 @media (max-width: 600px) {
-  header #logo a::after {
+  header #logo::after {
     content: "PGD";
   }
 }

@@ -90,7 +90,12 @@ header {
     font-size: 28px;
     padding-left: 3ch;
 
-    a::after {
+    &::before {
+      font-family: "Font Awesome 6 Free";
+      content: "\f11b";
+    }
+
+    &::after {
       font-family: "Montserrat", sans-serif;
       content: "Poly Games Day";
 
