@@ -23,12 +23,20 @@ html {
     }
 
     a {
+      display: inline-block;
       color: black;
       text-decoration: none;
-      transition: color 0.2s;
+      transition: all 0.2s ease;
 
       &:hover {
-        color: $blue2}
+        color: $blue2;
+        transform: scale(1.02);
+        -webkit-transform: scale(1.02);
+      }
+    }
+
+    img {
+      user-select: none;
     }
   }
 
@@ -45,6 +53,9 @@ html {
     font-family: inherit;
     background-color: white;
   }
+
+  b {
+    font-weight: 700;}
 }
 
 
@@ -54,6 +65,7 @@ header {
   height: 84px;
   line-height: 84px;
   position: sticky;
+  user-select: none;
   box-shadow: 0 6px 13px -7px rgb(0 0 0 / 20%);
 
   color: black;
@@ -62,12 +74,13 @@ header {
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
 
-  a {
-    padding-right: 30px}
+  a:not(:last-child) {
+    padding-right: 30px;}
 
   nav {
     float: right;
-
+    padding-right: 30px;
+    
     @media (max-width: 1100px) {
       display: none}
   }
@@ -89,27 +102,28 @@ header {
 
 
 #intro {
-  height: 90vh;
+  height: 100vh;
+  height: 100svh;
+  user-select: none;
   background: url('../images/background.webp') fixed center no-repeat;
   background-size: cover;
 
-  div {padding: 10% 0 0 10%}
+  #intro-container {
+    width: fit-content;
+    padding: 10% 10% 0 10%;
+  }
 
   h1 {
+    color: $pink;
     font-size: 74px;
     font-family: "Zorque", sans-serif;
     text-transform: uppercase;
-    color: $pink;
-  }
-
-  p {
-    font-size: 34px;
-    font-family: "Zorque", sans-serif;
-    color: $pink;
-    margin-bottom: 10px;
+    user-select: none;
 
     &::after {
-      text-transform: uppercase;
+      display: block;
+      font-size: 34px;
+      margin: 0 12% 10px 12%;
       content: "25 Mars 2023 - 6e édition ";
 
       @media (max-width: 600px) {
@@ -127,10 +141,38 @@ header {
 
     &:hover {color: $blue2}
   }
+
+  #cta {
+    color: white;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+
+    width: 76%;
+    padding: 10px 0;
+    margin: 0 12%;
+    border-radius: 5px;
+    background-color: $pink;
+    border: $pink solid 2px;
+
+    &:hover {
+      transform: none;
+      background-color: $blue2;
+      border: $blue2 solid 2px;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
 }
 
 
 section {
+  scroll-margin-top: 65px;
   &:nth-child(2n) {background-color: $blue1}
 
   h2 {
@@ -139,6 +181,7 @@ section {
     font-family: "Montserrat", sans-serif;
     font-size: 32px;
     font-weight: 700;
+    user-select: none;
     text-transform: uppercase;
 
     &::after {
@@ -210,12 +253,6 @@ section {
 }
 
 
-#event {
-  b {font-weight: 700}
-  a {text-decoration: underline black}
-}
-
-
 #inscriptions {
   .column:first-child img {
     margin-top: 12px;
@@ -224,6 +261,15 @@ section {
   img {
     max-width: 65%;
     padding: 4% 0;
+  }
+
+  a {
+    font-size: 2rem;
+    margin-top: 10px;
+    transition: color 0.2s ease;
+
+    &:hover {color: $pink}
+    &:not(:last-child) {margin-right: 10px;}
   }
 }
 
@@ -238,8 +284,8 @@ section {
     margin-top: 3px;
 
     img {
-      display: none;
       width: 100%;
+      display: none;
       max-height: 500px;
       object-fit: cover;
       border-radius: 5px;
@@ -332,12 +378,14 @@ table {
 
 
 #sponsors {
+  user-select: none;
   background-color: white;
 
   img {
     padding: 10px;
     margin: 4% 0 2% 0;
     vertical-align: middle;
+    transition: all 0.2s ease;
 
     &.long {
       width: 200px;
@@ -347,6 +395,11 @@ table {
     &.square {
       width: auto;
       height: 150px;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      -webkit-transform: scale(1.05);
     }
   }
 }
@@ -373,6 +426,11 @@ table {
   &:hover {
     background-color: $pink;
   }
+
+  &:active {
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+  }
 }
 
 
@@ -380,12 +438,17 @@ table {
   background-color: white;
 
   p {
-    padding-bottom: 50px;
     margin: 0;
+    padding: 0;
+    text-align: justify;
+
+    &:last-child {
+      margin-bottom: 50px;
+    } 
   }
 
   .container {padding: 0}
-  h2:first-child {padding-top: 50px}
+  h2 {padding-top: 50px}
 }
 
 
@@ -400,6 +463,16 @@ table {
 
 
 @media (max-width: 600px) {
+  #intro h1::after {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  #intro #cta {
+    margin: 0;
+    width: 100%;
+  }
+
   section p, td {font-size: 16px}
   section h2 {font-size: 26px}
 

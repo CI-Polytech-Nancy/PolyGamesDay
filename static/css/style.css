@@ -19,12 +19,20 @@ html body::-webkit-scrollbar-thumb:hover {
   background-color: #e22f8a;
 }
 html body a {
+  display: inline-block;
   color: black;
   text-decoration: none;
-  transition: color 0.2s;
+  transition: all 0.2s ease;
 }
 html body a:hover {
   color: #1c7ebb;
+  transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+}
+html body img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 html * {
   margin: 0;
@@ -38,6 +46,9 @@ html button {
   font-family: inherit;
   background-color: white;
 }
+html b {
+  font-weight: 700;
+}
 
 header {
   top: 0;
@@ -45,6 +56,9 @@ header {
   height: 84px;
   line-height: 84px;
   position: sticky;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   box-shadow: 0 6px 13px -7px rgba(0, 0, 0, 0.2);
   color: black;
   background-color: white;
@@ -52,11 +66,12 @@ header {
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
 }
-header a {
+header a:not(:last-child) {
   padding-right: 30px;
 }
 header nav {
   float: right;
+  padding-right: 30px;
 }
 @media (max-width: 1100px) {
   header nav {
@@ -79,31 +94,36 @@ header #logo a::after {
 }
 
 #intro {
-  height: 90vh;
+  height: 100vh;
+  height: 100svh;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   background: url("../images/background.webp") fixed center no-repeat;
   background-size: cover;
 }
-#intro div {
-  padding: 10% 0 0 10%;
+#intro #intro-container {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10% 10% 0 10%;
 }
 #intro h1 {
+  color: #e22f8a;
   font-size: 74px;
   font-family: "Zorque", sans-serif;
   text-transform: uppercase;
-  color: #e22f8a;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
-#intro p {
+#intro h1::after {
+  display: block;
   font-size: 34px;
-  font-family: "Zorque", sans-serif;
-  color: #e22f8a;
-  margin-bottom: 10px;
-}
-#intro p::after {
-  text-transform: uppercase;
+  margin: 0 12% 10px 12%;
   content: "25 Mars 2023 - 6e édition ";
 }
 @media (max-width: 600px) {
-  #intro p::after {
+  #intro h1::after {
     content: "25 Mars 2023\a 6e édition";
     white-space: pre-wrap;
   }
@@ -117,7 +137,33 @@ header #logo a::after {
 #intro a:hover {
   color: #1c7ebb;
 }
+#intro #cta {
+  color: white;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  width: 76%;
+  padding: 10px 0;
+  margin: 0 12%;
+  border-radius: 5px;
+  background-color: #e22f8a;
+  border: #e22f8a solid 2px;
+}
+#intro #cta:hover {
+  transform: none;
+  background-color: #1c7ebb;
+  border: #1c7ebb solid 2px;
+}
+#intro #cta:active {
+  transform: scale(0.95);
+}
 
+section {
+  scroll-margin-top: 65px;
+}
 section:nth-child(2n) {
   background-color: #c6b7f1;
 }
@@ -127,6 +173,9 @@ section h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 32px;
   font-weight: 700;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   text-transform: uppercase;
 }
 section h2::after {
@@ -189,20 +238,23 @@ section #notice {
   margin-bottom: 4%;
 }
 
-#event b {
-  font-weight: 700;
-}
-#event a {
-  -webkit-text-decoration: underline black;
-          text-decoration: underline black;
-}
-
 #inscriptions .column:first-child img {
   margin-top: 12px;
 }
 #inscriptions img {
   max-width: 65%;
   padding: 4% 0;
+}
+#inscriptions a {
+  font-size: 2rem;
+  margin-top: 10px;
+  transition: color 0.2s ease;
+}
+#inscriptions a:hover {
+  color: #e22f8a;
+}
+#inscriptions a:not(:last-child) {
+  margin-right: 10px;
 }
 
 .slideshow-container {
@@ -215,8 +267,8 @@ section #notice {
   margin-top: 3px;
 }
 .slideshow-container #slide img {
-  display: none;
   width: 100%;
+  display: none;
   max-height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -306,12 +358,16 @@ table .empty {
 }
 
 #sponsors {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   background-color: white;
 }
 #sponsors img {
   padding: 10px;
   margin: 4% 0 2% 0;
   vertical-align: middle;
+  transition: all 0.2s ease;
 }
 #sponsors img.long {
   width: 200px;
@@ -320,6 +376,10 @@ table .empty {
 #sponsors img.square {
   width: auto;
   height: 150px;
+}
+#sponsors img:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
 }
 
 #footer {
@@ -342,18 +402,26 @@ table .empty {
 #topBtn:hover {
   background-color: #e22f8a;
 }
+#topBtn:active {
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+}
 
 #mentions {
   background-color: white;
 }
 #mentions p {
-  padding-bottom: 50px;
   margin: 0;
+  padding: 0;
+  text-align: justify;
+}
+#mentions p:last-child {
+  margin-bottom: 50px;
 }
 #mentions .container {
   padding: 0;
 }
-#mentions h2:first-child {
+#mentions h2 {
   padding-top: 50px;
 }
 
@@ -366,6 +434,14 @@ table .empty {
 }
 
 @media (max-width: 600px) {
+  #intro h1::after {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  #intro #cta {
+    margin: 0;
+    width: 100%;
+  }
   section p, td {
     font-size: 16px;
   }
