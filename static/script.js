@@ -12,19 +12,25 @@ window.onscroll = function() {
 };
 
 
-var slideIdx = 1;
-setInterval(function(){ incrementSlideShow(1); }, 5000);
+var slide = document.getElementById("slide");
+
+if (slide != null) {
+  var slideIdx = 1;
+  var images = slide.getElementsByTagName("img");
+  setInterval(function(){ incrementSlideShow(1) }, 5000);
+}
+
 
 function incrementSlideShow(inc) {
   var images = document.getElementById("slide").getElementsByTagName("img")
 
-  nextId = (slideIdx + inc) % images.length
+  nextId = (slideIdx + inc) % images.length;
   if (nextId == 0) {
-    nextId = images.length
+    nextId = images.length;
   }
 
-  images[slideIdx - 1].style.display = "none"
-  images[nextId - 1].style.display = "block"
+  images[slideIdx - 1].style.display = "none";
+  images[nextId - 1].style.display = "block";
 
-  slideIdx = nextId
+  slideIdx = nextId;
 }
