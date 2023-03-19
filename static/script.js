@@ -1,33 +1,24 @@
-function topFunction() {
+function scrollToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
 
 window.onscroll = function() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      document.getElementById("topBtn").style.opacity = "1";
-  } else {
-      document.getElementById("topBtn").style.opacity = "0";
-  }
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
+      document.getElementById("scrollTopBtn").style.opacity = "1";
+  else
+      document.getElementById("scrollTopBtn").style.opacity = "0";
 };
 
 
-var slide = document.getElementById("slide");
+let slideIdx = 1;
+const images = document.getElementById("slide")?.getElementsByTagName("img");
 
-if (slide != null) {
-  var slideIdx = 1;
-  var images = slide.getElementsByTagName("img");
+if (images != null)
   setInterval(function(){ incrementSlideShow(1) }, 5000);
-}
-
 
 function incrementSlideShow(inc) {
-  var images = document.getElementById("slide").getElementsByTagName("img")
-
-  nextId = (slideIdx + inc) % images.length;
-  if (nextId == 0) {
-    nextId = images.length;
-  }
+  let nextId = (slideIdx + inc) % images.length || images.length;
 
   images[slideIdx - 1].style.display = "none";
   images[nextId - 1].style.display = "block";

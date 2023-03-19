@@ -416,13 +416,13 @@ table {
 }
 
 
-#topBtn {
+#scrollTopBtn {
   z-index: 1;
   opacity: 0;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  padding: 12px 17px;
+  padding: 12px 15px;
   border-radius: 50%;
   font-size: 17px;
   background-color: $blue2;

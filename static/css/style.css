@@ -391,22 +391,22 @@ table .empty {
   text-align: center;
 }
 
-#topBtn {
+#scrollTopBtn {
   z-index: 1;
   opacity: 0;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  padding: 12px 17px;
+  padding: 12px 15px;
   border-radius: 50%;
   font-size: 17px;
   background-color: #1c7ebb;
   transition: all 0.2s ease;
 }
-#topBtn:hover {
+#scrollTopBtn:hover {
   background-color: #e22f8a;
 }
-#topBtn:active {
+#scrollTopBtn:active {
   transform: scale(0.9);
   -webkit-transform: scale(0.9);
 }
