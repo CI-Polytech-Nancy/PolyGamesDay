@@ -437,6 +437,17 @@ table .empty {
   transform: translate(-45%, -50%);
 }
 
+#loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
 @media (max-width: 600px) {
   #intro h1::after {
     margin: 0;

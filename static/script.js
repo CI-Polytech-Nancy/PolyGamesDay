@@ -10,6 +10,12 @@ window.onscroll = function() {
       document.getElementById("scrollTopBtn").style.opacity = "0";
 };
 
+document.onreadystatechange = function () {
+  if (document.readyState === "complete") {
+    document.getElementById("loader").style.opacity = "0";
+  }
+}
+
 
 let slideIdx = 1;
 const images = document.getElementById("slide")?.getElementsByTagName("img");
