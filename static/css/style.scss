@@ -26,7 +26,7 @@ html {
       display: inline-block;
       color: black;
       text-decoration: none;
-      transition: all 0.2s ease;
+      transition: color 0.2s ease, transform 0.2s ease;
 
       &:hover {
         color: $blue2;
@@ -154,7 +154,7 @@ header {
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
-    transition: all 0.2s ease;
+    transition: color 0.1s ease, transform 0.1s ease;
 
     width: 76%;
     padding: 10px 0;
@@ -307,7 +307,7 @@ section {
     padding: 16px;
     font-weight: bold;
     font-size: 18px;
-    transition: 0.2s ease;
+    transition: background-color 0.2s ease;
     border-radius: 3px;
     user-select: none;
 
@@ -390,7 +390,7 @@ table {
     padding: 10px;
     margin: 4% 0 2% 0;
     vertical-align: middle;
-    transition: all 0.2s ease;
+    transition: transform 0.2s ease;
 
     &.long {
       width: 200px;
@@ -425,8 +425,9 @@ table {
   padding: 12px 15px;
   border-radius: 50%;
   font-size: 17px;
+  cursor: default;
   background-color: $blue2;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
 
   &:hover {
     background-color: $pink;
@@ -491,6 +492,14 @@ table {
 
 
 @font-face {
+  font-family: "Zorque";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/zorque.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
@@ -521,13 +530,6 @@ table {
     U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-@font-face {
-  font-family: "Zorque";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("../fonts/zorque.ttf") format("truetype");
-}
 @font-face {
   font-family: "Font Awesome 6 Free";
   font-style: normal;

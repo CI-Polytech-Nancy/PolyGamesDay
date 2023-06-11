@@ -1,20 +1,14 @@
-function scrollToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
+let button = document.getElementById("scrollTopBtn");
 
 window.onscroll = function() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
-      document.getElementById("scrollTopBtn").style.opacity = "1";
-  else
-      document.getElementById("scrollTopBtn").style.opacity = "0";
-};
-
-document.onreadystatechange = function () {
-  if (document.readyState === "complete") {
-    document.getElementById("loader").style.opacity = "0";
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      button.style.opacity = "1";
+      button.style.cursor = "pointer";
+  } else {
+      button.style.opacity = "0";
+      button.style.cursor = "default";
   }
-}
+};
 
 
 let slideIdx = 1;

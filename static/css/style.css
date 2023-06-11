@@ -22,7 +22,7 @@ html body a {
   display: inline-block;
   color: black;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 html body a:hover {
   color: #1c7ebb;
@@ -148,7 +148,7 @@ header #logo::after {
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
-  transition: all 0.2s ease;
+  transition: color 0.1s ease, transform 0.1s ease;
   width: 76%;
   padding: 10px 0;
   margin: 0 12%;
@@ -288,7 +288,7 @@ section #notice {
   padding: 16px;
   font-weight: bold;
   font-size: 18px;
-  transition: 0.2s ease;
+  transition: background-color 0.2s ease;
   border-radius: 3px;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -371,7 +371,7 @@ table .empty {
   padding: 10px;
   margin: 4% 0 2% 0;
   vertical-align: middle;
-  transition: all 0.2s ease;
+  transition: transform 0.2s ease;
 }
 #sponsors img.long {
   width: 200px;
@@ -400,8 +400,9 @@ table .empty {
   padding: 12px 15px;
   border-radius: 50%;
   font-size: 17px;
+  cursor: default;
   background-color: #1c7ebb;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
 }
 #scrollTopBtn:hover {
   background-color: #e22f8a;
@@ -469,6 +470,13 @@ table .empty {
   }
 }
 @font-face {
+  font-family: "Zorque";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/zorque.ttf") format("truetype");
+}
+@font-face {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
@@ -493,13 +501,6 @@ table .empty {
   font-display: swap;
   src: url("../fonts/open-sans-700.woff2") format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face {
-  font-family: "Zorque";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("../fonts/zorque.ttf") format("truetype");
 }
 @font-face {
   font-family: "Font Awesome 6 Free";
