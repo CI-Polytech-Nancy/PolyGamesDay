@@ -22,7 +22,7 @@
 
 <body>
 <header>
-  <a href="#" id="logo"> </a>
+  <a href="#" id="logo" aria-label="Retourner à la page principale"> </a>
   <nav>
     <a href="#event">Evenement</a>
     <a href="#inscriptions">Inscriptions</a>
@@ -133,14 +133,16 @@
     </p>
     <p class="responsive">La zone de restauration proposera des <b>snacks toute la journée</b> et les commandes de repas se font de <b>12h à 14h et à partir de 19h</b></p>
 
-    <table>
-      <tbody class="full">
+    <table aria-label="Planning des tournois et des repas">
+      <thead>
         <tr id="jeuxtab">
           <td></td>
-          <td class="loltab">League of Legends</td>
-          <td class="mktab">Mario Kart</td>
-          <td class="repas">Repas</td>
+          <th scope="row" class="loltab">League of Legends</th>
+          <th scope="row" class="mktab">Mario Kart</th>
+          <th scope="row" class="repas">Repas</th>
         </tr>
+      </thead>
+      <tbody class="full">
         <tr>
           <td>9h</td>
           <td colspan="3" class="empty">Accueil des joueurs</td>
@@ -149,7 +151,7 @@
           <td>9h30</td>
           <td rowspan="3" class="loltab">E406</td>
           <td class="empty"></td>
-          <td class="snack" rowspan="3">Snack</td>
+          <td rowspan="3">Snack</td>
         </tr>
         <tr>
           <td>10h30</td>
@@ -169,7 +171,7 @@
         <tr>
           <td>14h</td>
           <td rowspan="5" class="mktab">E310</td>
-          <td class="snack" rowspan="5">Snack</td>
+          <td rowspan="5">Snack</td>
         </tr>
         <tr><td>15h</td></tr>
         <tr><td>16h</td></tr>

@@ -310,19 +310,17 @@ table {
   text-align: center;
   margin: 25px auto;
   background-color: #1c7ebb;
+  border: 3px solid #fff;
 }
-table tbody {
-  border: 5px solid #fff;
-}
-table td:not(:first-child) {
+table td:not(:first-child), table th:not(:first-child) {
   width: 250px;
   height: 30px;
   padding: 5px;
   font-weight: 700;
   text-transform: uppercase;
-  border: 2px solid white;
+  border: 1px solid white;
 }
-table td:first-child {
+table td:first-child, table th:first-child {
   width: auto;
   height: 35px;
   padding: 5px;
@@ -330,15 +328,15 @@ table td:first-child {
   font-size: 0.8rem;
   position: relative;
   border-top: none;
-  border-right: 5px solid white;
+  border-right: 3px solid white;
   top: -23px;
   text-align: right;
 }
-table #jeuxtab td {
+table #jeuxtab th {
   font-size: 0.8rem;
-  height: 25px;
+  height: 15px;
   padding: 0;
-  text-shadow: 0 0 7px #444;
+  text-shadow: 0 0 5px #666;
 }
 table .loltab {
   background-color: #e98ebc;
@@ -351,10 +349,6 @@ table .pause, table .snack {
 }
 table .repas {
   background-color: #e22f8a;
-}
-table .snack {
-  writing-mode: vertical-lr;
-  text-orientation: upright;
 }
 table .empty {
   border: none !important;
