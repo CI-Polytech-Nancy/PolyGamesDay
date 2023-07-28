@@ -312,6 +312,11 @@ table {
   background-color: #1c7ebb;
   border: 3px solid #fff;
 }
+table thead th {
+  height: 15px;
+  padding: 0;
+  text-shadow: 0 0 5px #666;
+}
 table td:not(:first-child), table th:not(:first-child) {
   width: 250px;
   height: 30px;
@@ -331,12 +336,6 @@ table td:first-child, table th:first-child {
   border-right: 3px solid white;
   top: -23px;
   text-align: right;
-}
-table #jeuxtab th {
-  font-size: 0.8rem;
-  height: 15px;
-  padding: 0;
-  text-shadow: 0 0 5px #666;
 }
 table .loltab {
   background-color: #e98ebc;
@@ -453,14 +452,8 @@ table .empty {
   .container {
     max-width: 80vw;
   }
-  table td {
+  table td, table th {
     font-size: 12px;
-  }
-  .full {
-    display: none;
-  }
-  .responsive {
-    display: block;
   }
 }
 @font-face {

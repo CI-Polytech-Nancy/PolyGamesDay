@@ -331,6 +331,12 @@ table {
   background-color: $blue2;
   border: 3px solid #fff;
 
+  thead th {
+    height: 15px;
+    padding: 0;
+    text-shadow: 0 0 5px #666;
+  }
+
   td, th {
     &:not(:first-child) {
       width: 250px;
@@ -353,13 +359,6 @@ table {
       top: -23px;
       text-align: right;
     }
-  }
-
-  #jeuxtab th {
-    font-size: 0.8rem;
-    height: 15px;
-    padding: 0;
-    text-shadow: 0 0 5px #666;
   }
 
   .loltab {background-color: #e98ebc;}
@@ -477,9 +476,7 @@ table {
   #sponsors img {width: 80%}
   .container {max-width: 80vw;}
 
-  table td {font-size: 12px;}
-  .full {display: none;}
-  .responsive {display: block;}
+  table td, table th {font-size: 12px;}
 }
 
 
