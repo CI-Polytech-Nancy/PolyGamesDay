@@ -28,11 +28,7 @@ html {
       text-decoration: none;
       transition: color 0.2s ease, transform 0.2s ease;
 
-      &:hover {
-        color: $blue2;
-        transform: scale(1.02);
-        -webkit-transform: scale(1.02);
-      }
+      &:hover { color: $blue2; }
     }
 
     img {
@@ -62,8 +58,8 @@ html {
 header {
   top: 0;
   z-index: 3;
-  height: 84px;
-  line-height: 84px;
+  height: 60px;
+  line-height: 60px;
   position: sticky;
   user-select: none;
   box-shadow: 0 6px 13px -7px rgb(0 0 0 / 20%);
@@ -138,23 +134,13 @@ header {
     }
   }
 
-  a {
-    color: $pink;
-    font-size: 2.5rem;
-    margin-right: 1%;
-    transition: color 0.2s ease;
-
-    &:hover {color: $blue2}
-  }
-
   #cta {
     color: white;
     display: block;
     font-size: 1.5rem;
     font-weight: 700;
     text-align: center;
-    text-transform: uppercase;
-    transition: color 0.1s ease, transform 0.1s ease;
+    transition: background-color 0.1s ease, transform 0.1s ease;
 
     width: 76%;
     padding: 10px 0;
@@ -279,51 +265,6 @@ section {
 }
 
 
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-
-  #slide {
-    padding: 50px;
-    margin-top: 3px;
-
-    img {
-      width: 100%;
-      display: none;
-      max-height: 500px;
-      object-fit: cover;
-      border-radius: 5px;
-      background-position: top top;
-    }
-  }
-
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    font-weight: bold;
-    font-size: 18px;
-    transition: background-color 0.2s ease;
-    border-radius: 3px;
-    user-select: none;
-
-    &:hover {
-      background-color: $blue2;
-    }
-  }
-
-  .next {right: 0}
-}
-
-
-.responsive {
-  display: none;
-}
-
 table {
 	border-collapse: collapse;
 	text-align: center;
@@ -334,28 +275,27 @@ table {
   thead th {
     height: 15px;
     padding: 0;
-    text-shadow: 0 0 5px #666;
   }
 
   td, th {
+    font-weight: 700;
+    padding: 5px;
+    text-transform: uppercase;
+
     &:not(:first-child) {
       width: 250px;
       height: 30px;
       padding: 5px;
-      font-weight: 700;
-      text-transform: uppercase;
       border: 1px solid white;
     }
 
     &:first-child {
       width: auto;
       height: 35px;
-      padding: 5px;
-      font-weight: 700;
       font-size: 0.8rem;
       position: relative;
       border-top: none;
-      border-right: 3px solid white;
+      border-right: 2px solid white;
       top: -23px;
       text-align: right;
     }
@@ -375,23 +315,21 @@ table {
 
 #sponsors {
   user-select: none;
-  background-color: white;
 
   img {
-    padding: 10px;
-    margin: 4% 0 2% 0;
+    width: auto;
+    height: 90px;
+    margin-left: 2%;
+
+    &:first-child {
+      height: 150px;
+      margin-left: 0;
+    }
+
+    border-radius: 5px;
     vertical-align: middle;
     transition: transform 0.2s ease;
 
-    &.long {
-      width: 200px;
-      height: auto;
-    }
-
-    &.square {
-      width: auto;
-      height: 150px;
-    }
 
     &:hover {
       transform: scale(1.05);
@@ -401,9 +339,17 @@ table {
 }
 
 
+#staff .grid {
+  .column { background-color: $blue1; }
+  .name { border-top: white solid 4px; }
+}
+
+
 #footer {
-  padding: 25px 0;
+  padding: 20px 0;
   text-align: center;
+  background-color: white;
+  box-shadow: 0 -6px 13px -7px rgb(0 0 0 / 20%);
 }
 
 
@@ -473,7 +419,6 @@ table {
   section p, td {font-size: 16px}
   section h2 {font-size: 26px}
 
-  #sponsors img {width: 80%}
   .container {max-width: 80vw;}
 
   table td, table th {font-size: 12px;}

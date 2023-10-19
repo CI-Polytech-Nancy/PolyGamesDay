@@ -26,8 +26,6 @@ html body a {
 }
 html body a:hover {
   color: #1c7ebb;
-  transform: scale(1.02);
-  -webkit-transform: scale(1.02);
 }
 html body img {
   -webkit-user-select: none;
@@ -53,8 +51,8 @@ html b {
 header {
   top: 0;
   z-index: 3;
-  height: 84px;
-  line-height: 84px;
+  height: 60px;
+  line-height: 60px;
   position: sticky;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -132,23 +130,13 @@ header #logo::after {
     white-space: pre-wrap;
   }
 }
-#intro a {
-  color: #e22f8a;
-  font-size: 2.5rem;
-  margin-right: 1%;
-  transition: color 0.2s ease;
-}
-#intro a:hover {
-  color: #1c7ebb;
-}
 #intro #cta {
   color: white;
   display: block;
   font-size: 1.5rem;
   font-weight: 700;
   text-align: center;
-  text-transform: uppercase;
-  transition: color 0.1s ease, transform 0.1s ease;
+  transition: background-color 0.1s ease, transform 0.1s ease;
   width: 76%;
   padding: 10px 0;
   margin: 0 12%;
@@ -261,50 +249,6 @@ section #notice {
   margin-right: 10px;
 }
 
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-.slideshow-container #slide {
-  padding: 50px;
-  margin-top: 3px;
-}
-.slideshow-container #slide img {
-  width: 100%;
-  display: none;
-  max-height: 500px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 5px;
-  background-position: top top;
-}
-.slideshow-container .prev, .slideshow-container .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  font-weight: bold;
-  font-size: 18px;
-  transition: background-color 0.2s ease;
-  border-radius: 3px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-.slideshow-container .prev:hover, .slideshow-container .next:hover {
-  background-color: #1c7ebb;
-}
-.slideshow-container .next {
-  right: 0;
-}
-
-.responsive {
-  display: none;
-}
-
 table {
   border-collapse: collapse;
   text-align: center;
@@ -315,25 +259,25 @@ table {
 table thead th {
   height: 15px;
   padding: 0;
-  text-shadow: 0 0 5px #666;
+}
+table td, table th {
+  font-weight: 700;
+  padding: 5px;
+  text-transform: uppercase;
 }
 table td:not(:first-child), table th:not(:first-child) {
   width: 250px;
   height: 30px;
   padding: 5px;
-  font-weight: 700;
-  text-transform: uppercase;
   border: 1px solid white;
 }
 table td:first-child, table th:first-child {
   width: auto;
   height: 35px;
-  padding: 5px;
-  font-weight: 700;
   font-size: 0.8rem;
   position: relative;
   border-top: none;
-  border-right: 3px solid white;
+  border-right: 2px solid white;
   top: -23px;
   text-align: right;
 }
@@ -358,30 +302,36 @@ table .empty {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  background-color: white;
 }
 #sponsors img {
-  padding: 10px;
-  margin: 4% 0 2% 0;
+  width: auto;
+  height: 90px;
+  margin-left: 2%;
+  border-radius: 5px;
   vertical-align: middle;
   transition: transform 0.2s ease;
 }
-#sponsors img.long {
-  width: 200px;
-  height: auto;
-}
-#sponsors img.square {
-  width: auto;
+#sponsors img:first-child {
   height: 150px;
+  margin-left: 0;
 }
 #sponsors img:hover {
   transform: scale(1.05);
   -webkit-transform: scale(1.05);
 }
 
+#staff .grid .column {
+  background-color: #c6b7f1;
+}
+#staff .grid .name {
+  border-top: white solid 4px;
+}
+
 #footer {
-  padding: 25px 0;
+  padding: 20px 0;
   text-align: center;
+  background-color: white;
+  box-shadow: 0 -6px 13px -7px rgba(0, 0, 0, 0.2);
 }
 
 #scrollTopBtn {
@@ -445,9 +395,6 @@ table .empty {
   }
   section h2 {
     font-size: 26px;
-  }
-  #sponsors img {
-    width: 80%;
   }
   .container {
     max-width: 80vw;
