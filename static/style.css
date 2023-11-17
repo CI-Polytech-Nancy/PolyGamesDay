@@ -301,6 +301,7 @@ table {
     width: auto;
     height: 90px;
     margin-left: 2%;
+    margin-bottom: 20px;
 
     &:first-child {
       height: 150px;
@@ -414,6 +415,13 @@ table {
     }
   }
 
+  #sponsors img {
+    width: 60%;
+    height: auto;
+
+    &:first-child { height: auto; }
+  }
+
   section p, td {font-size: 16px}
   section h2 {font-size: 26px}
 
@@ -422,6 +430,9 @@ table {
   table td, table th {font-size: 12px;}
 }
 
+@media (max-width: 500px) {
+  #sponsors img { width: 80%; }
+}
 
 @font-face {
   font-family: "Zorque";
