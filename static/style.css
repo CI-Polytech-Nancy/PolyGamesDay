@@ -1,42 +1,36 @@
-$blue1: #c6b7f1;
-$blue2: #1c7ebb;
-$pink: #e22f8a;
+:root {
+  --blue1: #c6b7f1;
+  --blue2: #1c7ebb;
+  --pink: #e22f8a;
+}
 
 html {
   scroll-behavior: smooth;
 
-  body {
+  & body {
     color: black;
     font-family: "Open Sans", sans-serif;
 
-    &::-webkit-scrollbar {
-      width: 7px}
-
-    &::-webkit-scrollbar-track {
-      background-color: white}
-
+    &::-webkit-scrollbar { width: 7px}
+    &::-webkit-scrollbar-track { background-color: white}
     &::-webkit-scrollbar-thumb {
-      background-color: $blue2;
-
-      &:hover {
-        background-color: $pink}
+      background-color: var(--blue2);
+      &:hover { background-color: -var(--pink)}
     }
 
-    a {
+    & a {
       display: inline-block;
       color: black;
       text-decoration: none;
       transition: color 0.2s ease, transform 0.2s ease;
 
-      &:hover { color: $blue2; }
+      &:hover { color: var(--blue2); }
     }
 
-    img {
-      user-select: none;
-    }
+    & img { user-select: none; }
   }
 
-  * {
+  & * {
     margin: 0;
     padding: 0;
     border: none;
@@ -44,14 +38,13 @@ html {
     text-decoration: none;
   }
 
-  button {
+  & button {
     cursor: pointer;
     font-family: inherit;
     background-color: white;
   }
 
-  b {
-    font-weight: 700;}
+  & b { font-weight: 700;}
 }
 
 
@@ -70,15 +63,11 @@ header {
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
 
-  a:not(:last-child) {
-    padding-right: 30px;}
+  & a:not(:last-child) { padding-right: 30px;}
 
-  nav {
+  & nav {
     float: right;
     padding-right: 30px;
-    
-    @media (max-width: 1100px) {
-      display: none}
   }
 
   #logo {
@@ -94,9 +83,6 @@ header {
     &::after {
       font-family: "Montserrat", sans-serif;
       content: "Poly Games Day";
-
-      @media (max-width: 600px) {
-        content: "PGD"}
     }
   }
 }
@@ -106,16 +92,16 @@ header {
   height: 100vh;
   height: 100svh;
   user-select: none;
-  background: url('../images/background.webp') fixed center no-repeat;
+  background: url('images/background.webp') fixed center no-repeat;
   background-size: cover;
 
-  #intro-container {
+  & #intro-container {
     width: fit-content;
     padding: 10% 10% 0 10%;
   }
 
-  h1 {
-    color: $pink;
+  & h1 {
+    color: var(--pink);
     font-size: 74px;
     font-family: "Zorque", sans-serif;
     text-transform: uppercase;
@@ -126,15 +112,10 @@ header {
       font-size: 34px;
       margin: 0 12% 10px 12%;
       content: "25 Mars 2023 - 6e édition ";
-
-      @media (max-width: 600px) {
-        content: "25 Mars 2023\A 6e édition";
-        white-space: pre-wrap;
-      }
     }
   }
 
-  #cta {
+  & #cta {
     color: white;
     display: block;
     font-size: 1.5rem;
@@ -146,13 +127,13 @@ header {
     padding: 10px 0;
     margin: 0 12%;
     border-radius: 5px;
-    background-color: $pink;
-    border: $pink solid 2px;
+    background-color: var(--pink);
+    border: var(--pink) solid 2px;
 
     &:hover {
       transform: none;
-      background-color: $blue2;
-      border: $blue2 solid 2px;
+      background-color: var(--blue2);
+      border: var(--blue2) solid 2px;
     }
 
     &:active {
@@ -164,9 +145,9 @@ header {
 
 section {
   scroll-margin-top: 65px;
-  &:nth-child(2n) {background-color: $blue1}
+  &:nth-child(2n) {background-color: var(--blue1)}
 
-  h2 {
+  & h2 {
     margin-bottom: 45px;
     color: black;
     font-family: "Montserrat", sans-serif;
@@ -187,12 +168,12 @@ section {
     }
   }
 
-  p {
+  & p {
     font-size: 1rem;
     margin-bottom: 20px;
   }
 
-  #notice {
+  & #notice {
     color: #6d6565;
     font-style: italic;
     font-size: 0.75rem;
@@ -200,7 +181,7 @@ section {
   }
 }
 
-.container {
+& .container {
   max-width: 65vw;
   margin: 0 auto;
   padding: 50px 0;
@@ -213,7 +194,7 @@ section {
   flex-wrap: wrap;
   justify-content: center;
 
-  .column {
+  & .column {
     min-width: 0;
     max-width: 275px;
     background-color: white;
@@ -221,22 +202,22 @@ section {
     border-radius: 5px;
   }
   
-  img {
+  & img {
     height: auto;
     max-width: 50%;
     vertical-align: bottom;
   }
   
-  span {display: block;}
+  & span {display: block;}
   
-  .name {
+  & .name {
     font-weight: 700;
     font-size: 18px;
     padding-top: 4%;
-    border-top: $blue1 solid 4px;
+    border-top: var(--blue1) solid 4px;
   }
   
-  .role {
+  & .role {
     font-size: 14px;
     font-style: italic;
     margin-bottom: 4%;
@@ -245,21 +226,21 @@ section {
 
 
 #inscriptions {
-  .column:first-child img {
+  & .column:first-child img {
     margin-top: 12px;
   }
 
-  img {
+  & img {
     max-width: 65%;
     padding: 4% 0;
   }
 
-  a {
+  & a {
     font-size: 2rem;
     margin-top: 10px;
     transition: color 0.2s ease;
 
-    &:hover {color: $pink}
+    &:hover {color: var(--pink); }
     &:not(:last-child) {margin-right: 10px;}
   }
 }
@@ -269,15 +250,15 @@ table {
 	border-collapse: collapse;
 	text-align: center;
 	margin: 25px auto;
-  background-color: $blue2;
-  border: 3px solid #fff;
+  background-color: var(--blue2);
+  border: 2px solid black;
 
-  thead th {
+  & thead th {
     height: 15px;
     padding: 0;
   }
 
-  td, th {
+  & td, th {
     font-weight: 700;
     padding: 5px;
     text-transform: uppercase;
@@ -286,7 +267,7 @@ table {
       width: 250px;
       height: 30px;
       padding: 5px;
-      border: 1px solid white;
+      border: 1px solid black;
     }
 
     &:first-child {
@@ -295,18 +276,18 @@ table {
       font-size: 0.8rem;
       position: relative;
       border-top: none;
-      border-right: 2px solid white;
+      border-right: 2px solid black;
       top: -23px;
       text-align: right;
     }
   }
 
-  .loltab {background-color: #e98ebc;}
-  .mktab {background-color: #92d7c5;}
-  .pause, .snack {background-color: $blue2;}
-  .repas {background-color: $pink ;}
+  & .loltab {background-color: #e98ebc;}
+  & .mktab {background-color: #92d7c5;}
+  & .pause, .snack {background-color: var(--blue2);}
+  & .repas {background-color: var(--pink) ;}
 
-  .empty {
+  & .empty {
     border: none !important;
     background-color: transparent;
   }
@@ -316,7 +297,7 @@ table {
 #sponsors {
   user-select: none;
 
-  img {
+  & img {
     width: auto;
     height: 90px;
     margin-left: 2%;
@@ -340,8 +321,8 @@ table {
 
 
 #staff .grid {
-  .column { background-color: $blue1; }
-  .name { border-top: white solid 4px; }
+  & .column { background-color: var(--blue1); }
+  & .name { border-top: white solid 4px; }
 }
 
 
@@ -363,11 +344,11 @@ table {
   border-radius: 50%;
   font-size: 17px;
   cursor: default;
-  background-color: $blue2;
+  background-color: var(--blue2);
   transition: background-color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
 
   &:hover {
-    background-color: $pink;
+    background-color: var(--pink);
   }
 
   &:active {
@@ -380,7 +361,7 @@ table {
 #mentions {
   background-color: white;
 
-  p {
+  & p {
     margin: 0;
     padding: 0;
     text-align: justify;
@@ -390,8 +371,8 @@ table {
     } 
   }
 
-  .container {padding: 0}
-  h2 {padding-top: 50px}
+  & .container {padding: 0}
+  & h2 {padding-top: 50px}
 }
 
 
@@ -404,11 +385,18 @@ table {
   transform: translate(-45%, -50%);
 }
 
+@media (max-width: 1100px) {
+  header nav { display: none}
+}
 
 @media (max-width: 600px) {
+  #logo::after { content: "PGD" }
+
   #intro h1::after {
     margin: 0;
     margin-bottom: 10px;
+    white-space: pre-wrap;
+    content: "25 Mars 2023\A 6e édition";
   }
 
   #intro #cta {
@@ -427,18 +415,18 @@ table {
 
 @font-face {
   font-family: "Zorque";
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   font-display: swap;
-  src: url("../fonts/zorque.ttf") format("truetype");
+  src: url("fonts/zorque.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Montserrat";
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   font-display: swap;
-  src: url("../fonts/montserrat-700.woff2") format("woff2");
+  src: url("fonts/montserrat-700.woff2") format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
     U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
@@ -449,59 +437,50 @@ table {
   font-weight: 400;
   font-stretch: 100%;
   font-display: swap;
-  src: url("../fonts/open-sans-400.woff2") format("woff2");
+  src: url("fonts/open-sans-400.woff2") format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
     U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
   font-family: "Open Sans";
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   font-stretch: 100%;
   font-display: swap;
-  src: url("../fonts/open-sans-700.woff2") format("woff2");
+  src: url("fonts/open-sans-700.woff2") format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
     U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
   font-family: "Font Awesome 6 Free";
-  font-style: normal;
   font-weight: 900;
+  font-style: normal;
   font-display: swap;
-  src: url("../fonts/fa-solid-900.woff2") format("woff2");
+  src: url("fonts/fa-solid-900.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Font Awesome 6 Brands";
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   font-display: swap;
-  src: url("../fonts/fa-brands-400.woff2") format("woff2");
+  src: url("fonts/fa-brands-400.woff2") format("woff2");
 }
 
-.fab,
-.fa-brands {
+.fab, .fa-brands {
   font-weight: 400;
   font-family: "Font Awesome 6 Brands";
 }
-.fas,
-.fa-solid {
-  font-family: "Font Awesome 6 Free";
+.fas, .fa-solid {
   font-weight: 900;
+  font-family: "Font Awesome 6 Free";
 }
 
-.fa-twitch:before {
-  content: ""}
-.fa-instagram:before {
-  content: "\f16d"}
-.fa-facebook:before {
-  content: "\f09a"}
-.fa-discord:before {
-  content: "\f392"}
-.fa-youtube:before {
-  content: "\f167"}
-.fa-arrow-up::before {
-  content: "\f062"}
-.fa-gamepad::before {
-  content: "\f11b"}
+.fa-twitch:before { content: ""}
+.fa-instagram:before { content: "\f16d"}
+.fa-facebook:before { content: "\f09a"}
+.fa-discord:before { content: "\f392"}
+.fa-youtube:before { content: "\f167"}
+.fa-arrow-up::before { content: "\f062"}
+.fa-gamepad::before { content: "\f11b"}
