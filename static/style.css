@@ -390,18 +390,28 @@ table {
 }
 
 @media (max-width: 600px) {
-  #logo::after { content: "PGD" }
+  header #logo::after { content: "PGD" }
 
-  #intro h1::after {
-    margin: 0;
-    margin-bottom: 10px;
-    white-space: pre-wrap;
-    content: "25 Mars 2023\A 6e édition";
-  }
+  #intro {
+    & #intro-container {
+      width: 80%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
-  #intro #cta {
-    margin: 0;
-    width: 100%;
+    & h1::after {
+      margin: 0;
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+      content: "25 Mars 2023\A 6e édition";
+    }
+
+    & #cta {
+      margin: 0;
+      width: 100%;
+    }
   }
 
   section p, td {font-size: 16px}
