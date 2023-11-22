@@ -10,20 +10,16 @@
 html {
   scroll-behavior: smooth;
   font-family: "Open Sans", sans-serif;
+}
+
+body {
+  margin: 0;
 
   &::-webkit-scrollbar { width: 7px }
   &::-webkit-scrollbar-track { background-color: white }
   &::-webkit-scrollbar-thumb {
     background-color: var(--blue2);
     &:hover { background-color: -var(--pink)}
-  }
-
-  & * {
-    margin: 0;
-    padding: 0;
-    border: none;
-    font-style: normal;
-    text-decoration: none;
   }
 
   & a {
@@ -36,34 +32,37 @@ html {
   }
 
   & button {
+    border: none;
     cursor: pointer;
     font-family: inherit;
     background-color: white;
   }
 
+  & h1, h2 { margin: 0; }
   & b { font-weight: 700;}
   & img { user-select: none; }
 }
 
 header {
   top: 0;
-  z-index: 3;
+  z-index: 1;
+  position: sticky;
   height: 60px;
   line-height: 60px;
-  position: sticky;
-  user-select: none;
-  box-shadow: 0 6px 13px -7px rgb(0 0 0 / 20%);
-
-  background-color: white;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
-
-  & a:not(:last-child) { padding-right: 30px;}
+  background-color: white;
+  box-shadow: 0 6px 13px -7px rgb(0 0 0 / 20%);
 
   & nav {
+    gap: 30px;
     float: right;
-    padding-right: 30px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 30px;
+    padding-right: 3ch;
   }
 
   #logo {
@@ -76,28 +75,28 @@ header {
       content: "\f11b";
     }
 
-    &::after {
-      content: "Poly Games Day";
-    }
+    &::after { content: "Poly Games Day"; }
   }
 }
 
 
 #intro {
   height: 100vh;
-  height: 100svh;
-  user-select: none;
+  height: 100vh;
   background: url('images/background.webp') fixed center no-repeat;
   background-size: cover;
 
   & #intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
     width: fit-content;
     padding: 10% 10% 0 10%;
   }
 
   & h1 {
     color: var(--pink);
-    user-select: none;
     font-size: 74px;
     font-weight: 900;
     text-transform: uppercase;
@@ -106,7 +105,7 @@ header {
     &::after {
       display: block;
       font-size: 34px;
-      margin: 0 12% 10px 12%;
+      text-align: center;
       content: "25 Mars 2023 - 6e édition ";
     }
   }
@@ -117,11 +116,10 @@ header {
     font-size: 1.5rem;
     font-weight: 700;
     text-align: center;
-    transition: background-color 0.1s ease, transform 0.1s ease;
+    transition: background-color 0.2s ease, transform 0.1s ease;
 
-    width: 76%;
+    width: 70%;
     padding: 10px 0;
-    margin: 0 12%;
     border-radius: 5px;
     background-color: var(--pink);
     border: var(--pink) solid 2px;
@@ -133,7 +131,7 @@ header {
     }
 
     &:active {
-      transform: scale(0.95);
+      transform: scale(0.98);
     }
   }
 }
@@ -148,7 +146,6 @@ section {
     font-weight: 700;
     text-transform: uppercase;
     font-family: "Montserrat", sans-serif;
-    user-select: none;
     margin-bottom: 45px;
 
     &::after {
@@ -164,7 +161,7 @@ section {
   }
 
   & p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-bottom: 20px;
   }
 
@@ -183,8 +180,8 @@ section {
   text-align: center;
 }
 
-
 .grid {
+  gap: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -193,7 +190,6 @@ section {
     min-width: 0;
     max-width: 275px;
     background-color: white;
-    margin: 10px;
     border-radius: 5px;
   }
   
@@ -222,31 +218,21 @@ section {
 
 #inscriptions {
   & .column:first-child img {
-    margin-top: 12px;
+    margin-top: 10px;
   }
 
   & img {
     max-width: 65%;
     padding: 4% 0;
   }
-
-  & a {
-    font-size: 2rem;
-    margin-top: 10px;
-    transition: color 0.2s ease;
-
-    &:hover {color: var(--pink); }
-    &:not(:last-child) {margin-right: 10px;}
-  }
 }
 
 
 table {
-	border-collapse: collapse;
-	text-align: center;
 	margin: 25px auto;
-  background-color: var(--blue2);
+	border-collapse: collapse;
   border: 1.5px solid black;
+  background-color: var(--blue2);
 
   & thead th {
     height: 15px;
@@ -289,29 +275,25 @@ table {
 }
 
 
-#sponsors {
-  user-select: none;
+#sponsors img {
+  width: auto;
+  height: 90px;
+  margin-left: 2%;
+  margin-bottom: 20px;
 
-  & img {
-    width: auto;
-    height: 90px;
-    margin-left: 2%;
-    margin-bottom: 20px;
+  &:first-child {
+    height: 150px;
+    margin-left: 0;
+  }
 
-    &:first-child {
-      height: 150px;
-      margin-left: 0;
-    }
-
-    border-radius: 5px;
-    vertical-align: middle;
-    transition: transform 0.2s ease;
+  border-radius: 5px;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
 
 
-    &:hover {
-      transform: scale(1.05);
-      -webkit-transform: scale(1.05);
-    }
+  &:hover {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
   }
 }
 
@@ -339,7 +321,6 @@ table {
   padding: 12px 15px;
   border-radius: 50%;
   font-size: 17px;
-  cursor: default;
   background-color: var(--blue2);
   transition: background-color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
 
@@ -413,7 +394,6 @@ table {
   #sponsors img {
     width: 60%;
     height: auto;
-
     &:first-child { height: auto; }
   }
 
