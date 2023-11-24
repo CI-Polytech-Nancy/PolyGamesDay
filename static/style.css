@@ -62,20 +62,20 @@ header {
     align-items: center;
     height: 100%;
     font-size: 30px;
-    padding-right: 3ch;
+    padding-right: 30px;
   }
 
   #logo {
     float: left;
     font-size: 28px;
-    padding-left: 3ch;
+    padding-left: 30px;
 
     &::before {
       font-family: "Font Awesome 6 Free";
       content: "\f11b";
     }
 
-    &::after { content: "Poly Games Day"; }
+    &::after { content: "PGD"; }
   }
 }
 
@@ -92,7 +92,7 @@ header {
     align-items: center;
     gap: 10px;
     width: fit-content;
-    padding: 15% 10% 0 10%;
+    padding: 15% 0% 0 10%;
   }
 
   & h1 {
@@ -227,42 +227,39 @@ section {
   }
 }
 
-
-table {
-	margin: 25px auto;
-	border-collapse: collapse;
+#schedule table {
+  margin: 25px auto;
+  border-collapse: collapse;
   border: 1.5px solid black;
   background-color: var(--blue2);
 
-  & thead th {
-    height: 15px;
+  & th {
     padding: 0;
+    height: 15px;
   }
 
   & td, th {
-    font-weight: 700;
     padding: 5px;
-    text-transform: uppercase;
+    font-weight: 700;
 
     &:not(:first-child) {
       width: 250px;
       height: 30px;
       padding: 5px;
-      border: 1px solid black;
+      text-transform: uppercase;
+      border: 1.5px solid black;
     }
 
     &:first-child {
-      width: auto;
-      height: 35px;
-      font-size: 0.8rem;
-      position: relative;
-      border-top: none;
-      border-right: 1.5px solid black;
       top: -23px;
+      height: 35px;
+      position: relative;
+      font-size: 0.8rem;
       text-align: right;
+      border-right: 1.5px solid black;
     }
   }
-
+  
   & .loltab {background-color: #e98ebc;}
   & .mktab {background-color: #92d7c5;}
   & .pause, .snack {background-color: var(--blue2);}
@@ -362,20 +359,23 @@ table {
   transform: translate(-45%, -50%);
 }
 
-@media (max-width: 1100px) {
-  header nav { display: none}
-}
-
 @media (max-width: 600px) {
-  header #logo::after { content: "PGD" }
+  header nav {
+    gap: 15px;
+    .fa-youtube, .fa-twitch { display: none; }
+  }
 
   #intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     & #intro-container {
       width: 80%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      padding: 0;
+      margin-top: -20%;
+      text-align: center;
     }
 
     & h1::after {
@@ -391,18 +391,17 @@ table {
     }
   }
 
+  section {
+    & .container { max-width: 80vw; }
+    & p { font-size: 16px; }
+    & h2 { font-size: 26px; }
+  }
+
   #sponsors img {
     width: 60%;
     height: auto;
     &:first-child { height: auto; }
   }
-
-  section p, td {font-size: 16px}
-  section h2 {font-size: 26px}
-
-  .container {max-width: 80vw;}
-
-  table td, table th {font-size: 12px;}
 }
 
 @media (max-width: 500px) {
