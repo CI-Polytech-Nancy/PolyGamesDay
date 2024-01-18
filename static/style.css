@@ -92,11 +92,11 @@ header {
     align-items: center;
     gap: 10px;
     width: fit-content;
-    padding: 15% 0% 0 10%;
+    padding: 15% 22% 0 23%;
   }
 
   & h1 {
-    color: var(--pink);
+    color: var(--blue1);
     font-size: 74px;
     font-weight: 900;
     text-transform: uppercase;
@@ -106,7 +106,7 @@ header {
       display: block;
       font-size: 34px;
       text-align: center;
-      content: "25 Mars 2023 - 6e édition ";
+      content: "23 Mars 2024 - 7e édition ";
     }
   }
 
@@ -121,8 +121,8 @@ header {
     width: 70%;
     padding: 10px 0;
     border-radius: 5px;
-    background-color: var(--pink);
-    border: var(--pink) solid 2px;
+    background-color: var(--blue2);
+    border: var(--blue2) solid 2px;
 
     &:hover {
       transform: none;
@@ -260,8 +260,9 @@ section {
     }
   }
   
-  & .loltab {background-color: #e98ebc;}
-  & .mktab {background-color: #92d7c5;}
+  & .loltab {background-color: #1B27E5;}
+  & .crtab {background-color: #B04074;}
+  & .tmtab {background-color : #D6031D;}
   & .pause, .snack {background-color: var(--blue2);}
   & .repas {background-color: var(--pink) ;}
 
@@ -382,7 +383,7 @@ section {
       margin: 0;
       margin-bottom: 10px;
       white-space: pre-wrap;
-      content: "25 Mars 2023\A 6e édition";
+      content: "23 Mars 2024\A 7e édition";
     }
 
     & #cta {
