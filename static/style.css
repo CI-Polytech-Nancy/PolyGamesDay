@@ -81,10 +81,12 @@ header {
 
 
 #intro {
+	display: flex; 
   height: 100vh;
   height: 100vh;
   background: url('images/background.webp') fixed center no-repeat;
   background-size: cover;
+  justify-content: center;
 
   & #intro-container {
     display: flex;
