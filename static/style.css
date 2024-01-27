@@ -98,7 +98,7 @@ header {
   }
 
   & h1 {
-    color: var(--blue1);
+    color: #205f60;
     font-size: 74px;
     font-weight: 900;
     text-transform: uppercase;
@@ -109,6 +109,13 @@ header {
       font-size: 34px;
       text-align: center;
       content: "23 Mars 2024 - 7e édition ";
+    }
+    
+  & h2 {
+  	display: block;
+    color: #205f60;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
     }
   }
 
@@ -201,7 +208,9 @@ section {
     vertical-align: bottom;
   }
   
-  & span {display: block;}
+  & span {
+  	display: block;
+  	}
   
   & .name {
     font-weight: 700;
@@ -215,6 +224,7 @@ section {
     font-style: italic;
     margin-bottom: 4%;
   }
+}
 }
 
 
