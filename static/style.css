@@ -288,8 +288,10 @@ section {
 #sponsors img {
   width: auto;
   height: 90px;
-  margin-left: 2%;
+  margin-left: 5px;
+  margin-right: 5px;
   margin-bottom: 20px;
+
 
   &:first-child {
     height: 150px;
