@@ -81,9 +81,9 @@ header {
 
 
 #intro {
-	display: flex; 
+	display: flex;
   height: 100vh;
-  height: 100vh;
+  width: 210vh;
   background: url('images/background.webp') fixed center no-repeat;
   background-size: cover;
   justify-content: center;
@@ -94,7 +94,7 @@ header {
     align-items: center;
     gap: 10px;
     width: fit-content;
-    padding: 15% 22% 0 23%;
+    padding: 15% 23% 0 23%;
   }
 
   & h1 {
@@ -224,7 +224,6 @@ section {
     font-style: italic;
     margin-bottom: 4%;
   }
-}
 }
 
 
