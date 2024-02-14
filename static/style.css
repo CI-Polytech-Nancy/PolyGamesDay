@@ -83,7 +83,7 @@ header {
 #intro {
 	display: flex;
   height: 100vh;
-  width: 210vh;
+  width: 100%;
   background: url('images/background.webp') fixed center no-repeat;
   background-size: cover;
   justify-content: center;
@@ -94,7 +94,7 @@ header {
     align-items: center;
     gap: 10px;
     width: fit-content;
-    padding: 15% 23% 0 23%;
+    padding: 15% 15% 0 15%;
   }
 
   & h1 {
@@ -283,24 +283,19 @@ section {
   }
 }
 
+#sponsors a:first-child img {
+  margin-left: 0;
+}
 
 #sponsors img {
   width: auto;
-  height: 90px;
-  margin-left: 5px;
-  margin-right: 5px;
+  height: 150px;
+  margin-left: 40px;
   margin-bottom: 20px;
-
-
-  &:first-child {
-    height: 150px;
-    margin-left: 0;
-  }
 
   border-radius: 5px;
   vertical-align: middle;
   transition: transform 0.2s ease;
-
 
   &:hover {
     transform: scale(1.05);
