@@ -271,15 +271,15 @@ section {
     }
   }
   
-  & .loltab {background-color: #1B27E5;}
-  & .crtab {background-color: #B04074;}
-  & .tmtab {background-color : #D6031D;}
-  & .pause, .snack {background-color: var(--blue2);}
-  & .repas {background-color: var(--pink) ;}
+  & .loltab {background-color: #8289eb;}
+  & .crtab {background-color: #dd5858;}
+  & .tmtab {background-color : #92d889;}
+  & .pause, .snack {background-color: #ffbaf9;}
+  & .repas {background-color: #ffffff ;}
 
   & .empty {
     border: none !important;
-    background-color: transparent;
+    background-color: #ffffff5d;
   }
 }
 
