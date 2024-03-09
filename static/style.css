@@ -218,10 +218,6 @@ section {
 
 
 #inscriptions {
-  & .column:first-child img {
-    margin-top: 10px;
-  }
-
   & img {
     max-width: 65%;
     padding: 4% 0;
