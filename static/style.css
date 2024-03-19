@@ -209,6 +209,11 @@ section {
     border-top: var(--blue1) solid 4px;
   }
   
+  & .red {
+    color: red;
+    font-weight: bold;
+  }
+
   & .role {
     font-size: 14px;
     font-style: italic;
