@@ -77,6 +77,10 @@ header {
 
     &::after { content: "PGD"; }
   }
+
+  .logo_ci {
+    width : 35px;
+  }
 }
 
 
