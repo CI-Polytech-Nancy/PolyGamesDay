@@ -5,6 +5,8 @@
   --blue1: #c6b7f1;
   --blue2: #1c7ebb;
   --pink: #e22f8a;
+
+  --blue2_hover: #67b3ff;
 }
 
 html {
@@ -15,11 +17,20 @@ html {
 body {
   margin: 0;
 
-  &::-webkit-scrollbar { width: 7px }
-  &::-webkit-scrollbar-track { background-color: white }
+  &::-webkit-scrollbar {
+    width: 7px
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: white
+  }
+
   &::-webkit-scrollbar-thumb {
     background-color: var(--blue2);
-    &:hover { background-color: -var(--pink)}
+
+    &:hover {
+      background-color: -var(--pink)
+    }
   }
 
   & a {
@@ -28,7 +39,9 @@ body {
     text-decoration: none;
     transition: color 0.2s ease, transform 0.2s ease;
 
-    &:hover { color: var(--blue2); }
+    &:hover {
+      color: var(--blue2);
+    }
   }
 
   & button {
@@ -38,9 +51,18 @@ body {
     background-color: white;
   }
 
-  & h1, h2 { margin: 0; }
-  & b { font-weight: 700;}
-  & img { user-select: none; }
+  & h1,
+  h2 {
+    margin: 0;
+  }
+
+  & b {
+    font-weight: 700;
+  }
+
+  & img {
+    user-select: none;
+  }
 }
 
 header {
@@ -75,17 +97,19 @@ header {
       content: "\f11b";
     }
 
-    &::after { content: "PGD"; }
+    &::after {
+      content: "PGD";
+    }
   }
 
   .logo_ci {
-    width : 35px;
+    width: 35px;
   }
 }
 
 
 #intro {
-	display: flex;
+  display: flex;
   height: 100vh;
   width: 100%;
   background: url('images/background.webp') fixed center no-repeat;
@@ -112,37 +136,39 @@ header {
       margin-bottom: 10px;
     }
   }
+}
 
-  & #cta {
-    color: white;
-    display: block;
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-align: center;
-    transition: background-color 0.2s ease, transform 0.1s ease;
+#cta {
+  color: white;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  transition: all 0.2s ease, transform 0.1s ease;
 
-    width: 70%;
-    padding: 10px 0;
-    border-radius: 5px;
-    background-color: var(--blue2);
-    border: var(--blue2) solid 2px;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 5px;
+  background-color: var(--blue2);
+  border: var(--blue2) solid 2px;
 
-    &:hover {
-      transform: none;
-      background-color: var(--blue2);
-      border: var(--blue2) solid 2px;
-    }
+  &:hover {
+    transform: none;
+    background-color: var(--blue2_hover);
+    border: var(--blue2_hover) solid 2px;
+  }
 
-    &:active {
-      transform: scale(0.98);
-    }
+  &:active {
+    transform: scale(0.98);
   }
 }
 
-
 section {
   scroll-margin-top: 65px;
-  &:nth-child(2n) {background-color: var(--blue1)}
+
+  &:nth-child(2n) {
+    background-color: var(--blue1)
+  }
 
   & h2 {
     font-size: 32px;
@@ -195,24 +221,24 @@ section {
     background-color: white;
     border-radius: 5px;
   }
-  
+
   & img {
     height: auto;
     max-width: 50%;
     vertical-align: bottom;
   }
-  
+
   & span {
-  	display: block;
-  	}
-  
+    display: block;
+  }
+
   & .name {
     font-weight: 700;
     font-size: 18px;
     padding-top: 4%;
     border-top: var(--blue1) solid 4px;
   }
-  
+
   & .red {
     color: red;
     font-weight: bold;
@@ -244,7 +270,8 @@ section {
     height: 15px;
   }
 
-  & td, th {
+  & td,
+  th {
     padding: 5px;
     font-weight: 700;
 
@@ -265,12 +292,27 @@ section {
       border-right: 1.5px solid black;
     }
   }
-  
-  & .loltab {background-color: #8289eb;}
-  & .crtab {background-color: #dd5858;}
-  & .tmtab {background-color : #92d889;}
-  & .pause, .snack {background-color: #ffbaf9;}
-  & .repas {background-color: #ffffff ;}
+
+  & .loltab {
+    background-color: #8289eb;
+  }
+
+  & .crtab {
+    background-color: #dd5858;
+  }
+
+  & .tmtab {
+    background-color: #92d889;
+  }
+
+  & .pause,
+  .snack {
+    background-color: #ffbaf9;
+  }
+
+  & .repas {
+    background-color: #ffffff;
+  }
 
   & .empty {
     border: none !important;
@@ -300,8 +342,13 @@ section {
 
 
 #staff .grid {
-  & .column { background-color: var(--blue1); }
-  & .name { border-top: white solid 4px; }
+  & .column {
+    background-color: var(--blue1);
+  }
+
+  & .name {
+    border-top: white solid 4px;
+  }
 }
 
 
@@ -346,11 +393,16 @@ section {
 
     &:last-child {
       margin-bottom: 50px;
-    } 
+    }
   }
 
-  & .container {padding: 0}
-  & h2 {padding-top: 50px}
+  & .container {
+    padding: 0
+  }
+
+  & h2 {
+    padding-top: 50px
+  }
 }
 
 
@@ -366,7 +418,11 @@ section {
 @media (max-width: 600px) {
   header nav {
     gap: 15px;
-    .fa-youtube, .fa-twitch { display: none; }
+
+    .fa-youtube,
+    .fa-twitch {
+      display: none;
+    }
   }
 
   #intro {
@@ -396,18 +452,48 @@ section {
   }
 
   section {
-    & .container { max-width: 80vw; }
-    & p { font-size: 16px; }
-    & h2 { font-size: 26px; }
+    & .container {
+      max-width: 80vw;
+    }
+
+    & p {
+      font-size: 16px;
+    }
+
+    & h2 {
+      font-size: 26px;
+    }
   }
 
   #sponsors img {
     width: 60%;
     height: auto;
-    &:first-child { height: auto; }
+
+    &:first-child {
+      height: auto;
+    }
   }
 }
 
 @media (max-width: 500px) {
-  #sponsors img { width: 80%; }
+  #sponsors img {
+    width: 80%;
+  }
+}
+
+.centered {
+  width: 100%;
+}
+
+#modal-info {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  text-align: center;
+  background-color: #ffffff;
+  font-size: 3rem;
+  padding: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }

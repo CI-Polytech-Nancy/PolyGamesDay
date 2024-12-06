@@ -22,6 +22,11 @@
 </head>
 
 <body>
+  <div id="modal-info">
+    Les PGD 2025 arrivent à grand pas
+    <button onclick="document.getElementById('modal-info').style.display = 'none'">Fermer</button>
+  </div>
+
   <header>
     <a href="#" id="logo" aria-label="Retourner à la page principale"> </a>
     <nav>
@@ -38,7 +43,9 @@
     <div id="intro-container">
       <img width=100% height=auto src="static/images/title.webp" alt="Poly Games Day" loading="lazy">
       <h2>23 Mars 2024 - 7e édition</h2>
-      <a href="#inscriptions" id="cta">S'INSCRIRE !</a>
+      <div style="width: 70%;">
+        <a href="#inscriptions" id="cta">S'INSCRIRE !</a>
+      </div>
     </div>
   </div>
 
