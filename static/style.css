@@ -160,8 +160,8 @@ header {
 
   &:hover {
     transform: none;
-    background-color: var(--blue2_hover);
-    border: var(--blue2_hover) solid 2px;
+    background-color: var(--pink);
+    border: var(--pink) solid 2px;
   }
 
   &:active {
@@ -367,6 +367,7 @@ section {
 
 
 #scrollTopBtn {
+  color: white;
   z-index: 1;
   opacity: 0;
   position: fixed;
