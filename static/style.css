@@ -8,11 +8,15 @@
 }
 
 :root {
-  --blue1: #c6b7f1;
-  --blue2: #1c7ebb;
-  --pink: #e22f8a;
+  --pink: #76238f;
+  --blue: #1c7ebb;
+  --dark-blue: #040051;
+  --red: #e22f8a;
 
-  --blue2_hover: #67b3ff;
+  --on-pink: white;
+  --on-dark-blue: white;
+  --on-blue: ;
+  --on-red: ;
 }
 
 html {
@@ -32,10 +36,10 @@ body {
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: var(--blue2);
+    background-color: var(--blue);
 
     &:hover {
-      background-color: -var(--pink)
+      background-color: -var(--red)
     }
   }
 
@@ -46,7 +50,7 @@ body {
     transition: color 0.2s ease, transform 0.2s ease;
 
     &:hover {
-      color: var(--blue2);
+      color: var(--blue);
     }
   }
 
@@ -76,40 +80,77 @@ header {
   z-index: 1;
   position: sticky;
   height: 60px;
+  width: 100%;
   line-height: 60px;
   font-size: 16px;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
   background-color: white;
   box-shadow: 0 6px 13px -7px rgb(0 0 0 / 20%);
-
-  & nav {
-    gap: 30px;
-    float: right;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    font-size: 30px;
-    padding-right: 30px;
-  }
+  gap: 30px;
+  float: right;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  padding-right: 30px;
 
   #logo {
-    float: left;
+    cursor: pointer;
+    user-select: none;
     font-size: 28px;
     padding-left: 30px;
-
-    &::before {
-      font-family: "Font Awesome 6 Free";
-      content: "\f11b";
-    }
-
-    &::after {
-      content: "PGD";
-    }
   }
 
-  .logo_ci {
+  #logo_ci {
     width: 35px;
+    vertical-align: middle;
+    margin-bottom: 10px;
+  }
+}
+
+.flex-gap-fill {
+  flex-grow: 1;
+  width: auto;
+  height: auto;
+}
+
+@media (min-width: 601px) {
+  #header-small {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  #header-large {
+    display: none;
+  }
+
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    text-align: center;
+    /* min-width: 160px; */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: -15px;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
   }
 }
 
@@ -145,7 +186,7 @@ header {
 }
 
 #cta {
-  color: white;
+  color: var(--on-pink);
   display: block;
   font-size: 1.5rem;
   font-weight: 700;
@@ -155,13 +196,13 @@ header {
   width: 100%;
   padding: 10px 0;
   border-radius: 5px;
-  background-color: var(--blue2);
-  border: var(--blue2) solid 2px;
+  background-color: var(--blue);
+  border: var(--blue) solid 2px;
 
   &:hover {
     transform: none;
-    background-color: var(--pink);
-    border: var(--pink) solid 2px;
+    background-color: var(--red);
+    border: var(--red) solid 2px;
   }
 
   &:active {
@@ -173,7 +214,8 @@ section {
   scroll-margin-top: 65px;
 
   &:nth-child(2n) {
-    background-color: var(--blue1)
+    background-color: var(--pink);
+    color: var(--on-pink);
   }
 
   & h2 {
@@ -201,7 +243,7 @@ section {
   }
 
   & #notice {
-    color: #6d6565;
+    color: #d5c6c6;
     font-style: italic;
     font-size: 0.75rem;
     margin-bottom: 0;
@@ -257,6 +299,11 @@ section {
   }
 }
 
+/* #game-grid * * {
+  background-color: var(--dark-blue);
+  color: var(--on-dark-blue);
+} */
+
 
 #inscriptions {
   & img {
@@ -269,7 +316,7 @@ section {
   margin: 25px auto;
   border-collapse: collapse;
   border: 1.5px solid black;
-  background-color: var(--blue2);
+  background-color: var(--blue);
 
   & th {
     padding: 0;
@@ -349,7 +396,7 @@ section {
 
 #staff .grid {
   & .column {
-    background-color: var(--blue1);
+    background-color: var(--pink);
   }
 
   & .name {
@@ -376,11 +423,11 @@ section {
   padding: 12px 15px;
   border-radius: 50%;
   font-size: 17px;
-  background-color: var(--blue2);
+  background-color: var(--blue);
   transition: background-color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
 
   &:hover {
-    background-color: var(--pink);
+    background-color: var(--red);
   }
 
   &:active {
@@ -534,6 +581,7 @@ section {
   padding-left: 100px;
   padding-right: 100px;
 }
+
 #tobecontinued1 {
   rotate: 35deg;
   top: 400px;
