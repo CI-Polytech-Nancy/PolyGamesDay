@@ -118,7 +118,7 @@ header {
   display: flex;
   height: 100vh;
   width: 100%;
-  background: url('images/background.webp') fixed center no-repeat;
+  background: url('images/fond.png') fixed center no-repeat;
   background-size: cover;
   justify-content: center;
 
