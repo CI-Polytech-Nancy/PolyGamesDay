@@ -439,6 +439,7 @@ section {
 
 #mentions {
   background-color: white;
+  color: black;
 
   & p {
     margin: 0;
