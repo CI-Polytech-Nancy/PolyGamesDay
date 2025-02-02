@@ -253,7 +253,6 @@ section {
   font-size: 0.75rem;
   margin-bottom: 0;
 }
-}
 
 & .container {
   max-width: 65vw;
@@ -619,4 +618,19 @@ section {
   position: absolute;
   display: block;
   height: 0;
+}
+
+.link {
+  color: var(--blue);
+  background: linear-gradient(currentColor 0 0) bottom left/ var(--underline-width, 0%) 2px no-repeat;
+  display: inline-block;
+  padding-bottom: 0.2em;
+  text-decoration: none;
+  transition: 0.5s all;
+
+  &:hover {
+    --underline-width: 100%;
+    /* text-decoration: underline; */
+    filter: brightness(70%);
+  }
 }
