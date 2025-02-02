@@ -247,12 +247,12 @@ section {
   }
 }
 
-  & #notice {
-    color: #d5c6c6;
-    font-style: italic;
-    font-size: 0.75rem;
-    margin-bottom: 0;
-  }
+.notice {
+  color: #d5c6c6;
+  font-style: italic;
+  font-size: 0.75rem;
+  margin-bottom: 0;
+}
 }
 
 & .container {
@@ -378,7 +378,7 @@ section {
   }
 
   & .tab_1-2 {
-    background: repeating-linear-gradient(90deg, #8289eb, #8289eb 50%, #dd5858 50%,  #dd5858 100%);
+    background: repeating-linear-gradient(90deg, #8289eb, #8289eb 50%, #dd5858 50%, #dd5858 100%);
   }
 
   & .break {
