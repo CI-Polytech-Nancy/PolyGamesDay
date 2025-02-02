@@ -235,12 +235,17 @@ section {
       left: calc(50% - 32px);
       background-color: black;
     }
+    &.on_dark::after {
+      background-color: white;
+
+    }
   }
 
   & p {
     font-size: 1.1rem;
     margin-bottom: 20px;
   }
+}
 
   & #notice {
     color: #d5c6c6;
