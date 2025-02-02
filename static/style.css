@@ -82,7 +82,6 @@ header {
   height: 60px;
   width: 100%;
   line-height: 60px;
-  font-size: 16px;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
   background-color: white;
@@ -158,6 +157,7 @@ header {
 #intro {
   display: flex;
   height: 100vh;
+  min-height: 600px;
   width: 100%;
   background: url('images/fond.png') fixed center no-repeat;
   background-size: cover;
@@ -179,7 +179,8 @@ header {
       display: block;
       color: white;
       text-align: center;
-      font-size: 2.5em;
+      /* font-size: 2.5em; */
+      font-size: 4vw;
       margin-bottom: 10px;
     }
   }
@@ -261,11 +262,11 @@ section {
   text-align: center;
 }
 
-.grid {
+/* .grid {
   gap: 10px;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   justify-content: center;
+  grid-template-columns: auto auto auto;
 
   & .column {
     min-width: 0;
@@ -274,33 +275,78 @@ section {
     border-radius: 5px;
   }
 
-  & img {
-    height: auto;
+  & a {
+    display: block;
+    width: 200px;
+  }
+
+  & .game-img {
+    display: block;
+    height: 200px;
+    width: 100%;
+    background: transparent no-repeat center;
+    background-size: cover;
     max-width: 50%;
-    vertical-align: bottom;
   }
 
   & span {
     display: block;
   }
 
-  & .name {
-    font-weight: 700;
-    font-size: 18px;
-    padding-top: 4%;
-    border-top: var(--blue1) solid 4px;
-  }
-
+  
   & .red {
     color: red;
     font-weight: bold;
-  }
+    }
+    
+    & .role {
+      font-size: 14px;
+      font-style: italic;
+      margin-bottom: 4%;
+      }
+      } */
 
-  & .role {
-    font-size: 14px;
-    font-style: italic;
-    margin-bottom: 4%;
-  }
+.grid {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.column a {
+  width: 100%;
+}
+
+.column,
+.column a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-img,
+.column img {
+  width: 200px;
+  aspect-ratio: 1;
+  background: center no-repeat;
+  background-size: contain;
+}
+
+.column .name {
+  font-weight: 700;
+  font-size: 18px;
+  padding-top: 4%;
+  /* border-top: var(--blue) solid 4px; */
+}
+
+#free-games {
+  grid-column-start: 2;
+}
+
+.bar {
+  margin: 5px;
+  border-radius: 50px;
+  background-color: var(--dark-blue);
+  height: 6px;
+  width: 55%;
 }
 
 /* #game-grid * * {
@@ -414,10 +460,6 @@ section {
 #staff .grid {
   & .column {
     background-color: var(--pink);
-  }
-
-  & .name {
-    border-top: white solid 4px;
   }
 }
 
