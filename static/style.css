@@ -313,10 +313,22 @@ section {
 }
 
 #schedule table {
+  --border-width: 1.5px;
+
   margin: 25px auto;
   border-collapse: collapse;
-  border: 1.5px solid black;
+  border: var(--border-width) solid black;
   background-color: var(--blue);
+
+  thead {
+    & td {
+      border-bottom: none;
+    }
+
+    & th {
+      border: var(--border-width) solid black;
+    }
+  }
 
   & th {
     padding: 0;
@@ -333,42 +345,43 @@ section {
       height: 30px;
       padding: 5px;
       text-transform: uppercase;
-      border: 1.5px solid black;
     }
 
     &:first-child {
-      top: -23px;
+      top: -19px;
       height: 35px;
       position: relative;
       font-size: 0.8rem;
       text-align: right;
-      border-right: 1.5px solid black;
     }
   }
 
-  & .loltab {
+  td {
+    border: var(--border-width) solid black;
+  }
+
+  & .tab_1 {
     background-color: #8289eb;
   }
 
-  & .crtab {
+  & .tab_2 {
     background-color: #dd5858;
   }
 
-  & .tmtab {
+  & .tab_3 {
     background-color: #92d889;
   }
 
-  & .pause,
-  .snack {
+  & .tab_1-2 {
+    background: repeating-linear-gradient(90deg, #8289eb, #8289eb 50%, #dd5858 50%,  #dd5858 100%);
+  }
+
+  & .break {
+    color: #532753;
     background-color: #ffbaf9;
   }
 
-  & .repas {
-    background-color: #ffffff;
-  }
-
   & .empty {
-    border: none !important;
     background-color: #ffffff5d;
   }
 }
@@ -572,7 +585,7 @@ section {
   }
 }
 
-.tobecontinued {
+.warning_banner {
   user-select: none;
   display: block;
   position: relative;
@@ -583,13 +596,22 @@ section {
   padding-right: 100px;
 }
 
-#tobecontinued1 {
+#warning_banner1 {
   rotate: 35deg;
   top: 400px;
+  display: none;
 }
 
-#tobecontinued2 {
+#warning_banner2 {
   rotate: -10deg;
-  top: 200px;
+  top: 100px;
   z-index: 1000;
+  margin: auto;
+  width: 65vw;
+}
+
+.warning_container {
+  position: absolute;
+  display: block;
+  height: 0;
 }
