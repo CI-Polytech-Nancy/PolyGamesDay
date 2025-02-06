@@ -509,6 +509,7 @@ section {
 #mentions {
   background-color: white;
   color: black;
+  padding-top: 30px;
 
   & p {
     margin: 0;
