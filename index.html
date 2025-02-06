@@ -27,7 +27,7 @@
 
 <body>
   <!-- Header large -->
-  <header id="header-large">
+  <header class="hide-small">
     <a id="logo" href="#" aria-label="Retourner à la page principale">
       <img src="static/images/logo_ci.webp" alt="Logo du Club Info" id="logo_ci" />
       PGD
@@ -45,7 +45,7 @@
   </header>
 
   <!-- Header Small -->
-  <header id="header-small">
+  <header class="hide-large">
     <a id="logo" href="#" aria-label="Retourner à la page principale">
       <img src="static/images/logo_ci.webp" alt="Logo du Club Info" id="logo_ci" />
       PGD
@@ -70,7 +70,9 @@
   <!-- Large background image and inscription button -->
   <div id="intro">
     <div id="intro-container">
-      <img width=100% height=auto src="static/images/title.webp" alt="Poly Games Day" loading="lazy">
+      <img class="hide-small" width=100% height=auto src="static/images/title.webp" alt="Poly Games Day" loading="lazy">
+      <img class="hide-large" width=100% height=auto src="static/images/title_compact.webp" alt="Poly Games Day"
+        loading="lazy">
       <h2>Mars 2025 - 8e édition</h2>
       <div style="width: 70%;">
         <a href="#inscriptions" id="cta">S'INSCRIRE !</a>
@@ -94,7 +96,8 @@
 
         À la clé un <b>gros cashprize</b> pour LoL, Valorant et Brawl Stars alors n'hésite plus et inscris-toi !
       </p>
-      <p class="notice">Cette compétition n'est pas affiliée à Riot Games, Inc. ni parrainée par cette dernière ou League
+      <p class="notice">Cette compétition n'est pas affiliée à Riot Games, Inc. ni parrainée par cette dernière ou
+        League
         of Legends Esports.</p>
     </div>
   </section>
@@ -109,43 +112,42 @@
       <div class="grid" id="game-grid">
         <div class="column">
           <a href="./404.html" target="_blank">
-            <img src="static/images/games/lol_2.webp" loading="lazy" />
-            <span class="name">League of Legends</span>
-            <!-- <div class="game-img" style="background-image: url('static/images/games/valorant.png')" alt="Valorant"
-              loading="lazy"></div>
+            <!-- <img src="static/images/games/league_of_Legends.png" loading="lazy" />
+            <span class="name">League of Legends</span> -->
+            <div class="game-img" style="background-image: url('static/images/games/league_of_Legends.png')"
+              alt="Valorant" loading="lazy"></div>
             <span class="bar"></span>
             <span class="name">Valorant</span>
-            <span class="role">FFA - Salle E406</span> -->
           </a>
         </div>
         <div class="column">
           <a href="./404.html" target="_blank">
-            <img src="static/images/games/brawl-stars.webp" loading="lazy" />
-            <span class="name">Brawl Stars</span>
-            <!-- <div class="game-img" style="background-image: url('static/images/games/league_of_Legends.png')"
+            <!-- <img src="static/images/games/brawl_stars.png" loading="lazy" />
+            <span class="name">Brawl Stars</span> -->
+            <div class="game-img" style="background-image: url('static/images/games/brawl_stars.png')"
               alt="League of Legends" loading="lazy"></div>
             <span class="bar"></span>
             <span class="name">League of Legends</span>
-            <span class="role">FFA - Salle E406</span> -->
           </a>
         </div>
         <div class="column">
           <a href="./404.html" target="_blank">
-            <img src="static/images/games/valorant-logo-play-2.svg" loading="lazy" />
-            <span class="name">Valorant</span>
-            <!-- <div class="game-img" style="background-image: url('static/images/games/brawl_stars.png')" alt="Brawl Stars"
+            <!-- <img src="static/images/games/valorant.png" loading="lazy" />
+            <span class="name">Valorant</span> -->
+            <div class="game-img" style="background-image: url('static/images/games/valorant.png')" alt="Brawl Stars"
               loading="lazy"></div>
             <span class="bar"></span>
             <span class="name">Brawl Stars</span>
-            <span class="role">FFA - Salle E308</span> -->
           </a>
         </div>
         <div class="column" id="free-games">
           <a href="./404.html" target="_blank">
-            <img src="static/images/games/free.webp" loading="lazy" />
-            <!-- <img src="static/images/games/free.webp" alt="Jeux libres" loading="lazy" />
-            <span class="bar"></span> -->
-            <span class="name">Inscription Libre</span>
+            <!-- <img src="static/images/games/jeux_libres.png" width="228px" height="96.5px" loading="lazy" /> -->
+            <div class="game-img" style="background-image: url('static/images/games/jeux_libres.png')" alt="Brawl Stars"
+              loading="lazy"></div>
+            <!-- <img src="static/images/games/free.webp" alt="Jeux libres" loading="lazy" /> -->
+            <span class="bar"></span>
+            <span class="name">Jeux libres</span>
           </a>
         </div>
       </div>
@@ -275,8 +277,8 @@
         </div>
         <div class="column">
           <img src="static/images/staff/photo_aurelio_nobg.webp" alt="Aurelio" loading="lazy" />
-          <span class="name">SERRIDJ Aurelio</span>
           <span class="bar"></span>
+          <span class="name">SERRIDJ Aurelio</span>
           <span class="role">Chargé Trésorerie</span>
         </div>
         <div class="column">
