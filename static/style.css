@@ -114,13 +114,13 @@ header {
 }
 
 @media (min-width: 601px) {
-  #header-small {
+  .hide-large {
     display: none;
   }
 }
 
 @media (max-width: 600px) {
-  #header-large {
+  .hide-small {
     display: none;
   }
 
@@ -180,7 +180,7 @@ header {
       color: white;
       text-align: center;
       /* font-size: 2.5em; */
-      font-size: 4vw;
+      font-size: 2em;
       margin-bottom: 10px;
     }
   }
@@ -236,6 +236,7 @@ section {
       left: calc(50% - 32px);
       background-color: black;
     }
+
     &.on_dark::after {
       background-color: white;
 
@@ -324,7 +325,9 @@ section {
 
 .game-img,
 .column img {
-  width: 200px;
+  max-width: 150px;
+  width: 80%;
+  min-width: 100px;
   aspect-ratio: 1;
   background: center no-repeat;
   background-size: contain;
@@ -341,12 +344,20 @@ section {
   grid-column-start: 2;
 }
 
+#free-games div {
+  max-width: 320px;
+  min-width: 200px;
+  width: 140%;
+  aspect-ratio: 912/500;
+}
+
 .bar {
   margin: 5px;
   border-radius: 50px;
   background-color: var(--dark-blue);
-  height: 6px;
+  height: 4px;
   width: 55%;
+  max-width: 200px;
 }
 
 /* #game-grid * * {
@@ -419,6 +430,7 @@ section {
   }
 
   & .tab_3 {
+    color: #143914;
     background-color: #92d889;
   }
 
@@ -457,9 +469,23 @@ section {
 }
 
 
-#staff .grid {
-  & .column {
-    background-color: var(--pink);
+#staff {
+  &.grid {
+    & .column {
+      background-color: var(--pink);
+    }
+  }
+}
+
+#group-photo {
+  display: flex;
+  flex-direction: column;
+
+  & img {
+    /* overflow: hidden; */
+    flex-grow: 1;
+    /* margin-bottom: -80px;
+    object-fit: contain; */
   }
 }
 
@@ -499,6 +525,7 @@ section {
 #mentions {
   background-color: white;
   color: black;
+  padding-top: 30px;
 
   & p {
     margin: 0;
@@ -637,7 +664,7 @@ section {
   position: relative;
   background-color: #ff0000c0;
   transition: none;
-  font-size: 100px;
+  font-size: 4em;
   padding-left: 100px;
   padding-right: 100px;
 }
