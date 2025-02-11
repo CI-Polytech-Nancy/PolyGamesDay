@@ -236,6 +236,7 @@ section {
       left: calc(50% - 32px);
       background-color: black;
     }
+
     &.on_dark::after {
       background-color: white;
 
@@ -429,6 +430,7 @@ section {
   }
 
   & .tab_3 {
+    color: #143914;
     background-color: #92d889;
   }
 
