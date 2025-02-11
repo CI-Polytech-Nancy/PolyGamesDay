@@ -467,9 +467,23 @@ section {
 }
 
 
-#staff .grid {
-  & .column {
-    background-color: var(--pink);
+#staff {
+  &.grid {
+    & .column {
+      background-color: var(--pink);
+    }
+  }
+}
+
+#group-photo {
+  display: flex;
+  flex-direction: column;
+
+  & img {
+    /* overflow: hidden; */
+    flex-grow: 1;
+    /* margin-bottom: -80px;
+    object-fit: contain; */
   }
 }
 
