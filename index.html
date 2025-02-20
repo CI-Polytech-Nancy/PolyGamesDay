@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="stylesheet" href="static/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="keywords" content="PGD,Polytech,Nancy,Jeu vidéo,LAN,e-sport,Tournoi,Poly Games Day">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -72,11 +74,11 @@
   <div id="intro">
     <div id="intro-container">
       <img id="icon" src="static/images/logo.webp" alt="Logo des PGD" width="200px" fetchpriority="high">
-      <img id="logo-large-screen" class="hide-small" width=100% height=auto src="static/images/title.webp" alt="Poly Games Day"
-        fetchpriority="high">
-      <img id="logo-small-screen" class="hide-large" width=100% height=auto src="static/images/title_compact.webp" alt="Poly Games Day"
-        fetchpriority="high">
-      <h2>Mars 2025 -<br show> 8e édition</h2>
+      <img id="logo-large-screen" class="hide-small" width=100% height=auto src="static/images/title.webp"
+        alt="Poly Games Day" fetchpriority="high">
+      <img id="logo-small-screen" class="hide-large" width=100% height=auto src="static/images/title_compact.webp"
+        alt="Poly Games Day" fetchpriority="high">
+      <h2>Mars 2025 -<br class="hide-435px"> 8e édition</h2>
       <div style="width: 70%;">
         <a href="#inscriptions" id="cta">S'INSCRIRE !</a>
       </div>
@@ -115,15 +117,16 @@
       <div class="grid" id="game-grid">
         <div class="line-3">
           <div class="column">
-            <a href="./404.html" target="_blank">
-              <div id="game-img-lol" class="game-img" style="background-image: url('static/images/games/league_of_Legends.webp')"
-                alt="League of Legends" loading="lazy"></div>
+            <a href="./league-of-legends"><!--  target="_blank"> -->
+              <div id="game-img-lol" class="game-img"
+                style="background-image: url('static/images/games/league_of_Legends.webp')" alt="League of Legends"
+                loading="lazy"></div>
               <span class="bar"></span>
               <span class="name">League of Legends</span>
             </a>
           </div>
           <div class="column">
-            <a href="./404.html" target="_blank">
+            <a href="./brawl-stars"><!--  target="_blank"> -->
               <div class="game-img" style="background-image: url('static/images/games/brawl_stars.webp')"
                 alt="Brawl Stars" loading="lazy"></div>
               <span class="bar"></span>
@@ -131,7 +134,7 @@
             </a>
           </div>
           <div class="column">
-            <a href="./404.html" target="_blank">
+            <a href="./valorant"><!--  target="_blank"> -->
               <div class="game-img" style="background-image: url('static/images/games/valorant.webp')" alt="Valorant"
                 loading="lazy"></div>
               <span class="bar"></span>
@@ -141,7 +144,7 @@
         </div>
         <div class="line-2">
           <div class="column" id="free-games">
-            <a href="./404.html" target="_blank">
+            <a href="./free-games"><!--  target="_blank"> -->
               <div class="game-img" style="background-image: url('static/images/games/jeux_libres.webp')"
                 alt="Jeux libres" loading="lazy"></div>
               <span class="bar"></span>
@@ -149,7 +152,7 @@
             </a>
           </div>
           <div class="column" id="free-hardware">
-            <a href="./404.html" target="_blank">
+            <a href="./hotas-controllers"><!--  target="_blank"> -->
               <div class="game-img" style="background-image: url('static/images/games/jeux_libres_hardware.webp')"
                 alt="Jeux libres matériels" loading="lazy"></div>
               <span class="bar"></span>
@@ -233,25 +236,54 @@
   <!-- Sponsors -->
   <section id="sponsors">
     <div class="container">
-      <div class="warning_container"><span class="warning_banner" id="warning_banner2">A venir</span></div>
+      <!-- <div class="warning_container"><span class="warning_banner" id="warning_banner2">A venir</span></div> -->
       <h2>Nos Sponsors</h2>
-      <div>
+      <div id="sponsors-icons">
         <a href="https://www.lyf.eu/fr" target="_blank">
-          <img src="static/images/sponsors/lyf.webp" alt="Lyf" loading="lazy" />
+          <img src="static/images/sponsors/logo_lyf.webp" alt="Lyf" loading="lazy" />
         </a>
-        <a href="https://group.bnpparibas" target="_blank">
-          <img src="static/images/sponsors/bnp.webp" alt="BNP Paribas" loading="lazy" />
+        <a href="https://www.creditmutuel.fr" target="_blank">
+          <img src="static/images/sponsors/logo_credit-mutuel.webp" alt="Crédit Mutuel" loading="lazy" />
         </a>
-        <a href="https://lapizzadenico.com" target="_blank">
-          <img src="static/images/sponsors/nico.webp" alt="La pizza de Nico" loading="lazy" />
+        <a href="https://www.dominos.fr/" target="_blank">
+          <img src="static/images/sponsors/logo_dominos-pizza.webp" alt="Domino's Pizza" loading="lazy" />
+        </a>
+        <a href="https://www.univ-lorraine.fr/la-vie-a-luniversite-de-lorraine/initiatives-etudiantes/" target="_blank">
+          <img src="static/images/sponsors/logo_fsdie.webp"
+            alt="Fonds de Solidarité et Développement des Initiatives Etudiantes" loading="lazy" />
+        </a>
+        <a href="https://www.kosy-apparthotels.com/nancy-arborea/" target="_blank">
+          <img src="static/images/sponsors/logo_kosy-appart-hotels.webp" alt="Kosy appart'hôtels" loading="lazy" />
+        </a>
+        <a href="https://cavernedugobelin.com" target="_blank">
+          <img src="static/images/sponsors/logo_la-caverne-du-gobelin.webp" alt="La Caverne du Gobelin"
+            loading="lazy" />
         </a>
         <a href="https://www.jcautoecole.fr/" target="_blank">
-          <img src="static/images/sponsors/jc.webp" alt="JC Auto Ecole" loading="lazy" />
+          <img src="static/images/sponsors/logo_jc-autoecole.webp" alt="JC Auto Ecole" loading="lazy" />
+        </a>
+        <a href="https://www.lafaille-nancy.fr/fr/" target="_blank">
+          <img src="static/images/sponsors/logo_la-faille.webp" alt="La Faille" loading="lazy" />
         </a>
         <a href="https://lafeintedelours.fr/" target="_blank">
-          <img src="static/images/sponsors/ours.webp" alt="La feinte de l'ours" loading="lazy" />
+          <img src="static/images/sponsors/logo_feinte-de-l-ours.webp" alt="La feinte de l'ours" loading="lazy" />
+        </a>
+        <a href="https://www.crous-lorraine.fr/" target="_blank">
+          <img src="static/images/sponsors/logo_crous-lorraine.webp" alt="CROUS Lorraine" loading="lazy" />
+        </a>
+        <a href="https://polytech-nancy.univ-lorraine.fr/" target="_blank">
+          <img src="static/images/sponsors/logo_polytech-nancy.webp" alt="Polytech Nancy" loading="lazy" />
+        </a>
+        <a href="https://www.univ-lorraine.fr/" target="_blank">
+          <img src="static/images/sponsors/logo_univ-lorraine.webp" alt="Université de Lorraine" loading="lazy" />
         </a>
       </div>
+      <a id="culture-actions" href="https://www.etudiant.gouv.fr/fr/culture-actions-le-dispositif-des-crous-de-soutien-aux-initiatives-etudiantes-1771">
+        <img src="static/images/sponsors/logo_culture-actions.webp" alt="">
+      </a>
+      <a id="grand-nancy" href="https://www.grandnancy.eu">
+        <img src="static/images/sponsors/logo_metropole-grand-nancy.webp" alt="">
+      </a>
     </div>
   </section>
 
@@ -270,7 +302,7 @@
   </section>
 
   <section id="footer">
-    <a href="mentions-legales.html">Club Informatique Polytech Nancy © 2025</a>
+    <a href="mentions-legales">Club Informatique Polytech Nancy © 2025</a>
   </section>
 
   <button type="button" onclick="document.documentElement.scrollTop = 0;" id="scrollTopBtn" aria-label="Remonter"

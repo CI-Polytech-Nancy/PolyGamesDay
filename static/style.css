@@ -112,51 +112,6 @@ header {
   height: auto;
 }
 
-@media (min-width: 601px) {
-  .hide-large {
-    display: none;
-  }
-}
-
-@media (max-width: 600px) {
-  .hide-small {
-    display: none;
-  }
-
-
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    text-align: center;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    right: -15px;
-  }
-
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-}
-
-@media (min-width: 435px) {
-  [show] {
-    display: none;
-  }
-}
-
 #intro {
   display: flex;
   height: 100vh;
@@ -429,26 +384,55 @@ section {
   }
 }
 
-#sponsors a:first-child img {
-  margin-left: 0;
-}
+#sponsors {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-#sponsors img {
-  width: auto;
-  height: 150px;
-  margin-left: 40px;
-  margin-bottom: 20px;
+  width: 100%;
 
-  border-radius: 5px;
-  vertical-align: middle;
-  transition: transform 0.2s ease;
+  & a {
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
 
-  &:hover {
-    transform: scale(1.05);
-    -webkit-transform: scale(1.05);
+    margin: 10px;
+  }
+
+  & img {
+    margin: auto;
+    max-height: 150px;
+    height: 10vw;
+
+    border-radius: 10px;
+    vertical-align: middle;
+    transition: all 0.2s ease-in-out;
+
+    box-shadow: 0 1px 2px grey;
+    background-color: white;
+
+    &:hover {
+      transform: scale(1.05);
+      -webkit-transform: scale(1.05);
+      box-shadow: 0 5px 10px grey;
+    }
+  }
+
+  & #culture-actions > img {
+    padding: 15px;
   }
 }
 
+#sponsors-icons {
+  margin: 20px auto;
+  display: flex;
+  flex-grow: auto;
+  gap: 20px 5px;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-direction: row;
+}
 
 #staff {
   &.grid {
@@ -534,72 +518,6 @@ section {
   transform: translate(-45%, -50%);
 }
 
-@media (max-width: 600px) {
-  header nav {
-    gap: 15px;
-
-    .fa-youtube,
-    .fa-twitch {
-      display: none;
-    }
-  }
-
-  #intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    & #intro-container {
-      width: 80%;
-      padding: 0;
-      margin-top: -20%;
-      text-align: center;
-    }
-
-    & h1::after {
-      margin: 0;
-      margin-bottom: 10px;
-      white-space: pre-wrap;
-      content: "23 Mars 2024\A 7e édition";
-    }
-
-    & #cta {
-      margin: 0;
-      width: 100%;
-    }
-  }
-
-  section {
-    & .container {
-      max-width: 80vw;
-    }
-
-    & p {
-      font-size: 16px;
-    }
-
-    & h2 {
-      font-size: 26px;
-    }
-  }
-
-  #sponsors img {
-    width: 60%;
-    height: auto;
-
-    &:first-child {
-      height: auto;
-    }
-  }
-}
-
-@media (max-width: 500px) {
-  #sponsors img {
-    width: 80%;
-  }
-}
-
 .centered {
   width: 100%;
 }
@@ -678,5 +596,129 @@ section {
   &:hover {
     --underline-width: 100%;
     filter: brightness(70%);
+  }
+}
+
+.video-container {
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  height: calc(100% - 13vh);
+  aspect-ratio: 16/9;
+}
+
+.video {
+  width: 100%;
+  margin-top: -6.5vh
+}
+
+@media (min-width: 435px) {
+  .hide-435px {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  #sponsors img {
+    width: 80%;
+  }
+}
+
+@media (min-width: 601px) {
+  .hide-large {
+    display: none;
+  }
+}
+
+
+@media (max-width: 600px) {
+  header nav {
+    gap: 15px;
+
+    .fa-youtube,
+    .fa-twitch {
+      display: none;
+    }
+  }
+
+  #intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & #intro-container {
+      width: 80%;
+      padding: 0;
+      margin-top: -20%;
+      text-align: center;
+    }
+
+    & h1::after {
+      margin: 0;
+      margin-bottom: 10px;
+      white-space: pre-wrap;
+      content: "23 Mars 2024\A 7e édition";
+    }
+
+    & #cta {
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  section {
+    & .container {
+      max-width: 80vw;
+      margin: auto;
+    }
+
+    & p {
+      font-size: 16px;
+    }
+
+    & h2 {
+      font-size: 26px;
+    }
+  }
+
+  #sponsors img {
+    width: 60%;
+    height: auto;
+
+    &:first-child {
+      height: auto;
+    }
+  }
+
+  .hide-small {
+    display: none;
+  }
+
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    text-align: center;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: -15px;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
   }
 }
