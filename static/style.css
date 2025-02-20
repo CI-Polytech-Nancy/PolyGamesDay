@@ -394,6 +394,8 @@ section {
     flex-grow: 1;
     justify-content: center;
     align-items: center;
+
+    margin: 10px;
   }
 
   & img {
@@ -405,16 +407,23 @@ section {
     vertical-align: middle;
     transition: all 0.2s ease-in-out;
 
+    box-shadow: 0 1px 2px grey;
+    background-color: white;
+
     &:hover {
       transform: scale(1.05);
       -webkit-transform: scale(1.05);
       box-shadow: 0 5px 10px grey;
     }
   }
+
+  & #culture-actions > img {
+    padding: 15px;
+  }
 }
 
 #sponsors-icons {
-  margin: auto;
+  margin: 20px auto;
   display: flex;
   flex-grow: auto;
   gap: 20px 5px;
