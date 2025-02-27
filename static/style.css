@@ -31,7 +31,7 @@ body {
     background-color: var(--blue);
 
     &:hover {
-      background-color: -var(--red)
+      background-color: -var(-screen-red)
     }
   }
 
@@ -651,7 +651,6 @@ section {
     display: none;
   }
 }
-
 
 @media (max-width: 600px) {
   header nav {

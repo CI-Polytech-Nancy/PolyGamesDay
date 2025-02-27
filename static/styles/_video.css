@@ -1,6 +1,7 @@
 @import "./_constants.css";
 
-video {
+.video-container video,
+.video-container img {
   width: 100%;
 }
 
@@ -33,4 +34,9 @@ video {
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+#overview-brawl_stars-title {
+  max-width: min(60%, 600px);
+  margin: -35% 50px auto;
 }
