@@ -1,0 +1,47 @@
+@import "./_constants.css";
+
+.video-container {
+  position: relative;
+  /* top: 60px; */
+  overflow: hidden;
+  display: block;
+  width: 100%;
+
+  /* Trying to resize Valorant video */
+  /* width: 100%; */
+  /* height: calc(100% - 13vh); */
+  /* aspect-ratio: 16/9; */
+
+}
+
+.video-container img {
+  width: 100vw;
+}
+
+.video-container video {
+  width: 100%;
+}
+
+.video-overlay {
+  z-index: 10;
+  position: relative;
+  top: calc(-100vw * 9 / 16);
+  background-color: white;
+  height: calc(100vh - 60px);
+  width: 33%;
+}
+
+/* .video-button-toggle {
+  position: relative;
+  bottom: calc((100vw * 9 / 16) - (90vw * 9 / 16));
+  left: calc(100vw - var(--button-icon-size) - 2vw * 16 / 9);
+  z-index: 1000;
+} */
+
+.image-title {
+  width: 100%;
+}
+
+#overview-valorant-title {
+  margin-top: 10%;
+}

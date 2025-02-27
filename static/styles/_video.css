@@ -1,0 +1,42 @@
+@import "./_constants.css";
+
+.video-container video,
+.video-container img {
+  width: 100%;
+}
+
+.floating-button-container {
+  position: static;
+  display: block;
+  height: 0;
+  width: 100vw;
+  padding-top: 60px;
+}
+
+.video-button-toggle {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  box-shadow: 0 1px 2px grey;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 3px 9px grey;
+  }
+}
+
+.image-title {
+  max-width: 60%;
+  margin-top: -35%;
+}
+
+.game-description-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#overview-brawl_stars-title {
+  max-width: min(60%, 600px);
+  margin: -35% 50px auto;
+}

@@ -1,0 +1,41 @@
+@import "./_constants.css";
+
+.button {
+  padding: 15px 30px;
+  color: var(--md-light-color-on-primary);
+  background-color: var(--md-light-color-primary);
+
+  border-radius: 10px;
+
+  font-size: 1.5em;
+
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 2px 4px grey;
+    color: var(--md-light-color-on-primary);
+    filter: brightness(92%);
+  }
+}
+
+.button-icon {
+  color: var(--md-light-color-on-primary-container);
+  background-color: var(--md-light-color-primary-container);
+  width: var(--button-icon-size);
+  height: var(--button-icon-size);
+
+  border-radius: 10px;
+}
+
+.button-disabled {
+  color: rgb(151, 147, 153) !important;
+  background-color: rgb(226, 220, 228) !important;
+  border: none !important;
+  cursor: default;
+
+  &:hover {
+    border: none !important;
+    color: rgb(151, 147, 153) !important;
+    background-color: rgb(226, 220, 228) !important;
+  }
+}

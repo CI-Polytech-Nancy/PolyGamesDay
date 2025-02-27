@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="static/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="keywords" content="PGD,Polytech,Nancy,Jeu vidéo,LAN,e-sport,Tournoi,Poly Games Day">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="La compétition multi-gaming créée par des étudiants pour des étudiants. Que ce soit pour s'amuser ou pour try-hard, venez vous affronter et jouer ensemble !" />
+  <meta name="google-site-verification" content="R9ypPytCcpkWHXkFNWHsxwZ1dY_oDqmIUXsrzLjoU9I" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Poly Games Day" />
+  <meta property="og:description"
+    content="La compétition multi-gaming créée par des étudiants pour des étudiants. Que ce soit pour s'amuser ou pour try-hard, venez vous affronter et jouer ensemble !" />
+  <meta property="og:url" content="https://pgd.ci-polytech-nancy.fr/" />
+  <meta property="og:image" content="https://pgd.ci-polytech-nancy.fr/static/images/logo.webp" />
+  <meta content="#e22f8a" data-react-helmet="true" name="theme-color" />
+
+  <title>Poly Games Day</title>
+
+  <link rel="icon" href="static/images/logo.webp" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close" />
+</head>
+
+<body>
+  <!-- Header large -->
+  <header class="hide-small">
+    <a id="logo" href="/" aria-label="Retourner à la page principale">
+      <img src="static/images/logo_ci.webp" alt="Logo du Club Info" id="logo_ci" />
+      PGD
+    </a>
+    <span class="flex-gap-fill"></span>
+    <a href="https://www.instagram.com/club_info_polytech_nancy/" target="_blank" aria-label="Notre Instagram"
+      class="fab fa-instagram"></a>
+    <a href="https://www.discord.gg/PMNFaNG" target="_blank" aria-label="Notre Discord" class="fab fa-discord"></a>
+    <a href="https://www.facebook.com/ClubInfoPolytechNancy" target="_blank" aria-label="Notre Facebook"
+      class="fab fa-facebook"></a>
+    <a href="https://www.youtube.com/channel/UCkh5EzQc0l9Wi-muVNXbYQw" target="_blank" aria-label="Notre Youtube"
+      class="fab fa-youtube"></a>
+    <a href="https://www.twitch.tv/ci_polytech_nancy" target="_blank" aria-label="Notre chaîne Twitch"
+      class="fab fa-twitch"></a>
+  </header>
+
+  <!-- Header Small -->
+  <header class="hide-large">
+    <a id="logo" href="/" aria-label="Retourner à la page principale">
+      <img src="static/images/logo_ci.webp" alt="Logo du Club Info" id="logo_ci" />
+      PGD
+    </a>
+    <span class="flex-gap-fill"></span>
+    <div class="dropdown">
+      <a class="fas fa-link"></a>
+      <div class="dropdown-content">
+        <a href="https://www.instagram.com/club_info_polytech_nancy/" target="_blank" aria-label="Notre Instagram"
+          class="fab fa-instagram"></a>
+        <a href="https://www.discord.gg/PMNFaNG" target="_blank" aria-label="Notre Discord" class="fab fa-discord"></a>
+        <a href="https://www.facebook.com/ClubInfoPolytechNancy" target="_blank" aria-label="Notre Facebook"
+          class="fab fa-facebook"></a>
+        <a href="https://www.youtube.com/channel/UCkh5EzQc0l9Wi-muVNXbYQw" target="_blank" aria-label="Notre Youtube"
+          class="fab fa-youtube"></a>
+        <a href="https://www.twitch.tv/ci_polytech_nancy" target="_blank" aria-label="Notre chaîne Twitch"
+          class="fab fa-twitch"></a>
+      </div>
+    </div>
+  </header>
+
+  <div class="floating-button-container">
+    <button class="button-icon video-button-toggle" onclick="toggleVideo()">
+      <i class="fa fa-pause fa-lg"></i>
+    </button>
+  </div>
+
+  <div class="video-container">
+    <img src="https://supercell.com/images/1a5b69311180a4a1c374e10556941f05/1681/hero_bg_brawlstars.a385872a.webp">
+
+
+    <div class="game-description-container">
+
+      <img id="overview-brawl_stars-title" class="image-title" src="static/images/overview_pages/brawl-stars-logo.png">
+
+    </div>
+
+  </div>
+
+  <div class="rules">
+
+    <h1>Déroulement des tournois</h1>
+
+    <h2>Introduction</h2>
+    <span>
+      Le tournoi Brawl Stars des Poly Games Day se déroule sous forme de <strong>tournoi en présentiel</strong>.<br>
+      Les règles du <a href="reglement" class="link">règlement général</a> s'appliquent au tournoi.<br>
+      Un non-respect du règlement ou au déroulement du tournoi pourra entraîner une disqualification de l'équipe.
+    </span>
+
+    <h2>Déroulement</h2>
+    <span>
+      La phase finale se déroulera le <strong>samedi 15 mars</strong> en présentiel. Les matchs se dérouleront sous forme <strong>d'arbre de
+      tournoi</strong> présenté comme ci-dessous :
+
+      <img src="static/images/pool-graph-2.png" alt="Graphe des phases de poule finales"><br>
+
+      Les matchs se déroulent en <strong>BO3</strong>, chaque match de la série se déroulant dans un mode de jeu différent parmi les
+      suivants: BrawlBall, Razzia de gemmes, Hors-Jeu, Zone réservée et Prime.
+
+
+      Les demi-finales et la finale se déroulent en <strong>BO5</strong>.
+      L'équipe gagnant la finale remporte le prix.
+
+    </span>
+
+
+  </div>
+
+  <section id="footer">
+    <a href="mentions-legales">Club Informatique Polytech Nancy © 2025</a>
+  </section>
+
+</body>
+
+</html>

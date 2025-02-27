@@ -80,7 +80,7 @@
         alt="Poly Games Day" fetchpriority="high">
       <h2>Mars 2025 -<br class="hide-435px"> 8e édition</h2>
       <div style="width: 70%;">
-        <a href="#inscriptions" id="cta">S'INSCRIRE !</a>
+        <a href="https://boutique.lyf.eu/polytech-nancy-cde/inscription-pgd-2025" id="cta" aria-disabled="true" class="button" target="_blank">S'INSCRIRE !</a>
       </div>
     </div>
   </div>
@@ -110,14 +110,14 @@
   <!-- Game list and inscriptions -->
   <section id="inscriptions">
     <div class="container">
-      <h2>Inscriptions</h2>
+      <h2>Jeux</h2>
       <p>Les Poly Games Day auront lieu le <b>Samedi 15 Mars 2025</b>, de <b>9h à 19h</b><br>au gymnase de Polytech</p>
-      <p>Les inscriptions sont fermées actuellement.</p>
+      <!-- <p>Les inscriptions sont fermées actuellement.</p> -->
 
       <div class="grid" id="game-grid">
         <div class="line-3">
           <div class="column">
-            <a href="./league-of-legends"><!--  target="_blank"> -->
+            <a href="./league-of-legends">
               <div id="game-img-lol" class="game-img"
                 style="background-image: url('static/images/games/league_of_Legends.webp')" alt="League of Legends"
                 loading="lazy"></div>
@@ -126,7 +126,7 @@
             </a>
           </div>
           <div class="column">
-            <a href="./brawl-stars"><!--  target="_blank"> -->
+            <a href="./brawl-stars">
               <div class="game-img" style="background-image: url('static/images/games/brawl_stars.webp')"
                 alt="Brawl Stars" loading="lazy"></div>
               <span class="bar"></span>
@@ -134,7 +134,7 @@
             </a>
           </div>
           <div class="column">
-            <a href="./valorant"><!--  target="_blank"> -->
+            <a href="./valorant">
               <div class="game-img" style="background-image: url('static/images/games/valorant.webp')" alt="Valorant"
                 loading="lazy"></div>
               <span class="bar"></span>
@@ -144,7 +144,7 @@
         </div>
         <div class="line-2">
           <div class="column" id="free-games">
-            <a href="./free-games"><!--  target="_blank"> -->
+            <a href="./free-games">
               <div class="game-img" style="background-image: url('static/images/games/jeux_libres.webp')"
                 alt="Jeux libres" loading="lazy"></div>
               <span class="bar"></span>
@@ -152,7 +152,7 @@
             </a>
           </div>
           <div class="column" id="free-hardware">
-            <a href="./hotas-controllers"><!--  target="_blank"> -->
+            <a href="./hotas-controllers">
               <div class="game-img" style="background-image: url('static/images/games/jeux_libres_hardware.webp')"
                 alt="Jeux libres matériels" loading="lazy"></div>
               <span class="bar"></span>
@@ -160,15 +160,21 @@
             </a>
           </div>
         </div>
+        <br>
+        <br>
+        <div class="line-1">
+          <a href="reglement" class="button">Règlement</a>
+        </div>
       </div>
     </div>
+
   </section>
 
   <!-- Schedule -->
   <section id="schedule">
     <div class="container">
       <h2 class="on_dark">La journée</h2>
-      <p>Les <b>commandes de repas</b> se font de <b>12h à 20h30</b>.</p>
+      <p>Les <b>commandes de repas</b> se font à partir de <b>12h</b>.</p>
       <p class="notice">Le planning est sujet à modifications jusqu'au jour de l'évènement</p>
 
       <div class="warning_container"><span class="warning_banner" id="warning_banner1">A venir</span></div>
@@ -188,7 +194,7 @@
           </tr>
           <tr>
             <th scope="row">9h</th>
-            <td rowspan="6" colspan="2" class="tab_1-2">Phases de poules en BO1</td>
+            <td rowspan="6" colspan="2" class="tab_1-2">Phases de poules en BO3</td>
             <td rowspan="4" class="tab_3">Tournoi</td>
           </tr>
           <tr>
@@ -203,8 +209,6 @@
           <tr>
             <th scope="row">13h</th>
             <td rowspan="1" colspan="3" class="break">Remise des prix</td>
-            <!-- <td rowspan="3" colspan="2" class="tab_1-2">Demi-finales en BO3</td> -->
-            <!-- <td rowspan="7" class="tab_3"></td> -->
           </tr>
           <tr>
             <th scope="row">14h</th>
@@ -236,7 +240,6 @@
   <!-- Sponsors -->
   <section id="sponsors">
     <div class="container">
-      <!-- <div class="warning_container"><span class="warning_banner" id="warning_banner2">A venir</span></div> -->
       <h2>Nos Sponsors</h2>
       <div id="sponsors-icons">
         <a href="https://www.lyf.eu/fr" target="_blank">
@@ -278,7 +281,8 @@
           <img src="static/images/sponsors/logo_univ-lorraine.webp" alt="Université de Lorraine" loading="lazy" />
         </a>
       </div>
-      <a id="culture-actions" href="https://www.etudiant.gouv.fr/fr/culture-actions-le-dispositif-des-crous-de-soutien-aux-initiatives-etudiantes-1771">
+      <a id="culture-actions"
+        href="https://www.etudiant.gouv.fr/fr/culture-actions-le-dispositif-des-crous-de-soutien-aux-initiatives-etudiantes-1771">
         <img src="static/images/sponsors/logo_culture-actions.webp" alt="">
       </a>
       <a id="grand-nancy" href="https://www.grandnancy.eu">

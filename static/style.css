@@ -1,21 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Open+Sans:wght@400;700&display=swap");
+@import "./styles/_constants.css";
+@import "./styles/_button.css";
+@import "./styles/_video.css";
+
 
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-}
-
-:root {
-  --pink: #76238f;
-  --blue: #1c7ebb;
-  --dark-blue: #040051;
-  --red: #e22f8a;
-
-  --on-pink: white;
-  --on-dark-blue: white;
-  --on-blue: ;
-  --on-red: ;
 }
 
 html {
@@ -24,7 +16,8 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 0 !important;
+  top: 0;
 
   &::-webkit-scrollbar {
     width: 7px
@@ -38,7 +31,7 @@ body {
     background-color: var(--blue);
 
     &:hover {
-      background-color: -var(--red)
+      background-color: -var(-screen-red)
     }
   }
 
@@ -76,7 +69,7 @@ body {
 
 header {
   top: 0;
-  z-index: 1;
+  z-index: 100;
   position: sticky;
   height: 60px;
   width: 100%;
@@ -186,7 +179,7 @@ section {
   scroll-margin-top: 65px;
 
   &:nth-child(2n) {
-    background-color: var(--pink);
+    background-color: var(--purple);
     color: var(--on-pink);
   }
 
@@ -227,7 +220,7 @@ section {
   margin-bottom: 0;
 }
 
-& .container {
+.container {
   max-width: 65vw;
   margin: 0 auto;
   padding: 50px 0;
@@ -243,6 +236,11 @@ section {
   display: grid;
   grid-template-columns: 50% 50%;
   gap: 10px;
+}
+
+.grid .line-1 {
+  display: grid;
+  grid-template-columns: 100%;
 }
 
 .column a {
@@ -419,7 +417,7 @@ section {
     }
   }
 
-  & #culture-actions > img {
+  & #culture-actions>img {
     padding: 15px;
   }
 }
@@ -437,7 +435,7 @@ section {
 #staff {
   &.grid {
     & .column {
-      background-color: var(--pink);
+      background-color: var(--purple);
     }
   }
 }
@@ -453,6 +451,7 @@ section {
 
 
 #footer {
+  height: 60px;
   padding: 20px 0;
   text-align: center;
   background-color: white;
@@ -522,12 +521,13 @@ section {
   width: 100%;
 }
 
-#modal-info {
+/* TODO: remove useless components and styles */
+/* #modal-info {
   display: flex;
   position: fixed;
   top: 0;
   width: 100vw;
-  z-index: 100;
+  z-index: 10;
   text-align: center;
   background-color: #ffffff;
   font-size: 3rem;
@@ -535,9 +535,9 @@ section {
   padding-top: 30px;
   padding-bottom: 20px;
   justify-content: space-around;
-}
+} */
 
-.icon-button {
+/* .icon-button {
   display: flex;
   border-radius: 50px;
   padding: 4px;
@@ -552,7 +552,7 @@ section {
   &:hover {
     background-color: #c6c6c6;
   }
-}
+} */
 
 .warning_banner {
   user-select: none;
@@ -574,7 +574,7 @@ section {
 #warning_banner2 {
   rotate: -10deg;
   top: 100px;
-  z-index: 1000;
+  z-index: 10;
   margin: auto;
   width: 65vw;
 }
@@ -585,7 +585,8 @@ section {
   height: 0;
 }
 
-.link {
+/* Custom link underline */
+.link { /* TODO: move to general file --> not specific to a component */
   color: var(--blue);
   background: linear-gradient(currentColor 0 0) bottom left/ var(--underline-width, 0%) 2px no-repeat;
   display: inline-block;
@@ -599,17 +600,34 @@ section {
   }
 }
 
-.video-container {
-  overflow: hidden;
-  display: block;
-  width: 100%;
-  height: calc(100% - 13vh);
-  aspect-ratio: 16/9;
-}
+.rules {
+  display: flex;
+  flex-direction: column;
+  width: 95vw;
+  margin: auto;
+  & h1 {
+    margin-top: 30px;
+    align-self: center;
+    font-size: 2.5em;
+  }
 
-.video {
-  width: 100%;
-  margin-top: -6.5vh
+  & h2 {
+    margin-top: 20px;
+  }
+
+  & span {
+    line-height: 1.5;
+    width: 85vw;
+    margin: auto;
+
+    &:last-child {
+      margin-bottom: 30px;
+    }
+  }
+  img {
+    max-width: 50%;
+    margin: 10px auto 20px;
+  }
 }
 
 @media (min-width: 435px) {
@@ -622,6 +640,10 @@ section {
   #sponsors img {
     width: 80%;
   }
+
+  .rules img {
+    max-width: 95%;
+  }
 }
 
 @media (min-width: 601px) {
@@ -629,7 +651,6 @@ section {
     display: none;
   }
 }
-
 
 @media (max-width: 600px) {
   header nav {
@@ -720,5 +741,9 @@ section {
 
   .dropdown:hover .dropdown-content {
     display: block;
+  }
+
+  .rules img {
+    max-width: 85%;
   }
 }
