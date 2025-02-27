@@ -19,6 +19,8 @@
 }
 
 .button-icon {
+  color: var(--md-light-color-on-primary-container);
+  background-color: var(--md-light-color-primary-container);
   width: var(--button-icon-size);
   height: var(--button-icon-size);
 
