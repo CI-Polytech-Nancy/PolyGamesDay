@@ -225,6 +225,10 @@ section {
   margin: 0 auto;
   padding: 50px 0;
   text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .grid .line-3 {
@@ -425,7 +429,6 @@ section {
 #sponsors-icons {
   margin: 20px auto;
   display: flex;
-  flex-grow: auto;
   gap: 20px 5px;
   flex-wrap: wrap;
   width: 100%;
@@ -627,6 +630,19 @@ section {
   img {
     max-width: 50%;
     margin: 10px auto 20px;
+  }
+}
+
+.youtube-embed-container {
+  /* position: relative; */
+  max-width: 600px;
+  min-width: min(600px, 80vw);
+  width: 50%;
+  flex-grow: 1;
+  aspect-ratio: 16/9;
+  & iframe {
+    width: 100%;
+    height: 100%;
   }
 }
 
