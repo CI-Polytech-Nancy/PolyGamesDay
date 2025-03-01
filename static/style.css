@@ -435,14 +435,6 @@ section {
   flex-direction: row;
 }
 
-#staff {
-  &.grid {
-    & .column {
-      background-color: var(--purple);
-    }
-  }
-}
-
 #group-photo {
   display: flex;
   flex-direction: column;
