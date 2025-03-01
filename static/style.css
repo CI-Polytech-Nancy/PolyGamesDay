@@ -658,12 +658,6 @@ section {
   }
 }
 
-@media (min-width: 435px) {
-  .hide-435px {
-    display: none;
-  }
-}
-
 @media (max-width: 500px) {
   .rules img {
     max-width: 95%;
