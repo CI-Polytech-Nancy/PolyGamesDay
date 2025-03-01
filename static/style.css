@@ -221,7 +221,7 @@ section {
 }
 
 .container {
-  /* max- */
+  height: 100%;
   width: 65vw;
   margin: 0 auto;
   padding: 50px 0;
@@ -420,6 +420,7 @@ section {
   & img {
     margin: auto;
     max-height: 150px;
+    min-height: 100px;
     height: 10vw;
 
     border-radius: 10px;
@@ -664,10 +665,6 @@ section {
 }
 
 @media (max-width: 500px) {
-  #sponsors img {
-    width: 80%;
-  }
-
   .rules img {
     max-width: 95%;
   }
@@ -728,15 +725,6 @@ section {
 
     & h2 {
       font-size: 26px;
-    }
-  }
-
-  #sponsors img {
-    width: 60%;
-    height: auto;
-
-    &:first-child {
-      height: auto;
     }
   }
 
