@@ -221,7 +221,8 @@ section {
 }
 
 .container {
-  max-width: 65vw;
+  /* max- */
+  width: 65vw;
   margin: 0 auto;
   padding: 50px 0;
   text-align: center;
@@ -231,9 +232,13 @@ section {
   align-items: center;
 }
 
-.grid .line-3 {
+.grid {
+  width: 100%;
+}
+
+.grid .line-1 {
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: 100%;
 }
 
 .grid .line-2 {
@@ -242,9 +247,9 @@ section {
   gap: 10px;
 }
 
-.grid .line-1 {
+.grid .line-3 {
   display: grid;
-  grid-template-columns: 100%;
+  grid-template-columns: 33% 33% 33%;
 }
 
 .column a {
@@ -280,14 +285,24 @@ section {
   padding-top: 4%;
 }
 
+.center-vertically {
+  flex-grow: 1;
+}
+
+#free-games a,
+#free-hardware a {
+  height: 100%;
+}
+
 #free-games {
   height: 200px;
 }
 
 #free-games div {
-  max-width: 320px;
+  /* max-width: 320px; */
   min-width: 200px;
-  width: 140%;
+  width: 80%;
+  height: 150px;
   aspect-ratio: 912/500;
 }
 
@@ -581,7 +596,8 @@ section {
 }
 
 /* Custom link underline */
-.link { /* TODO: move to general file --> not specific to a component */
+.link {
+  /* TODO: move to general file --> not specific to a component */
   color: var(--blue);
   background: linear-gradient(currentColor 0 0) bottom left/ var(--underline-width, 0%) 2px no-repeat;
   display: inline-block;
@@ -600,6 +616,7 @@ section {
   flex-direction: column;
   width: 95vw;
   margin: auto;
+
   & h1 {
     margin-top: 30px;
     align-self: center;
@@ -619,6 +636,7 @@ section {
       margin-bottom: 30px;
     }
   }
+
   img {
     max-width: 50%;
     margin: 10px auto 20px;
@@ -632,6 +650,7 @@ section {
   width: 50%;
   flex-grow: 1;
   aspect-ratio: 16/9;
+
   & iframe {
     width: 100%;
     height: 100%;
@@ -698,7 +717,8 @@ section {
 
   section {
     & .container {
-      max-width: 80vw;
+      /* max- */
+      width: 80vw;
       margin: auto;
     }
 
